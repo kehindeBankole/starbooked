@@ -1,0 +1,12 @@
+@import "../../scss/index.scss";
+
+.homeContainer {
+  border-bottom-left-radius: 200px;
+  .banner {
+    height: 27.625rem;
+    border: 0;
+    @include mq("tablet") {
+      height: 47.625rem;
+    }
+  }
+}
