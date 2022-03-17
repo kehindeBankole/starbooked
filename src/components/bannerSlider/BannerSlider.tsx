@@ -4,8 +4,21 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { ReactComponent as ChevronLeft } from "../../assets/images/chevronleft.svg";
 import { ReactComponent as ChevronRight } from "../../assets/images/chevronright.svg";
+import { ReactComponent as ChevronSmall } from "../../assets/images/small.svg";
 import img1 from "../../assets/images/1.png";
+import Button from "../button/Button";
 function bannerSlider() {
+  const indicatorStyles: React.CSSProperties = {
+    background: "#3C3C3C",
+    width: 10,
+    height: 10,
+    display: "inline-block",
+    position: "relative",
+    margin: "0 8px",
+    borderRadius: 100,
+    bottom: -30,
+  };
+
   return (
     <Carousel
       showStatus={false}
@@ -53,11 +66,36 @@ function bannerSlider() {
           </button>
         )
       }
+      renderIndicator={(onClickHandler, isSelected, index, label) => {
+        if (isSelected) {
+          return (
+            <li
+              style={{ ...indicatorStyles, background: "#F9A61B" }}
+              aria-label={`Selected: ${label} ${index + 1}`}
+              title={`Selected: ${label} ${index + 1}`}
+            />
+          );
+        }
+        return (
+          <li
+            style={indicatorStyles}
+            onClick={onClickHandler}
+            onKeyDown={onClickHandler}
+            value={index}
+            key={index}
+            role="button"
+            tabIndex={0}
+            title={`${label} ${index + 1}`}
+            aria-label={`${label} ${index + 1}`}
+          />
+        );
+      }}
     >
-      <div
-        className={styles.content}
-        style={{ background: `url(${img1})` }}
-      ></div>
+      <div className={styles.content} style={{ background: `url(${img1})` }}>
+        <Button className={styles.btn}>
+          booking <ChevronSmall />
+        </Button>
+      </div>
       <div className={styles.content} style={{ background: "blue" }}></div>
     </Carousel>
   );
