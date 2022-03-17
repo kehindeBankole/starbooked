@@ -11,6 +11,8 @@
   top: 0;
   left: 0;
   padding-bottom: 22px;
+  background-position: center;
+  background-size: contain;
   @include mq("fluid-out") {
     height: 577px;
     width: 1030px;
@@ -18,16 +20,21 @@
   }
   .btn {
     background-color: $six;
-    height: 60px;
-    width: 156px;
+    height: 40px;
+    width: 130px;
     border-radius: 15px;
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: 0.8rem;
     line-height: 20px;
     text-transform: uppercase;
     color: #191c1f;
     svg {
       margin-left: 12px;
+    }
+    @include mq("fluid-out") {
+      height: 60px;
+      width: 156px;
+      font-size: 1.125rem;
     }
   }
 }

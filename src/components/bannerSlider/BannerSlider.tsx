@@ -91,12 +91,22 @@ function bannerSlider() {
         );
       }}
     >
-      <div className={styles.content} style={{ background: `url(${img1})` }}>
-        <Button className={styles.btn}>
-          booking <ChevronSmall />
-        </Button>
-      </div>
-      <div className={styles.content} style={{ background: "blue" }}></div>
+      {[1, 2].map(() => (
+        <>
+          <div
+            className={styles.content}
+            style={{
+              background: `url(${img1})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <Button className={styles.btn}>
+              booking <ChevronSmall />
+            </Button>
+          </div>
+        </>
+      ))}
     </Carousel>
   );
 }
