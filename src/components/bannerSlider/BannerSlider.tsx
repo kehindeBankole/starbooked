@@ -7,7 +7,7 @@ import { ReactComponent as ChevronRight } from "../../assets/images/chevronright
 import { ReactComponent as ChevronSmall } from "../../assets/images/small.svg";
 import img1 from "../../assets/images/1.png";
 import Button from "../button/Button";
-function bannerSlider() {
+function BannerSlider() {
   const indicatorStyles: React.CSSProperties = {
     background: "#3C3C3C",
     width: 10,
@@ -111,4 +111,4 @@ function bannerSlider() {
   );
 }
 
-export default bannerSlider;
+export default BannerSlider;
