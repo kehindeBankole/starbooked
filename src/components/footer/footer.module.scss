@@ -1,0 +1,50 @@
+@import "../../scss/index.scss";
+
+.footer {
+  background-color: $four;
+  color: $one;
+  padding-top: 69px;
+  .foot_border {
+    border-bottom: 1px solid $borderColor;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include mq("fluid-out") {
+      padding-left: 61px;
+    }
+    padding-bottom: 59px;
+  }
+  h2 {
+    font-weight: 700;
+    margin-bottom: 36px;
+  }
+  li,
+  .textHeight,
+  h2 {
+    margin-top: 20px;
+  }
+  li {
+    font: {
+      size: 18px;
+      weight: 400;
+    }
+  }
+}
+
+.bottom_footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 27px;
+  p {
+    color: rgba(245, 243, 244, 0.7);
+    font-weight: 400;
+    font-size: 1.125;
+    line-height: 26px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+button {
+  display: block;
+}
