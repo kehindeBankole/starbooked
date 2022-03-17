@@ -1,10 +1,8 @@
 @import "../../scss/index.scss";
 
-%link-height{
-    line-height:3;
-}
+
 .footer{
-    background-color:$five;
+    background-color:$four;
     color:$one;
 .foot_border{
     border-bottom:1px solid $borderColor
@@ -12,21 +10,31 @@
 }
 h2{
     font-weight: 700;
+    margin-bottom: 36px;
 }
 li, .textHeight,h2{
-   @extend %link-height;
+  margin-top: 20px;
    
 }
-
+li{
+    font: {size: 18px;
+        weight:400;
+    }
+}
 }
 
 .bottom_footer{
     p{
         color: rgba(245, 243, 244, 0.7);
         font-weight: 400;
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 1.125;
+        line-height: 26px;
        
-
+span{
+    margin-right:10px;
+}
     }
 }
+ button{
+     display:block;
+ }
