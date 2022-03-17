@@ -1,0 +1,16 @@
+@import "../../scss/index.scss";
+.content {
+  background-color: red;
+  height: 300px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 20px 20px 100px 20px;
+
+  top: 0;
+  left: 0;
+  @include mq("fluid-out") {
+    height: 577px;
+    width: 1030px;
+    border-radius: 20px 20px 200px 20px;
+  }
+}

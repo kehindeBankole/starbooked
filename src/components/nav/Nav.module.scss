@@ -6,7 +6,7 @@
     margin: 0 auto;
     .co {
       padding: 0 2rem;
-      @include mq("tablet") {
+      @include mq("fluid-out") {
         padding: 0;
       }
     }
@@ -24,7 +24,7 @@
     }
   }
   .navItems {
-    @include mq("tablet") {
+    @include mq("fluid-out") {
       margin-top: 46px;
       width: 100% !important;
       padding-right: 57px;
