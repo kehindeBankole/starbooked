@@ -1,4 +1,6 @@
 @import "../../scss/index.scss";
+$weight:700;
+
 .services{
 background-color:$five;
 color: $one;
@@ -8,12 +10,12 @@ h2{
     text:{ 
     transform:uppercase;
    align:center ;
+   
     }
 
-    // font:{
-    //     weight:700;
-    //     size:4rem;
-    // }
+    font:{
+        weight:700;
+    }
 
 }
 }
@@ -23,5 +25,8 @@ h2{
     padding-bottom: 135px;
     div{
         margin: 10px 5px;
+        p{
+            font-weight: 700;
+        }
     }
 }
