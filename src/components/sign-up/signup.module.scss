@@ -1,0 +1,17 @@
+@import "../../scss/index.scss";
+
+.section{
+    background-color: $five;
+   
+    color: $one;
+    div{
+        h2{
+            font-weight:700;
+            font-size: 2.25rem;
+        }
+        p{
+            color: $two;
+        }
+    }
+}
+

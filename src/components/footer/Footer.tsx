@@ -7,7 +7,7 @@ function Footer() {
       <div className={`flex flex-wrap justify-between ${styles.foot_border}`}>
         <div className="md:w-[35%] sm:w-[45%] w-[100%] my-[20px] xlg:my-[0]">
           <div>
-            <img src={logoWhite} alt="" />
+            <img src={logoWhite} className="w-[40%]  sm:w-[60%]" alt="" />
           </div>
 
           <div className="mt-[34px]" style={{ fontSize: "18px" }}>
