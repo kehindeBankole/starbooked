@@ -5,7 +5,8 @@
   .banner {
     height: 27.625rem;
     border: 0;
-    @include mq("tablet") {
+    padding-top: 31px;
+    @include mq("fluid-out") {
       height: 47.625rem;
     }
   }
