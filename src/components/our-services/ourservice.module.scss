@@ -7,26 +7,21 @@ color: $one;
 margin-bottom: 125px;
 
 h2{
-    text:{ 
-    transform:uppercase;
-   align:center ;
-   
-    }
+    text-transform:uppercase;
+   text-align:center ;
 
-    font:{
-        weight:700;
-    }
+   font-weight:$weight;
 
 }
 }
-
 .service{
     padding-top: 65px;
     padding-bottom: 135px;
     div{
         margin: 10px 5px;
         p{
-            font-weight: 700;
+            font-weight: $weight;
+            margin-top: 29px;
         }
     }
 }
