@@ -1,8 +1,8 @@
 @import "../../scss/index.scss";
 
-
-textarea{
-    background-color: $two;
-outline: none;
-resize: none;
+textarea {
+  background: rgba(249, 249, 249, 0.5);
+  outline: none;
+  resize: none;
+  height: 100px;
 }

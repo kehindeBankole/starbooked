@@ -1,21 +1,24 @@
-import "./input.module.scss"
-interface Props{
-    label:string;
-    height:string;
-    width:string;
+import styles from "./Input.module.scss";
+interface Props {
+  label: string;
+  height: string;
+  width: string;
 }
-function Input(props:Props){
+function Input(props: Props) {
   return (
     <div>
-        <div>
+      <div>
         <label htmlFor={props.label}>{props.label}</label>
-        </div>
-        <div>
-        <input type="text" style={{height:props.height,width:props.width}} />
-        </div>
-
+      </div>
+      <div>
+        <input
+          type="text"
+          style={{ height: props.height, width: props.width }}
+          className={styles.input}
+        />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Input
+export default Input;

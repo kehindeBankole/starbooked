@@ -1,15 +1,17 @@
-import styles from "./button.module.scss"
-interface Props{
-  text:string;
-  width:string;
-  height:string;
+import styles from "./Button.module.scss";
+interface Props {
+  text: string;
+  width: string;
+  height: string;
 }
-function Button(props:Props) {
+function Button(props: Props) {
   return (
-    <button className={`uppercase ${styles.btn} w-[${props.width}] h-[${props.height}]`}>
-      {props.text} 
+    <button
+      className={`uppercase ${styles.btn} w-[${props.width}] h-[${props.height}]`}
+    >
+      {props.text}
     </button>
-  )
+  );
 }
 
-export default Button
+export default Button;

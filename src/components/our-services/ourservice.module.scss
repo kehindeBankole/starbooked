@@ -1,27 +1,25 @@
 @import "../../scss/index.scss";
-$weight:700;
 
-.services{
-background-color:$five;
-color: $one;
-margin-bottom: 125px;
+.services {
+  background-color: $five;
+  color: $one;
+  margin-bottom: 125px;
 
-h2{
-    text-transform:uppercase;
-   text-align:center ;
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
 
-   font-weight:$weight;
-
+    font-weight: 700;
+  }
 }
-}
-.service{
-    padding-top: 65px;
-    padding-bottom: 135px;
-    div{
-        margin: 10px 5px;
-        p{
-            font-weight: $weight;
-            margin-top: 29px;
-        }
+.service {
+  padding-top: 65px;
+  padding-bottom: 135px;
+  div {
+    margin: 10px 5px;
+    p {
+      font-weight: 700;
+      margin-top: 29px;
     }
+  }
 }

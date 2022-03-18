@@ -1,9 +1,7 @@
 @import "../../scss/index.scss";
 
-
-
-
-input{
-    background-color: $two;
-outline: none;
+input {
+  background: rgba(249, 249, 249, 0.5);
+  outline: none;
+  padding: 0 15px;
 }
