@@ -28,7 +28,7 @@ function SignUp() {
           </div>
 
           <div className="mt-[40px]">
-            <TextArea label="additional details" height="100px" width="100%" />
+            <TextArea label="additional details" />
           </div>
 
           <div className="mt-[40px]">
