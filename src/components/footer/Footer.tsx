@@ -1,6 +1,7 @@
 import styles from "./footer.module.scss";
 import logoWhite from "../../assets/images/logowhite.svg";
 import { Facebook, Twitter, Linkdin, Instagram } from "../../assets/images";
+
 function Footer() {
   return (
     <footer className={`${styles.footer} relative bottom-0 p-[20px] flex-wrap`}>
