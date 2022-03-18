@@ -1,0 +1,25 @@
+@import "../../scss/index.scss";
+
+.services {
+  background-color: $five;
+  color: $one;
+  margin-bottom: 125px;
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+
+    font-weight: 700;
+  }
+}
+.service {
+  padding-top: 65px;
+  padding-bottom: 135px;
+  div {
+    margin: 0px 5px;
+    p {
+  font-weight: 700;
+    margin-top: 29px;
+    }
+  }
+}
