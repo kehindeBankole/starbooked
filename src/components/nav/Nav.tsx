@@ -98,7 +98,7 @@ function Nav() {
         </div>
         <div className={`${styles.navItems} hidden lg:flex bg-five`}>
           {navItems.map((item, index) => (
-            <button
+            <button 
               onClick={() => {
                 navigate(item.url);
               }}
@@ -114,6 +114,7 @@ function Nav() {
                     ? "#F9A61B"
                     : "#FFFEFE",
               }}
+              
             >
               {item.title}
             </button>

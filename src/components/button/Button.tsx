@@ -9,7 +9,7 @@ function Button({
   style?: React.CSSProperties;
   className: string;
 }) {
-  return <button className={`${styles.btn} ${className}`}>{children}</button>;
+  return <button className={`${styles.btn}`}>{children}</button>;
 }
 
 export default Button;
