@@ -1,4 +1,4 @@
-import styles from "./signup.module.scss";
+import styles from "./SignUp.module.scss";
 import { Input, Button, TextArea } from "../../utilities";
 function SignUp() {
   return (
