@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import {Nav,Footer,Booking} from "./components";
+import {Nav,Footer,Booking,SignUp,OurService} from "./components";
 import { Routes, Route } from "react-router-dom";
 const Home = lazy(() => import("./pages/home/Home"));
 const Services = lazy(() => import("./pages/services/Services"));
@@ -17,8 +17,13 @@ function App() {
           </Routes>
         </Suspense>
       </main>
+
+      <section>
+        <OurService/>
+      </section>
       <section className="book_and_sign">
-        <Booking/>
+        {/* <Booking/> */}
+       <SignUp/>
       </section>
       <footer>
         <Footer />

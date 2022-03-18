@@ -1,4 +1,4 @@
-import React from 'react'
+import styles from "./button.module.scss"
 interface Props{
   text:string;
   width:string;
@@ -6,8 +6,8 @@ interface Props{
 }
 function Button(props:Props) {
   return (
-    <button className={`w-[${props.width}] h-[${props.height}]`}>
-      {props.text}
+    <button className={`uppercase ${styles.btn} w-[${props.width}] h-[${props.height}]`}>
+      {props.text} 
     </button>
   )
 }

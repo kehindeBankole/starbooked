@@ -1,9 +1,14 @@
-
-function TextArea() {
+import styles from "./textarea.module.scss"
+interface Props{
+  label:string;
+  height:string;
+  width:string;
+}
+function TextArea(props:Props) {
   return (
     <div>
-        <label htmlFor="message"></label>
-        <textarea name="message"></textarea>
+        <label htmlFor="message">{props.label}</label>
+        <textarea name="message" className={`${styles.textarea} w-[${props.width}] h-[${props.height}] `}></textarea>
     </div>
   )
 }

@@ -1,35 +1,45 @@
-import "./booking.module.scss"
-import {Input} from "../../utilities";
-function Booking() {
+import styles from "./signup.module.scss"
+import {Input,Button,TextArea} from "../../utilities";
+function SignUp() {
   return (
-    <section className="pt-[130px] capitalize">
-      <div className="flex flex-wrap">
+    <section className={`${styles.section} capitalize`}>
+    <div className="flex flex-wrap py-[100px] md:py-[130px]">
 
-        <div className="w-[80%] md:w-[35%] mx-auto mb-[50px]">
-           <h2 className="mb-[18px]">Get in touch</h2>
-           <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat eu duis donec non fames tellus.
-           </p>
-        </div>
+      <div className="w-[80%] md:w-[40%] mx-auto mb-[50px]">
+         <h2 className={`mb-[18px]`}>be the first to know</h2>
+         <p>
+         Sign up to get exclusive information about our new signings, rosters and labels. We only send you information that you tell us is relevant, and won’t share your email with anyone else.
+         </p>
+      </div>
 
-<div className="w-[80%] md:w-[35%] mx-auto">
-  <div className="">
-  <Input label="name" height="50px" width="100%"/>
-  </div>
-  <div className="mt-[40px]">
-  <Input label="email" height="50px" width="100%" />
-  </div>
-  <div className="mt-[40px]">
-  <Input label="phone" height="50px" width="100%"/>
-  </div>
-  <div className="mt-[40px]">
+<div className="w-[80%] md:w-[40%] mx-auto">
+<div className="">
+<Input label="name" height="50px" width="100%"/>
+</div>
+<div className="mt-[40px]">
+<Input label="email" height="50px" width="100%" />
+</div>
+<div className="mt-[40px]">
+<Input label="phone" height="50px" width="100%"/>
+</div>
+<div className="mt-[40px]">
 <Input label="location" height="50px" width="100%"/>
-  </div>
+</div>
+
+<div className="mt-[40px]">
+<TextArea label="Message" height="100px" width="100%"/>
+</div>
+
+<div className="mt-[40px]">
+<Button text="Sign up" height="68px" width="100%" />
+</div>
+
+
 </div>
 </div>
-      
-    </section>
+    
+  </section>
   )
 }
 
-export default Booking
+export default SignUp
