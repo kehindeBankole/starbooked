@@ -13,9 +13,11 @@
   padding-bottom: 22px;
   background-position: center;
   background-size: contain;
+  @include mq("tablet") {
+    border-radius: 20px 20px 100px 20px;
+  }
   @include mq("fluid-out") {
     height: 577px;
-    width: 1030px;
     border-radius: 20px 20px 200px 20px;
   }
   .btn {
