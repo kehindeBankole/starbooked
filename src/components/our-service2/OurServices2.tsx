@@ -8,9 +8,9 @@ function OurServices2() {
           <header className={`uppercase ${styles.header} text-[2rem] sm:text-[3rem] lg:text-[4rem] text-center`}>Our services</header>
       
           
-           <div className=" sm:w-[95% ]w-[80%] m-auto flex justify-center flex-wrap">
-             <div className="md:mr-[24px] ">
-             <ServicesCard
+           <div className="md:flex px-[20px] flex-wrap justify-center">
+             
+           <ServicesCard
               title="talent management" 
              text="Amet minim mollit non deserunt ullamco est 
 sit aliqua dolor do amet sint. Velit officia 
@@ -18,70 +18,50 @@ sit aliqua dolor do amet sint. Velit officia
  sunt nostrud amet............" 
  img={Talent2}/>
 
-             </div>
-            
-           
-             <div className="md:mr-[24px] ">
-             <ServicesCard 
-             title="bookings" 
+<ServicesCard
+              title="Bookings" 
              text="Amet minim mollit non deserunt ullamco est 
 sit aliqua dolor do amet sint. Velit officia 
  duis enim velit mollit. Exercitation veniam 
  sunt nostrud amet............" 
  img={Booking2}/>
 
-             </div>
-            
-            
-           
-             <div className="md:mr-[24px]" >
-             <ServicesCard 
-             title="brand partnership"
-              text="Amet minim mollit non deserunt ullamco est 
+<ServicesCard
+              title="brand patnership" 
+             text="Amet minim mollit non deserunt ullamco est 
 sit aliqua dolor do amet sint. Velit officia 
  duis enim velit mollit. Exercitation veniam 
  sunt nostrud amet............" 
  img={BrandPartner2}/>
 
-             </div>
-
-             
-             <div className="md:mr-[24px]  ">
-             <ServicesCard 
-             title="PR" 
+<ServicesCard
+              title="PR" 
              text="Amet minim mollit non deserunt ullamco est 
 sit aliqua dolor do amet sint. Velit officia 
  duis enim velit mollit. Exercitation veniam 
- sunt nostrud amet............"
-  img={PR2}/>
+ sunt nostrud amet............" 
+ img={PR2}/>
 
-             </div>
-
-             
-             <div className="md:mr-[24px]  ">
-             <ServicesCard title="social media management" 
+<ServicesCard
+              title="social media management" 
              text="Amet minim mollit non deserunt ullamco est 
 sit aliqua dolor do amet sint. Velit officia 
  duis enim velit mollit. Exercitation veniam 
  sunt nostrud amet............" 
  img={Management2}/>
 
-             </div>
 
-             
-             <div className="md:mr-[24px]  ">
-             <ServicesCard title="label services" 
+<ServicesCard
+              title="label services" 
              text="Amet minim mollit non deserunt ullamco est 
 sit aliqua dolor do amet sint. Velit officia 
  duis enim velit mollit. Exercitation veniam 
  sunt nostrud amet............" 
- img={LabelService2}/>
+ img={PR2}/>
 
-             </div>
-            
-           </div>
-        
-            
+
+ 
+           </div> 
       
           </div>
        

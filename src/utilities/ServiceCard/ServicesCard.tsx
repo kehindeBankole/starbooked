@@ -9,8 +9,8 @@ title:any;
 function ServicesCard(props:Props) {
   return (
     // <div className={`${styles.card} w-[397px]`}>
-      <div className={`${styles.card} w-[397px] m-auto `}>
-      <img src={props.img} className="mx-auto h-[420px]" alt="" />
+      <div className={`${styles.card} lg:w-[30%] md:w-[50%] md:mr-[24px] `}>
+      <img src={props.img} className=" lg:h-[420px] md:w-[100%] mx-auto h-auto" alt="" />
       <p className={`text-center ${styles.card_title} uppercase`}>{props.title}</p>
         <p className={`text-center ${styles.card_text}`}>{props.text}</p>
         <p className={`${styles.card_footer}`}>learn more <hr /></p>
