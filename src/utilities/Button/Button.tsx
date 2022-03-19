@@ -3,9 +3,10 @@ interface Props {
   text: string;
   width: string;
   height: string;
+  radius?:any;
 }
 function Button(props: Props) {
-  return <button className={`uppercase ${styles.btn}`}>{props.text}</button>;
+  return <button className={`uppercase ${styles.btn} w-[${props.width}]`} style={{borderRadius:props.radius?props.radius:"0px"}}>{props.text}</button>;
 }
 
 export default Button;

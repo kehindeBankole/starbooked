@@ -1,0 +1,36 @@
+@import "../../scss/index.scss";
+
+.hero{
+    header{
+        font: {
+            weight: 700;
+            
+        }
+        text-transform:uppercase ;
+    }
+    .hero_text{
+       
+        margin: {
+            left: 13px;
+           right: 20px;
+           bottom: 37px;
+           top:24px
+        }
+        
+    }
+  
+}
+
+@media screen and (max-width:1023px){
+    .hero{
+        div{
+            div{
+               flex-direction: column-reverse;
+               .bookImg{
+                   margin-bottom: 20px;
+               }
+            }
+        }
+        
+    }
+}
