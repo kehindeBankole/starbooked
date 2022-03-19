@@ -5,10 +5,11 @@ import { Booking2 } from '../../assets/images'
 import styles from "./Bookings.module.scss"
 function Bookings() {
   return (
-      <section className={`${styles.hero} my-[30px]`}>
-    <div className='container'>   
-     <div className="flex flex-wrap m-auto sm:w-[60%] w-[80%] md:w-[90%]  justify-between ">
-     <div className='lg:w-[45%] md:w-[55%]  m-auto'>
+      <section className={`${styles.hero} flex my-[30px]`}>
+      
+     <div className="flex container justify-between">
+ 
+     <div className=' md:w-[60%] lg:w-[40%] m-auto lg:p-[0] p-[20px] lg:ml-[61px]'>
       <header className=' lg:text-[2.25rem] text-[1.8rem] md:text-[2rem]'>
       bookings: djs, celebrity talent & live acts
       </header>
@@ -29,13 +30,15 @@ function Bookings() {
 
             </div>
        
-       <div  className={`mx-auto lg:w-auto md:w-[55%] w-[100%] ${styles.bookImg}`}>
-<img src={Booking2} className="w-[100%] lg:w-[344px] lg:h-[344px]" alt="" />
-       </div>
+     <div className='lg:mr-[57px] m-auto'>
+     <img src={Booking2} className=" h-[344px]" alt="" />
+
+     </div>
+      
 
         </div>
       
-    </div>
+    
     </section>
   )
 }

@@ -24,8 +24,9 @@
 @media screen and (max-width:1023px){
     .hero{
         div{
+            flex-direction: column-reverse;
+
             div{
-               flex-direction: column-reverse;
                .bookImg{
                    margin-bottom: 20px;
                }
