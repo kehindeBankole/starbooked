@@ -30,7 +30,7 @@ function Bookings() {
 
             </div>
        
-     <div className='lg:mr-[57px] m-auto'>
+     <div className='lg:mr-[57px] mx-auto'>
      <img src={Booking2} className=" h-[344px]" alt="" />
 
      </div>
