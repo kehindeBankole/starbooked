@@ -1,7 +1,14 @@
-import React from "react";
-
+import {OurServices2} from "../../components";
 function Services() {
-  return <div>Services</div>;
+  return <section className="">
+    <div>
+      
+
+  <OurServices2/>
+
+    </div>
+
+  </section>;
 }
 
 export default Services;

@@ -18,13 +18,15 @@ function App() {
         </Suspense>
       </main>
 
-      <section>
-        <OurService/>
+      <section className="our_services">
+        {/* <OurService/> */}
       </section>
+
       <section className="book_and_sign">
         {/* <Booking/> */}
-       <SignUp/>
+       {/* <SignUp/> */}
       </section>
+      
       <footer>
         <Footer />
       </footer>
