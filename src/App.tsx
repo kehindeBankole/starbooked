@@ -6,6 +6,7 @@ const Home = lazy(() => import("./pages/home/Home"));
 const Services = lazy(() => import("./pages/services/Services"));
 const Company= lazy(() => import("./pages/company/Company"));
 const Bookings= lazy(() => import("./pages/bookings/Bookings"));
+const AboutUs= lazy(() => import("./pages/about us/AboutUs"));
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -17,6 +18,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/company" element={<Company />} />
             <Route path="/bookings" element={<Bookings />} />
+            <Route path="company/aboutus" element={<AboutUs />} />
           </Routes>
         </Suspense>
       </main>
