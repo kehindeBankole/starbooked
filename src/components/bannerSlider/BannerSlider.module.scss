@@ -30,6 +30,9 @@
     line-height: 20px;
     text-transform: uppercase;
     color: #191c1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     svg {
       margin-left: 12px;
     }

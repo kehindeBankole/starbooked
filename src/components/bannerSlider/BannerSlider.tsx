@@ -101,9 +101,9 @@ function BannerSlider() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <Button className={styles.btn}>
+            <button className={styles.btn}>
               booking <ChevronSmall />
-            </Button>
+            </button>
           </div>
         </>
       ))}

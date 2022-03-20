@@ -13,7 +13,7 @@ function ServicesCard(props:Props) {
       <img src={props.img} className=" lg:h-[420px] md:w-[100%] mx-auto h-auto" alt="" />
       <p className={`text-center ${styles.card_title} uppercase`}>{props.title}</p>
         <p className={`text-center ${styles.card_text}`}>{props.text}</p>
-        <p className={`${styles.card_footer}`}>learn more <hr /></p>
+        <p className={`${styles.card_footer} capitalize`}>learn more <hr /></p>
       </div>
 
     // </div>
