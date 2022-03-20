@@ -30,7 +30,7 @@ function App() {
       </section>
 
       <section className="book_and_sign">
-        {/* <Booking/> */}
+        <Booking/>
        {/* <SignUp/> */}
       </section>
       

@@ -11,7 +11,7 @@ function OurServices() {
   return (
     <section id="services" className={`${styles.services} `}>
       <div className="container pt-[42px]">
-        <h2 className=" text-[2rem] sm:text-[3rem] lg:text-[4rem]">
+        <h2 className=" text-[1.8rem] sm:text-[3rem] lg:text-[4rem]">
           our services
         </h2>
         <div className={`flex flex-wrap justify-center ${styles.service}`}>
