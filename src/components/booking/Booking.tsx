@@ -1,13 +1,13 @@
 import styles from "./Booking.module.scss";
 import { Input, Button,TextArea } from "../../utilities";
-function Booking() {
+function Booking({title , subtitle}:{title:string , subtitle:string}) {
   return (
-    <section className={`${styles.section} capitalize`}>
-      <div className="container flex flex-wrap py-[100px] md:py-[130px]">
-        <div className="w-[80%] md:w-[60%] lg:w-[30%] mx-auto mb-[50px]">
-          <h2 className={`mb-[18px]`}>get in touch</h2>
+    <section className={`${styles.section} capitalize items-center justify-center flex`}>
+      <div className="flex flex-wrap flex-row container items-center justify-center">
+        <div className="w-[80%] md:w-[40%] mx-auto mb-[50px] self-start">
+          <h2 className={`mb-[18px]`}>{title}</h2>
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat eu duis donec non fames tellus.
+        {subtitle}
           </p>
         </div>
 

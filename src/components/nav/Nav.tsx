@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Nav.module.scss";
 import { gsap } from "gsap";
 import logoWhite from "../../assets/images/logowhite.svg";
+import logoDark from "../../assets/images/logodark.svg";
 import { useNavigate } from "react-router-dom";
 
 function Nav() {
@@ -41,22 +42,25 @@ function Nav() {
         each: 0.1,
       },
     });
+    // window.location.href ===
+    // `${window.location.protocol}//${window.location.host}/
   });
+
   return (
-    <div className={`${styles.nav} bg-five d-flex `}>
+    <div className={`${styles.nav}  d-flex `} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
       <div
         className={`${styles.content} flex flex-row justify-between w-screen`}
       >
         <div className={`${styles.co} flex flex-row justify-between w-screen`}>
           <img
-            src={logoWhite}
+            src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
             alt="website logo"
             onClick={() => navigate("/")}
           />
           <button onClick={() => timeline.play()}>
             <i
               className="ri-menu-5-fill lg:hidden"
-              style={{ color: "white", fontSize: 25 }}
+              style={{ color: window.location.href===`${window.location.protocol}//${window.location.host}/` ? 'white':"black", fontSize: 25 }}
             ></i>
           </button>
         </div>
@@ -96,7 +100,7 @@ function Nav() {
             </button>
           ))}
         </div>
-        <div className={`${styles.navItems} hidden lg:flex bg-five`}>
+        <div className={`${styles.navItems} hidden lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
             <button 
               onClick={() => {
@@ -108,11 +112,11 @@ function Nav() {
                   item.title !== "home"
                     ? window.location.pathname.includes(item.url)
                       ? "#F9A61B"
-                      : "#FFFEFE"
+                      : window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#FFFEFE':"#191C1F"
                     : window.location.href ===
                       `${window.location.protocol}//${window.location.host}/`
                     ? "#F9A61B"
-                    : "#FFFEFE",
+                    : "#191C1F",
               }}
               
             >
@@ -120,9 +124,16 @@ function Nav() {
             </button>
           ))}
         </div>
+        
       </div>
+  <div className={`${styles.bottomBar} container capitalize ${styles.home}`} style={{marginTop:100,marginBottom:100 }}>
+  { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"> Home <span style={{color:"#F9A61B"}}> {
+      `> ${window.location.pathname.split("/")[1]} `
+      } </span>
+      </div>}
+  </div>
     </div>
-  );
+  )
 }
 
 export default Nav;

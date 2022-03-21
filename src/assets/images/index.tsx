@@ -13,7 +13,7 @@ export { default as PR} from "./our_services/PR.png"
 export { default as Booking2 } from "./our_services2/Booking.png"
 export { default as BrandPartner2} from "./our_services2/BrandPartner.png"
 export { default as LabelService2} from "./our_services2/label.png"
-export { default as Management2} from "./our_services2/social_media_management.png"
+export { default as Management2} from "./our_services2/Social.png"
 export { default as Talent2} from "./our_services2/Talent.png"
 export { default as PR2} from "./our_services2/PR.png"
 export { default as About} from "./aboutus.png"
@@ -30,3 +30,14 @@ export {default as Influencers} from "./book fav/influencers.png"
 export {default as Band1} from "./book band/1.png"
 export {default as Band2} from "./book band/2.png"
 export {default as Star} from "./Star.png"
+export { default as Social} from "./our_services2/Social.png"
+export { default as Label} from "./our_services2/label.png"
+export {default as FB} from "./book band/fb.svg";
+export {default as Twitter2} from "./book band/twitter.svg";
+export {default as Insta} from "./book band/insta.svg";
+export {default as BandInfo} from "./artist info/band.png";
+export {default as ComedianInfo} from "./artist info/comedian.png";
+export {default as DjInfo} from "./artist info/Dj.png";
+export {default as InfluencerInfo} from "./artist info/influencer.png";
+export {default as McInfo} from "./artist info/mc.png";
+export {default as MusicianInfo} from "./artist info/musician.png";

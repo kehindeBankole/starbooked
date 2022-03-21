@@ -7,9 +7,9 @@ import {ServicesCard} from "../../utilities"
 import styles from "./Bookings.module.scss"
 function Bookings() {
   return (
-      <section className={`${styles.hero}  my-[30px]`}>
+      <section className={`${styles.hero}`}>
       
-     <div className={`flex ${styles.hero_content} container justify-between`}>
+     {/* <div className={`flex ${styles.hero_content} container justify-between`}>
  
      <div className=' md:w-[60%] lg:w-[38%] m-auto lg:p-[0] p-[20px] lg:ml-[61px]'>
       <header className=' lg:text-[2.25rem] text-[1.8rem] md:text-[2rem]'>
@@ -98,7 +98,7 @@ sit aliqua dolor do amet sint. Velit officia
           </div>
        
       </div>
-        
+         */}
             
       
    

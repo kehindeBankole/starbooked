@@ -5,7 +5,7 @@ import {NewsGallery} from "../../components"
 import { Button } from '../../utilities';
 function News() {
   return (
-    <section className={`${styles.News} mt-[76px]`}>
+    <section className={`${styles.News} mt-[px]`}>
         <div className='mb-[166px] '>
         <div className='container lg:p-[0] p-[20px] '>
             <header className='text-center  lg:text-[4rem] text-[1.5rem] md:text-[2rem]'>
