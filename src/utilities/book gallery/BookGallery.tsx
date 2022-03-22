@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./BookGallery.module.scss"
-
+import {Link} from "react-router-dom"
 interface Props{
     category_img:any;
 handle1:any;
@@ -8,6 +8,7 @@ handle2:any;
 handle3:any;
 stars:any;
 title:string;
+url:string
 }
 
 function BookGallery(props:Props) {
@@ -39,7 +40,10 @@ function BookGallery(props:Props) {
 <p className='mt-[5px] text-[.75rem]'>380k</p>
 </div>   
  </div>
+ <Link to={props.url}>
 <button className={`capitalize ${styles.read}`}>read more.....</button>
+
+ </Link>
 
      </div>
      <div className='absolute bottom-[0]  shadow-lg rounded-[20px] w-[100%]'>

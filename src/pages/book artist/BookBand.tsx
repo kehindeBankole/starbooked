@@ -4,13 +4,14 @@ import styles from "./BookPages.module.scss"
 import {BookGallery} from "../../utilities"
 function BookBand() {
 
-  const Bands:{category_img:any;handle1:any,handle2:any,handle3:any,stars:any,title:string}[]=[
+  const Bands:{category_img:any;handle1:any,handle2:any,handle3:any,stars:any,title:string;url:string;}[]=[
 {category_img:Band1,
 handle1:FB,
 handle2:Twitter2,
 handle3:Insta,
 stars:Array(5).fill(Star),
-title:"the band hitz"
+title:"the band hitz",
+url:"about"
 
 },
 
@@ -19,8 +20,9 @@ title:"the band hitz"
   handle2:Twitter2,
   handle3:Insta,
   stars:Array(5).fill(Star),
-  title:"the band hitz"
-  }
+  title:"the band hitz",
+url:"about"  
+}
   ,
 
 {category_img:Band2,
@@ -28,8 +30,9 @@ title:"the band hitz"
   handle2:Twitter2,
   handle3:Insta,
   stars:Array(5).fill(Star),
-  title:"the band hitz"
-  }
+  title:"the band hitz",
+url:"about"  
+}
   ,
 
 {category_img:Band2,
@@ -37,8 +40,9 @@ title:"the band hitz"
   handle2:Twitter2,
   handle3:Insta,
   stars:Array(5).fill(Star),
-  title:"the band hitz"
-  }
+  title:"the band hitz",
+url:"about"  
+}
   ,
 
 {category_img:Band2,
@@ -46,16 +50,18 @@ title:"the band hitz"
   handle2:Twitter2,
   handle3:Insta,
   stars:Array(5).fill(Star),
-  title:"the band hitz"
-  }
+  title:"the band hitz",
+url:"about"  
+}
 ,
   {category_img:Band2,
     handle1:FB,
     handle2:Twitter2,
     handle3:Insta,
     stars:Array(5).fill(Star),
-    title:"the band hitz"
-    }
+    title:"the band hitz",
+  url:"about"  
+  }
 
   ]
 
@@ -70,7 +76,7 @@ title:"the band hitz"
 
       <div className={`${styles.bands} flex flex-wrap justify-between md:mr-[57px] md:ml-[61px] mt-[105px]`}>
     {Bands.map(item=>(
-      <BookGallery category_img={item.category_img} handle1={item.handle1} handle2={item.handle2} handle3={item.handle3} stars={item.stars} title={item.title} />
+      <BookGallery url={item.url} category_img={item.category_img} handle1={item.handle1} handle2={item.handle2} handle3={item.handle3} stars={item.stars} title={item.title} />
 
     ))}
       </div>

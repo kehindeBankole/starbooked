@@ -8,27 +8,30 @@ import { useNavigate } from "react-router-dom";
 function Nav() {
   const timeline = gsap.timeline({ paused: true });
   const navigate = useNavigate();
-  const navItems: { url: string; title: string }[] = [
+  console.log(window.location.pathname);
+  const [show,setShow]=useState(false) 
+  const navItems: { url: string; title: string;display?:boolean }[] = [
     {
       url: "/",
       title: "home",
+   
     },
     {
       url: "bookings",
       title: "bookings",
-    },
+display:false},
     {
       url: "services",
       title: "our services",
-    },
+display:false},
     {
       url: "company",
       title: "company",
-    },
+display:false},
     {
       url: "news",
       title: "news",
-    },
+}
   ];
   useEffect(() => {
     timeline
@@ -94,9 +97,10 @@ function Nav() {
                       `${window.location.protocol}//${window.location.host}/`
                     ? "#F9A61B"
                     : "#FFFEFE",
-              }}
+             }}
             >
               {item.title}
+              
             </button>
           ))}
         </div>
@@ -105,6 +109,7 @@ function Nav() {
             <button 
               onClick={() => {
                 navigate(item.url);
+                item.hasOwnProperty("display")&&setShow(!show)
               }}
               className="text-lg text-one mr-30"
               style={{
@@ -117,10 +122,18 @@ function Nav() {
                       `${window.location.protocol}//${window.location.host}/`
                     ? "#F9A61B"
                     : "#191C1F",
+                    position:"relative"
               }}
               
             >
               {item.title}
+              {item.title!=="home"&&(<div className={`absolute top-[10%]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", display:item.display?"block":"none"}}>
+                <ul>
+                  <li>one </li>
+                  <li>two </li>
+                  <li>three </li>
+                </ul>
+                </div>)}
             </button>
           ))}
         </div>
@@ -128,7 +141,7 @@ function Nav() {
       </div>
   <div className={`${styles.bottomBar} container capitalize ${styles.home}`} style={{marginTop:100,marginBottom:100 }}>
   { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"> Home <span style={{color:"#F9A61B"}}> {
-      `> ${window.location.pathname.split("/")[1]} `
+      `> ${window.location.pathname.split("/")[1]}  ${window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""} `
       } </span>
       </div>}
   </div>

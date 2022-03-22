@@ -40,22 +40,23 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/company" element={<Company />} />
+            {/* <Route path="/company" element={<Company />} /> */}
             <Route path="/bookings" element={<Bookings_Page />} />
-            <Route path="company/aboutus" element={<AboutUs />} />
+            <Route path="/company" element={<AboutUs />} />
             <Route path="news" element={<News/>} />
-            <Route path="bookband" element={<BookBand/>} />
-            <Route path="bookdj" element={<BookDj/>} />
-            <Route path="bookmusician" element={<BookMusician/>} />
-            <Route path="bookcomedian" element={<BookComedian/>} />
-            <Route path="bookmc" element={<BookMc/>} />
-            <Route path="bookinfluencer" element={<BookInfluencer/>} />
-            <Route path="musicianinfo" element={<MusicianInfo/>} />
-            <Route path="comedianinfo" element={<ComedianInfo/>} />
-            <Route path="mcinfo" element={<McInfo/>} />
-            <Route path="influencerinfo" element={<InfluencerInfo/>} />
-            <Route path="bandinfo" element={<BandInfo/>} />
-            <Route path="book" element={<Book/>} />
+            <Route path="bookings/liveband" element={<BookBand/>} />
+            <Route path="bookings/dj" element={<BookDj/>} />
+            <Route path="bookings/musician" element={<BookMusician/>} />
+            <Route path="bookings/comedian" element={<BookComedian/>} />
+            <Route path="bookings/mc" element={<BookMc/>} />
+            <Route path="bookings/influencer" element={<BookInfluencer/>} />
+            <Route path="bookings/musician/about" element={<MusicianInfo/>} />
+            <Route path="bookings/comedian/about" element={<ComedianInfo/>} />
+            <Route path="bookings/mc/about" element={<McInfo/>} />
+            <Route path="bookings/dj/about" element={<DjInfo/>} />
+            <Route path="bookings/influencer/about" element={<InfluencerInfo/>} />
+            <Route path="bookings/liveband/about" element={<BandInfo/>} />
+            <Route path="/book" element={<Book/>} />
           </Routes>
         </Suspense>
       </main>

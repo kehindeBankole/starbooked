@@ -1,31 +1,38 @@
 import React from 'react'
 import {DJS,Comedians,MCS,LiveBands,Musicians,Influencers} from "../../assets/images"
+import { Link } from 'react-router-dom';
 function Bookings_page() {
 
-  const Booking_Items: { img: any; title: string }[]=[
+  const Booking_Items: { img: any; title: string,url:string }[]=[
     {
       img:LiveBands,
-      title:"live bands"
+      title:"live bands",
+      url:"liveband"
     },
     {
       img:DJS,
-      title:"djs"
+      title:"djs",
+      url:'dj'
     },
     {
       img:Musicians,
-      title:"musicians"
+      title:"musicians",
+      url:'musician'
     },
     {
       img:Comedians,
-      title:"comedian"
+      title:"comedian",
+      url:'comedian'
     },
     {
       img:MCS,
-      title:"mcs"
+      title:"mcs",
+      url:'mc'
     },
     {
       img:Influencers,
-      title:"inflencers"
+      title:"influencers",
+      url:'influencer'
     }
 
   ]
@@ -41,10 +48,15 @@ function Bookings_page() {
         
         {Booking_Items.map(item=>(
           <div className=' lg:w-[38%] md:w-[60%] sm:w-[70%] w-[100%] lg:m-[0] m-auto'>
+          <Link to={`${item.url}`}>
           <img className='w-[100%]' src={item.img} alt="" />
+        </Link>
+
           <p className='mb-[125px] mt-[24px]'>{item.title}</p>
         </div>
-        ))}
+
+        ))
+        }
          
         </div>
 <div>

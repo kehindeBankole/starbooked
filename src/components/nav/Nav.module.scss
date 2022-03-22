@@ -24,11 +24,7 @@
     }
     
   }
-@media screen and (max-width:960px) {
-  .home{
-    margin-left: 32px;
-  }
-}
+
  
   .navItems {
     @include mq("fluid-out") {
@@ -40,6 +36,10 @@
     button {
       text-transform: capitalize;
     }
+    .dropdown{
+      background-color: $six;
+     
+    }
   }
   .bottomBar{
     font-size: 1.5rem;
@@ -47,3 +47,8 @@
     cursor: pointer;
   }
 }
+@media screen and (max-width:960px) {
+  .home{
+    margin-left: 32px;
+  }
+} 
