@@ -3,8 +3,8 @@ import { Input, Button, TextArea } from "../../utilities";
 function SignUp() {
   return (
     <section className={`${styles.section} capitalize`}>
-      <div className="flex flex-wrap py-[100px] md:py-[130px]">
-        <div className="w-[80%] md:w-[40%] mx-auto mb-[50px]">
+      <div className="container flex flex-wrap py-[100px] md:py-[130px]">
+        <div className="w-[80%] md:w-[60%] lg:w-[30%] mx-auto mb-[50px]">
           <h2 className={`mb-[18px]`}>be the first to know</h2>
           <p>
             Sign up to get exclusive information about our new signings, rosters
@@ -13,7 +13,7 @@ function SignUp() {
           </p>
         </div>
 
-        <div className="w-[80%] md:w-[40%] mx-auto">
+        <div className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto">
           <div className="">
             <Input label="name" height="50px" width="100%" />
           </div>
