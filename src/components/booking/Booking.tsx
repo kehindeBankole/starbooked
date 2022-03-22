@@ -26,7 +26,7 @@ function Booking({title , subtitle}:{title:string , subtitle:string}) {
           </div>
 
           <div className="mt-[40px]">
-            <Button text="send a message" height="68px" width="100%" />
+            <Button text="send a message"/>
           </div>
         </div>
       </div>
