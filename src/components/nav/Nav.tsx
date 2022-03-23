@@ -41,7 +41,7 @@ dropMenu:<><li><Link to="">Talent Management</Link> </li> <li> <Link to="booking
     url: "company/aboutus",
     title: "company",
 display:false,
-dropMenu:<><li><Link to="company/aboutus">About us</Link> </li> <li><Link to=""> Contact</Link></li></>
+dropMenu:<><li><Link to="company/aboutus">About us</Link> </li> <li><Link to="contact"> Contact</Link></li></>
 
 },
   {

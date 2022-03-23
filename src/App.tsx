@@ -56,6 +56,7 @@ function App() {
             <Route path="bookings/dj/about" element={<DjInfo/>} />
             <Route path="bookings/influencer/about" element={<InfluencerInfo/>} />
             <Route path="bookings/liveband/about" element={<BandInfo/>} />
+            <Route path="contact" element={<div className="text-center font-[700] uppercase text-[2.25rem]">Contact us</div>} />
           </Routes>
         </Suspense>
       </main>
