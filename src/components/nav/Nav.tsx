@@ -156,11 +156,11 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               {item.title}
             </button>
              {(item.title!=="home")&&(<div className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", display:item.display?"block":"none",
-            left:item.title==="bookings"||item.title==="our services"?"47%":"80%"
+            left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:item.title==="our services"?"20px":"0px"
             }}>
               <button className="absolute right-[27px]" style={{top:item.title==="company"?"40px":"0"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
              <ul className="my-[67px]" style={{display:"block",
-  paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px"
+  paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px",
 
             }}>
              {item.dropMenu}
