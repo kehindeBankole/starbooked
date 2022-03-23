@@ -41,3 +41,4 @@ export {default as DjInfo} from "./artist info/Dj.png";
 export {default as InfluencerInfo} from "./artist info/influencer.png";
 export {default as McInfo} from "./artist info/mc.png";
 export {default as MusicianInfo} from "./artist info/musician.png";
+export {default as CloseList} from "./closedrop_btn.svg"

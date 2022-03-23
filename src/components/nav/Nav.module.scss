@@ -38,6 +38,11 @@
     }
     .dropdown{
       background-color: $six;
+     color: black;
+     ul li{margin-bottom: 20px;
+    font-weight: 700;
+  text-transform: uppercase;
+  }
      
     }
   }

@@ -4,35 +4,53 @@ import { gsap } from "gsap";
 import logoWhite from "../../assets/images/logowhite.svg";
 import logoDark from "../../assets/images/logodark.svg";
 import { useNavigate } from "react-router-dom";
-
+import { CloseList } from "../../assets/images";
+import {Link} from "react-router-dom"
+type Drop={
+dropMenu?:any
+url:string;
+title:string;
+display?:boolean;
+}
 function Nav() {
   const timeline = gsap.timeline({ paused: true });
   const navigate = useNavigate();
   console.log(window.location.pathname);
-  const [show,setShow]=useState(false) 
-  const navItems: { url: string; title: string;display?:boolean }[] = [
-    {
-      url: "/",
-      title: "home",
-   
-    },
-    {
-      url: "bookings",
-      title: "bookings",
-display:false},
-    {
-      url: "services",
-      title: "our services",
-display:false},
-    {
-      url: "company",
-      title: "company",
-display:false},
-    {
-      url: "news",
-      title: "news",
+
+const Items:Drop[]=[
+  {
+    url: "/",
+    title: "home"
+ 
+  },
+  {
+    url: "bookings",
+    title: "bookings",
+display:false,
+dropMenu:<><li> <Link to="bookings/liveband">live band</Link> </li> <li> <Link to="bookings/dj">djs</Link> </li><li> <Link to="bookings/musician">musician</Link> </li><li><Link to="bookings/comedian">comedian</Link></li><li><Link to="bookings/mc">mc</Link></li><li><Link to="bookings/influencer">influencers</Link></li> </>
+
+},
+  {
+    url: "services",
+    title: "our services",
+display:false,
+dropMenu:<><li><Link to="">Talent Management</Link> </li> <li> <Link to="bookings">Bookings</Link> </li><li><Link to="">brand partnership</Link> </li><li><Link to="">PR</Link> </li><li> <Link to="">social media management</Link> </li><li> <Link to="">label services</Link> </li> </>
+
+},
+  {
+    url: "company",
+    title: "company",
+display:false,
+dropMenu:<><li><Link to="company/aboutus">About us</Link> </li> <li><Link to=""> Contact</Link></li></>
+
+},
+  {
+    url: "news",
+    title: "news",
 }
-  ];
+]
+
+  const [navItems,setNavItem]= useState(Items)
   useEffect(() => {
     timeline
       .to(".mobileNav", { x: 0, duration: 0.2 })
@@ -48,6 +66,14 @@ display:false},
     // window.location.href ===
     // `${window.location.protocol}//${window.location.host}/
   });
+
+  const getTitle=(title:string)=>{
+setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty("dropMenu")?{...navItem,display: !navItem.display}: {...navItem,display:false}))
+  }
+
+  const CloseDropDown=()=>{
+  setNavItem(  navItems.map(item=>({...item,display:false})))
+  }
 
   return (
     <div className={`${styles.nav}  d-flex `} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
@@ -106,10 +132,11 @@ display:false},
         </div>
         <div className={`${styles.navItems} hidden lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
+            <>
             <button 
               onClick={() => {
-                navigate(item.url);
-                item.hasOwnProperty("display")&&setShow(!show)
+              ( item.title==="home"||item.title==="news")&&navigate(item.url);
+             getTitle(item.title)
               }}
               className="text-lg text-one mr-30"
               style={{
@@ -127,14 +154,19 @@ display:false},
               
             >
               {item.title}
-              {item.title!=="home"&&(<div className={`absolute top-[10%]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", display:item.display?"block":"none"}}>
-                <ul>
-                  <li>one </li>
-                  <li>two </li>
-                  <li>three </li>
-                </ul>
-                </div>)}
             </button>
+             {(item.title!=="home")&&(<div className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", display:item.display?"block":"none",
+            left:item.title==="bookings"||item.title==="our services"?"47%":"80%"
+            }}>
+              <button className="absolute right-[27px]" style={{top:item.title==="company"?"40px":"0"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
+             <ul className="my-[67px]" style={{display:"block",
+  paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px"
+
+            }}>
+             {item.dropMenu}
+             </ul>
+             </div>)}
+             </>
           ))}
         </div>
         
