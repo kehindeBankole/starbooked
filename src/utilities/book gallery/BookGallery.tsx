@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./BookGallery.module.scss"
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 interface Props{
     category_img:any;
 handle1:any;
@@ -12,7 +12,7 @@ url:string
 }
 
 function BookGallery(props:Props) {
-
+const navigate= useNavigate() 
   return (
   
       <>
@@ -47,7 +47,7 @@ function BookGallery(props:Props) {
 
      </div>
      <div className='absolute bottom-[0]  shadow-lg rounded-[20px] w-[100%]'>
-   <button className={`${styles.book_btn} uppercase w-[100%] text-[1.125rem] md:h-[99px] h-[60px] rounded-[20px]`}>book</button>
+   <button className={`${styles.book_btn} uppercase w-[100%] text-[1.125rem] md:h-[99px] h-[60px] rounded-[20px]`} onClick={()=>navigate("/book")}>book</button>
    </div>
    </div>     
   

@@ -47,7 +47,7 @@ full story
 
 <div className='flex mt-[123px]'>
 <div className={`${styles.load_more} m-auto`}>
-<Button text="load more +" width="171px" height="20px" radius={"15px"}/>
+    <button className={`w-[171px] h-[60px] rounded-[15px] uppercase text-[1.125rem] font-[700]`}>load more +</button>
 </div>
 </div>
         </div>

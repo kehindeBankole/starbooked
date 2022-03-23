@@ -38,7 +38,7 @@ dropMenu:<><li><Link to="">Talent Management</Link> </li> <li> <Link to="booking
 
 },
   {
-    url: "company",
+    url: "company/aboutus",
     title: "company",
 display:false,
 dropMenu:<><li><Link to="company/aboutus">About us</Link> </li> <li><Link to=""> Contact</Link></li></>
@@ -67,9 +67,12 @@ dropMenu:<><li><Link to="company/aboutus">About us</Link> </li> <li><Link to="">
     // `${window.location.protocol}//${window.location.host}/
   });
 
-  const getTitle=(title:string)=>{
-setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty("dropMenu")?{...navItem,display: !navItem.display}: {...navItem,display:false}))
-  }
+  const getTitle=(e:any,title:string)=>{
+setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty("dropMenu")?{...navItem,display: !navItem.display}:{...navItem,display:false}))
+
+}
+
+
 
   const CloseDropDown=()=>{
   setNavItem(  navItems.map(item=>({...item,display:false})))
@@ -94,7 +97,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           </button>
         </div>
         <div
-          className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-0 left-0 bg-five h-screen w-screen z-50 justify-center items-center`}
+          className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-0 left-[0] bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
         >
           <button
             className="absolute closeIcon"
@@ -134,9 +137,10 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           {navItems.map((item, index) => (
             <>
             <button 
-              onClick={() => {
+            id="dropdown-btn"
+              onClick={(e) => {
               ( item.title==="home"||item.title==="news")&&navigate(item.url);
-             getTitle(item.title)
+             getTitle(e.target,item.title)
               }}
               className="text-lg text-one mr-30"
               style={{
@@ -153,9 +157,9 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               }}
               
             >
-              {item.title}
+             {item.title}
             </button>
-             {(item.title!=="home")&&(<div className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", display:item.display?"block":"none",
+             {(item.title!=="home")&&(<div className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"350px":item.display&&item.title==="company"?"168px":"0px",overflow:"hidden", transition:"all .5s",
             left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:item.title==="our services"?"20px":"0px"
             }}>
               <button className="absolute right-[27px]" style={{top:item.title==="company"?"40px":"0"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
@@ -163,7 +167,8 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
   paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px",
 
             }}>
-             {item.dropMenu}
+              <span className="" onClick={()=>setNavItem(navItems.map(navItem=>({...navItem,display:false})))}> {item.dropMenu}</span>
+            
              </ul>
              </div>)}
              </>
@@ -171,8 +176,8 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
         </div>
         
       </div>
-  <div className={`${styles.bottomBar} container capitalize ${styles.home}`} style={{marginTop:100,marginBottom:100 }}>
-  { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"> Home <span style={{color:"#F9A61B"}}> {
+  <div className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
+  { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"> Home <span style={{color:"#F9A61B"}}> {
       `> ${window.location.pathname.split("/")[1]}  ${window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""} `
       } </span>
       </div>}

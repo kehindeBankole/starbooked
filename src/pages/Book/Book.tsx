@@ -3,10 +3,10 @@ import { Input, Button,TextArea } from "../../utilities";
 import styles from "./Book.module.scss"
 function Book() {
   return (
-   <section className={`${styles.book_container}`}>
+   <section className={`${styles.book_container} fixed top-[0] w-[100%] h-[100%] z-[100] overflow-y-scroll`}>
        <div className='container'>
            <header className='text-center uppercase pt-[181px] mb-[107px]  lg:text-[2.25rem] text-[1.5rem] md:text-[2rem] font-[700]'>Book now</header>
-       <div className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto">
+       <div className="mb-[428px] w-[80%] md:w-[60%] lg:w-[40%] mx-auto">
           <div className="">
             <Input label="name*" height="50px" width="100%" />
           </div>

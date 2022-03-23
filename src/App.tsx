@@ -22,13 +22,13 @@ const McInfo= lazy(() => import("./pages/artist info/Mc"));
 const DjInfo= lazy(() => import("./pages/artist info/Dj"));
 const InfluencerInfo= lazy(() => import("./pages/artist info/Influencer"));
 const Book= lazy(() => import("./pages/Book/Book"));
-function SmallNav(){
-  return(
-    <div className="container mt-80">
+// function SmallNav(){
+//   return(
+//     <div className="container mt-80">
   
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -56,12 +56,18 @@ function App() {
             <Route path="bookings/dj/about" element={<DjInfo/>} />
             <Route path="bookings/influencer/about" element={<InfluencerInfo/>} />
             <Route path="bookings/liveband/about" element={<BandInfo/>} />
-            <Route path="/book" element={<Book/>} />
           </Routes>
         </Suspense>
       </main>
-
      
+     <section className="book">
+     <Suspense fallback={<p>loading</p>}>
+     <Routes>
+      <Route path="/book" element={<Book/>} />
+
+      </Routes>
+      </Suspense>
+     </section>
 
       <section className="our_services">
         {/* <OurService/> */}
