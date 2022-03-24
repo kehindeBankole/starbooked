@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import {Nav,Footer,Booking,SignUp,OurService} from "./components";
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import { GlobalProvider } from "./GlobalContext/GlobalContext";
 // import Bookings_page from "./pages/bookings/Bookings_Page";
 const Home = lazy(() => import("./pages/home/Home"));
@@ -32,7 +31,6 @@ const InfluencerInfo= lazy(() => import("./pages/artist info/Influencer"));
 //   )
 // }
 function App() {
-const [showForm,setShowForm]=useState(false)
 
   return (
     <GlobalProvider>
