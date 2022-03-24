@@ -1,5 +1,5 @@
 import styles from "./Booking.module.scss";
-import { Input, Button } from "../../utilities";
+import { Input, Button,TextArea } from "../../utilities";
 function Booking({title , subtitle}:{title:string , subtitle:string}) {
   return (
     <section className={`${styles.section} capitalize items-center justify-center flex`}>
@@ -11,7 +11,7 @@ function Booking({title , subtitle}:{title:string , subtitle:string}) {
           </p>
         </div>
 
-        <div className="w-[80%] md:w-[40%] mx-auto">
+        <div className="w-[80%] md:w-[60%] lg:w-[40%] mx-auto">
           <div className="">
             <Input label="name" height="50px" width="100%" />
           </div>

@@ -1,8 +1,9 @@
 import styles from "./footer.module.scss";
 import logoWhite from "../../assets/images/logowhite.svg";
 import { Facebook, Twitter, Linkdin, Instagram } from "../../assets/images";
-
+import { useNavigate } from "react-router-dom";
 function Footer() {
+  const navigate=useNavigate()
   return (
     <footer className={`${styles.footer} relative bottom-0 p-[20px] flex-wrap`}>
       <div className={`flex flex-wrap justify-between ${styles.foot_border}`}>
@@ -21,19 +22,19 @@ function Footer() {
           <h2 className="uppercase">quick links</h2>
           <ul>
             <li>
-              <button className="capitalize">about</button>
+              <button className="capitalize" onClick={()=>navigate("company/aboutus")}>about</button>
             </li>
 
             <li>
-              <button className="capitalize">news</button>{" "}
+              <button className="capitalize" onClick={()=>navigate("/news")}>news</button>{" "}
             </li>
 
             <li>
-              <button className="capitalize">booking</button>
+              <button className="capitalize" onClick={()=>navigate("/bookings")}>booking</button>
             </li>
 
             <li>
-              <button className="capitalize">services</button>
+              <button className="capitalize" onClick={()=>navigate("/services")}>services</button>
             </li>
           </ul>
         </div>

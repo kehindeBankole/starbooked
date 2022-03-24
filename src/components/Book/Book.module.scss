@@ -1,0 +1,15 @@
+@import "../../scss/index.scss";
+
+.book_container{
+    background-color:$four;
+    color: $one;
+    text-transform: capitalize;
+}
+.book_container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .book_container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

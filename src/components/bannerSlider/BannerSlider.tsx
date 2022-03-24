@@ -7,7 +7,10 @@ import { ReactComponent as ChevronRight } from "../../assets/images/chevronright
 import { ReactComponent as ChevronSmall } from "../../assets/images/small.svg";
 import img1 from "../../assets/images/1.png";
 import Button from "../button/Button";
+import { useNavigate } from "react-router-dom";
 function BannerSlider() {
+const navigate=useNavigate()
+
   const indicatorStyles: React.CSSProperties = {
     background: "#3C3C3C",
     width: 10,
@@ -101,7 +104,7 @@ function BannerSlider() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <button className={styles.btn}>
+            <button onClick={()=>navigate("bookings")} className={styles.btn}>
               booking <ChevronSmall />
             </button>
           </div>

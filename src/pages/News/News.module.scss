@@ -1,0 +1,35 @@
+@import "../../scss/index.scss";
+
+.News{
+header{
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.lat_news{
+    color:$six;
+}
+.full_story{
+    @extend .lat_news;
+}
+
+.headline{
+    margin: 20px 0 30px 0;
+}
+
+}
+
+.load_more{
+    button{
+        background-color: $six;
+
+    }
+}
+
+
+@media screen and (max-width:1226px) and (min-width:1024px) {
+    .headline{
+        font-size: 1.3rem;
+    }
+    
+}

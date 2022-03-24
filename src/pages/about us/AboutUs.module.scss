@@ -1,0 +1,59 @@
+@import "../../scss/index.scss";
+
+.hero{
+    header{
+        font: {
+            weight: 700;
+            
+        }
+        text-transform:uppercase ;
+    }
+    // .hero_text{
+       
+    //     margin: {
+    //         left: 13px;
+    //        right: 20px;
+    //        bottom: 37px;
+    //        top:37px
+    //     }
+        
+    // }
+
+    p{
+        margin-top: 37px;
+        
+    }
+  
+  
+}
+
+@media screen and (max-width:1023px){
+    .hero{
+        .hero_content{
+            flex-direction: column-reverse;
+
+            div{
+               .bookImg{
+                   margin-bottom: 20px;
+               }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width:1024px){
+    header{
+        // font-size: 2.5rem !important;
+    }
+}
+@media screen and (max-width:1226px) and (min-width:1024px){
+    header{
+        font-size: 2.5rem !important;
+    }
+
+    .hero_text_container{
+        // flex-basis: 44% !important;
+padding:0 10px ;
+    }
+}
