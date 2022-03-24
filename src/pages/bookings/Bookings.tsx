@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../utilities'
+
 import {Talent2,BrandPartner2,Booking2,PR2,Management2,LabelService2} from "../../assets/images"
 import {ServicesCard} from "../../utilities"
 import styles from "./Bookings.module.scss"
