@@ -1,11 +1,13 @@
 import React, { Suspense, lazy } from "react";
 import {Nav,Footer,Booking,SignUp,OurService} from "./components";
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { GlobalProvider } from "./GlobalContext/GlobalContext";
 // import Bookings_page from "./pages/bookings/Bookings_Page";
-
 const Home = lazy(() => import("./pages/home/Home"));
 const Services = lazy(() => import("./pages/services/Services"));
 const Company= lazy(() => import("./pages/company/Company"));
+const Bookings= lazy(() => import("./pages/bookings/Bookings"));
 const Bookings_Page= lazy(() => import("./pages/bookings/Bookings_Page"));
 const AboutUs= lazy(() => import("./pages/about us/AboutUs"));
 const News= lazy(() => import("./pages/News/News"));
@@ -21,7 +23,7 @@ const MusicianInfo= lazy(() => import("./pages/artist info/Musician"));
 const McInfo= lazy(() => import("./pages/artist info/Mc"));
 const DjInfo= lazy(() => import("./pages/artist info/Dj"));
 const InfluencerInfo= lazy(() => import("./pages/artist info/Influencer"));
-const Book= lazy(() => import("./pages/Book/Book"));
+// const Book= lazy(() => import("./pages/Book/Book"));
 // function SmallNav(){
 //   return(
 //     <div className="container mt-80">
@@ -30,8 +32,12 @@ const Book= lazy(() => import("./pages/Book/Book"));
 //   )
 // }
 function App() {
+const [showForm,setShowForm]=useState(false)
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <GlobalProvider>
+
+    <div className="flex flex-col min-h-screen w-[100%] overflow-x-hidden">
       <Nav />
      
       <main className="main">
@@ -56,19 +62,12 @@ function App() {
             <Route path="bookings/dj/about" element={<DjInfo/>} />
             <Route path="bookings/influencer/about" element={<InfluencerInfo/>} />
             <Route path="bookings/liveband/about" element={<BandInfo/>} />
-            <Route path="contact" element={<div className="text-center font-[700] uppercase text-[2.25rem]">Contact us</div>} />
+            <Route path="contact" element={<div className="text-center font-[700] uppercase  text-[2.25rem]">Contact us</div>} />
           </Routes>
         </Suspense>
       </main>
      
-     <section className="book">
-     <Suspense fallback={<p>loading</p>}>
-     <Routes>
-      <Route path="/book" element={<Book/>} />
-
-      </Routes>
-      </Suspense>
-     </section>
+ 
 
       <section className="our_services">
         {/* <OurService/> */}
@@ -83,6 +82,8 @@ function App() {
         <Footer />
       </footer>
     </div>
+    </GlobalProvider>
+
   );
 }
 

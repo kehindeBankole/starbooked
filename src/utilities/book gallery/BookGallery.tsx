@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "./BookGallery.module.scss"
 import {Link,useNavigate} from "react-router-dom"
+import {useContext} from "react"
+import {GlobalContext} from "../../GlobalContext/GlobalContext"
 interface Props{
     category_img:any;
 handle1:any;
@@ -8,11 +10,21 @@ handle2:any;
 handle3:any;
 stars:any;
 title:string;
-url:string
+url:string;
+
+
+}
+
+type Show={
+  show?:any
 }
 
 function BookGallery(props:Props) {
-const navigate= useNavigate() 
+const context=useContext(GlobalContext)
+// console.log(context);
+const {show}:Show=context
+
+// const navigate= useNavigate() 
   return (
   
       <>
@@ -23,7 +35,7 @@ const navigate= useNavigate()
      
      <div className={`px-[15px] sm:pt-[50px] pt-[20px] sm:text-[1.125rem] text-[0.8rem] capitalize ${styles.infos}`}>
 <div className='flex justify-between mb-[7px]'>Award <span id='award_number' className='text-right'>20</span></div>
-<div className='flex justify-between mb-[7px] items-center'>Ratings<span className='flex' id='stars'>{props.stars.map((item:any)=><img src={item} className="sm:w-[13px] sm:h-[13px] w-[8px] h-[8px]" />)}
+<div className='flex justify-between mb-[7px] items-center'>Ratings<span className='flex' id='stars'>{props.stars.map((item:any,index:number)=><img key={index} src={item} className="sm:w-[13px] sm:h-[13px] w-[8px] h-[8px]" alt="stars" />)}
     </span></div>
 <div className='flex justify-between mb-[22px]'>Active years<span id='act_yrs'>20</span></div>
 <div className={`text-[0.75rem] mb-[37px] flex justify-between ${styles.handles}`}>
@@ -47,7 +59,7 @@ const navigate= useNavigate()
 
      </div>
      <div className='absolute bottom-[0]  shadow-lg rounded-[20px] w-[100%]'>
-   <button className={`${styles.book_btn} uppercase w-[100%] text-[1.125rem] md:h-[99px] h-[60px] rounded-[20px]`} onClick={()=>navigate("/book")}>book</button>
+   <button  className={`${styles.book_btn} uppercase w-[100%] text-[1.125rem] md:h-[99px] h-[60px] rounded-[20px]`} onClick={()=>{ show()}}>book</button>
    </div>
    </div>     
   

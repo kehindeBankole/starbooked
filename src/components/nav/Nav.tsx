@@ -111,6 +111,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           </button>
           {navItems.map((item, index) => (
             <button
+            key={index}
               onClick={() => {
                 timeline.reverse();
                 navigate(item.url);
@@ -137,6 +138,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           {navItems.map((item, index) => (
             <>
             <button 
+            key={index}
             id="dropdown-btn"
               onClick={(e) => {
               ( item.title==="home"||item.title==="news")&&navigate(item.url);
@@ -159,12 +161,12 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             >
              {item.title}
             </button>
-             {(item.title!=="home")&&(<div className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"350px":item.display&&item.title==="company"?"168px":"0px",overflow:"hidden", transition:"all .5s",
+             {(item.title!=="home")&&(<div key={index+1} className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"350px":item.display&&item.title==="company"?"168px":"0px",overflow:"hidden", transition:"all .5s",
             left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:item.title==="our services"?"20px":"0px"
             }}>
               <button className="absolute right-[27px]" style={{top:item.title==="company"?"40px":"0"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
              <ul className="my-[67px]" style={{display:"block",
-  paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px",
+              paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px",
 
             }}>
               <span className="" onClick={()=>setNavItem(navItems.map(navItem=>({...navItem,display:false})))}> {item.dropMenu}</span>
@@ -176,7 +178,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
         </div>
         
       </div>
-  <div className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
+  <div  className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
   { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"> Home <span style={{color:"#F9A61B"}}> {
       `> ${window.location.pathname.split("/")[1]}  ${window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""} `
       } </span>

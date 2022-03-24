@@ -2,6 +2,8 @@ import React from 'react'
 import {DJS,Star,FB,Insta,Twitter2, Musicians} from "../../assets/images"
 import styles from "./BookPages.module.scss"
 import {BookGallery} from "../../utilities"
+import {Book} from "../../components"
+
 function BookMusician() {
 
   const Bands:{category_img:any;handle1:any,handle2:any,handle3:any,stars:any,title:string,url:string}[]=[
@@ -81,7 +83,7 @@ url:"about"
     ))}
       </div>
 <div>
-
+<Book/>
 </div>
     </div>
   </section>

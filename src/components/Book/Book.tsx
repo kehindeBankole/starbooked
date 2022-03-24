@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState,useContext } from 'react'
 import { Input, Button,TextArea } from "../../utilities";
+import * as BI from "react-bootstrap-icons"
 import styles from "./Book.module.scss"
+import {GlobalContext} from "../../GlobalContext/GlobalContext"
+
+
+
+
 function Book() {
+  
+  const context=useContext(GlobalContext)
+  const {show}:any=context
+  const {showForm}:any=context.showForm
+  console.log(showForm);
+  
   return (
-   <section className={`${styles.book_container} fixed top-[0] w-[100%] h-[100%] z-[100] overflow-y-scroll`}>
-       <div className='container'>
-           <header className='text-center uppercase pt-[181px] mb-[107px]  lg:text-[2.25rem] text-[1.5rem] md:text-[2rem] font-[700]'>Book now</header>
+   <section className={`${styles.book_container} overflow-auto z-[100] top-[0] left-[0] h-[100%] fixed`} style={{width:showForm?"100%":"0%", transition:"all 1s"}} >
+       <div className='container relative'>
+           <header className='text-center uppercase pt-[181px] pb-[107px]  lg:text-[2.25rem] text-[1.5rem] md:text-[2rem] font-[700]'>Book now</header>
        <div className="mb-[428px] w-[80%] md:w-[60%] lg:w-[40%] mx-auto">
           <div className="">
             <Input label="name*" height="50px" width="100%" />
@@ -28,6 +40,7 @@ function Book() {
             <Button text="Send a message" height="68px" width="100%" />
           </div>
         </div>
+        <button onClick={()=>show()} className='absolute top-[98px] text-light right-[0] text-[2.5rem] font-[700]'><BI.X/></button>
        </div>
          
    </section>
