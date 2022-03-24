@@ -73,8 +73,8 @@ function Bookings() {
           
            <div className="md:flex px-[20px] flex-wrap justify-center">
 
-{ServiceDetails.map(serviceDetail=>(
-  <ServicesCard
+{ServiceDetails.map((serviceDetail,index)=>(
+  <ServicesCard key={index}
   title={serviceDetail.title} 
  text={serviceDetail.text}
 img={serviceDetail.img}/>
