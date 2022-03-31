@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Explore } from '../../components'
 import {Talent2,BrandPartner2,Booking2,PR2,Management2,LabelService2} from "../../assets/images"
 import {ServicesCard} from "../../utilities"
 import styles from "./Bookings.module.scss"
@@ -66,7 +66,9 @@ function Bookings() {
         </div>
       
         
+<Explore/>
         <div>
+
           <div className="container">
           <header className={`uppercase ${styles.header} text-[2rem] sm:text-[3rem] lg:text-[4rem] text-center`}>Our services</header>
       
