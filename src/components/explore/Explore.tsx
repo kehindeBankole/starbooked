@@ -42,8 +42,8 @@ function Explore() {
 </ul>
   </div>
 
-{exploreArr.map(item=>(
-  <div className="flex-shrink-0 relative mr-[24px] mb-[24px]">
+{exploreArr.map((item,index)=>(
+  <div className="flex-shrink-0 relative mr-[24px] mb-[24px]" key={index}>
   <img src={item.img}  alt={item.title} />
 <p className="absolute bottom-[16px] left-[50%] text-[white] translate-x-[-50%]  font-[700] uppercase">{item.title}</p>
   </div>
