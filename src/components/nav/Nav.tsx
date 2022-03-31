@@ -136,9 +136,8 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
         </div>
         <div className={`${styles.navItems} hidden lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
-            <>
+            <span key={index}>
             <button 
-            key={index}
             id="dropdown-btn"
               onClick={(e) => {
               ( item.title==="home"||item.title==="news")&&navigate(item.url);
@@ -173,7 +172,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             
              </ul>
              </div>)}
-             </>
+             </span>
           ))}
         </div>
         
