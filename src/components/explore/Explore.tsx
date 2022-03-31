@@ -30,8 +30,8 @@ function Explore() {
 <button className={`${styles.btn} md:w-[156px] md:h-[60px] hidden lg:block uppercase`}>booking</button>
 </div>
 
-<div id="explore-slider" className={`${styles.exploreSlider} my-[2rem] flex-1 flex overflow-x-auto items-end`}>
-  <div className="pt-[46px] pb-[41px] ml-[24px] mb-[24px] flex-shrink-0 mr-[45px] w-[218px] rounded-[40px] bg-[#D8D7D7]">
+<div id="explore-slider" className={`${styles.exploreSlider} my-[2rem] flex-1 flex overflow-x-auto snap-x items-end`}>
+  <div className="pt-[46px] pb-[41px] snap-center ml-[24px] mb-[24px] flex-shrink-0 mr-[45px] w-[218px] rounded-[40px] bg-[#D8D7D7]">
   <ul className="font-[700] ml-[49px]">
     <li className="uppercase mb-[20px]">live band</li>
     <li className="mb-[20px]">DJs</li>
@@ -43,7 +43,7 @@ function Explore() {
   </div>
 
 {exploreArr.map((item,index)=>(
-  <div className="flex-shrink-0 relative mr-[24px] mb-[24px]" key={index}>
+  <div className="flex-shrink-0 relative snap-center mr-[24px] mb-[24px]" key={index}>
   <img src={item.img}  alt={item.title} />
 <p className="absolute bottom-[16px] left-[50%] text-[white] translate-x-[-50%]  font-[700] uppercase">{item.title}</p>
   </div>
