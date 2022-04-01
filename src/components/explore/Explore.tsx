@@ -31,7 +31,7 @@ function Explore() {
             <div className='flex lg:flex-row flex-col flex-wrap'>
 <div className="lg:w-[40%]  lg:text-left text-center ">
  <header className="font-[700] lg:text-[4rem] sm:text-[2rem] text-[1.4rem] lg:w-[30%]  uppercase ">explore our roosters</header>
-<button  onClick={()=>navigate("/bookings")} className={`${styles.btn} md:w-[156px] text-[1.125rem] md:h-[60px] hidden lg:block uppercase`}>booking <ChevronSmall className="inline"/> </button>
+<button  onClick={()=>navigate("/bookings")} className={`${styles.btn} md:w-[156px] text-[1.125rem] md:h-[60px] hidden lg:block uppercase`}>booking <ChevronSmall className="inline ml-[12px]"/> </button>
 </div>
 
 <div id="explore-slider" className={`${styles.exploreSlider} my-[2rem] flex-1 flex overflow-x-auto snap-x items-end`}>
@@ -55,7 +55,7 @@ function Explore() {
 
 </div>
 <div className="w-[100%]">
-<button onClick={()=>navigate("/bookings")} className={`${styles.btn} lg:hidden m-auto lg:w-[156px] lg:h-[60px] w-[7rem] h-[3rem] text-[.8rem] uppercase`}>booking <ChevronSmall className="inline w-[7%]"/> </button>
+<button onClick={()=>navigate("/bookings")} className={`${styles.btn} lg:hidden m-auto lg:w-[156px] lg:h-[60px] w-[7rem] h-[3rem] text-[.8rem] uppercase`}> booking <ChevronSmall className="inline w-[7%] ml-[12px]"/> </button>
 
 </div>
 

@@ -41,7 +41,7 @@ dropMenu:<><li><Link to="">Talent Management</Link> </li> <li> <Link to="booking
     url: "company/aboutus",
     title: "company",
 display:false,
-dropMenu:<><li><Link to="company/aboutus">About us</Link> </li> <li><Link to="contact"> Contact</Link></li></>
+dropMenu:<><li style={{lineHeight:"15px"}}><Link to="company/aboutus">About us</Link> </li> <li><Link to="contact"> Contact</Link></li></>
 
 },
   {
@@ -163,10 +163,10 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
              {(item.title!=="home")&&(<div key={index+1} className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"350px":item.display&&item.title==="company"?"168px":"0px",overflow:"hidden", transition:"all .5s",
             left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:item.title==="our services"?"20px":"0px"
             }}>
-              <button className="absolute right-[27px]" style={{top:item.title==="company"?"40px":"0"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
+              <button className="absolute right-[27px]" style={{top:item.title==="company"?"30px":"0"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
              <ul className="my-[67px]" style={{display:"block",
               paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px",
-
+              margin:item.title==="company"?"56px 0":"67px 0"
             }}>
               <span className="" onClick={()=>setNavItem(navItems.map(navItem=>({...navItem,display:false})))}> {item.dropMenu}</span>
             
