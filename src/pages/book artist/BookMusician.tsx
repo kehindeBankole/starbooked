@@ -70,7 +70,7 @@ url:"about"
     
     
   return (
-    <section className=''>
+    <section className='mt-[150px]'>
     <div className='container '>
       <header className='text-center uppercase  lg:text-[4rem] text-[1.5rem] md:text-[2rem] font-[700]'>
         book your favourites

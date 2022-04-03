@@ -5,9 +5,9 @@ import BannerSlider from "../../components/bannerSlider/BannerSlider";
 import styles from "./Home.module.scss";
 function Home() {
   return (
-    <section className={`${styles.homeContainer}`}>
-     <div className="bg-five">
-     <div className={`${styles.banner} container  `}>
+    <section className={`${styles.homeContainer} `}>
+     <div className="bg-five pt-[5rem]">
+     <div className={`${styles.banner} container`}>
         <BannerSlider />
       </div>
      </div>

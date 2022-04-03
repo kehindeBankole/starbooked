@@ -40,7 +40,7 @@ function Book() {
             <Button text="Send a message" height="68px" width="100%" />
           </div>
         </div>
-        <button onClick={()=>show()} className='absolute top-[98px] text-light right-[0] text-[2.5rem] font-[700]'><BI.X/></button>
+        <button onClick={()=>show()} className='absolute top-[-20%] text-light right-[0] text-[2.5rem] font-[700]'><BI.X/></button>
        </div>
          
    </section>
