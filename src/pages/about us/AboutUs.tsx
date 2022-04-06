@@ -14,7 +14,7 @@ import {
 } from "../../assets/images";
 function AboutUs() {
   return (
-    <section className={`${styles.hero}  mt-[150px]`}>
+    <section className={`${styles.hero}  mt-[0px]`}>
   
   <div className={`pb-[159px] flex ${styles.hero_content} container justify-between items-center`}>
  
