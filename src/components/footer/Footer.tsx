@@ -13,8 +13,7 @@ function Footer() {
           </div>
 
           <div className="mt-[34px]" style={{ fontSize: "18px" }}>
-            Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit.
-            Lectus non sit libero tellus.
+          A platform to promote celebrities and also book them for their services
           </div>
         </div>
 
@@ -43,16 +42,20 @@ function Footer() {
           <h2 className="uppercase">our services</h2>
           <ul>
             <li>
-              <button className="capitalize">About</button>
+              <button className="capitalize">Talent Management</button>
             </li>
             <li>
-              <button className="capitalize"> news</button>
+              <button className="capitalize">Social Media Management</button>
             </li>
             <li>
-              <button className="capitalize"> booking</button>
+              <button className="capitalize">PR</button>
             </li>
             <li>
-              <button className="capitalize"> services</button>
+              <button className="capitalize">Label Services</button>
+            </li>
+
+            <li>
+              <button className="capitalize">Brand partnership</button>
             </li>
           </ul>
         </div>

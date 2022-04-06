@@ -1,6 +1,7 @@
 import React from 'react'
 import {DJS,Comedians,MCS,LiveBands,Musicians,Influencers} from "../../assets/images"
 import { Link } from 'react-router-dom';
+import styles from "./Bookings.module.scss"
 function Bookings_page() {
 
   const Booking_Items: { img: any; title: string,url:string }[]=[
@@ -38,7 +39,7 @@ function Bookings_page() {
   ]
 
   return (
-    <section className='mt-[150px]'>
+    <section className='mt-[0px]'>
       <div className='container'>
         <header className='text-center uppercase  lg:text-[4rem] text-[1.5rem] md:text-[2rem] font-[700]'>
           book your favourites
@@ -49,7 +50,15 @@ function Bookings_page() {
         {Booking_Items.map(item=>(
           <div className=' lg:w-[38%] md:w-[60%] sm:w-[70%] w-[100%] lg:m-[0] m-auto'>
           <Link to={`${item.url}`}>
-          <img className='w-[100%]' src={item.img} alt="" />
+            <div className={`${styles.img} relative`}>
+            <img className='w-[100%]' src={item.img} alt="" />
+        <div className={`${styles.overText} absolute rounded-[15px] font-[normal] overflow-hidden text-xl flex text-[white] top-[0] w-[100%] opacity-[.7]  bg-[black]`}>
+          <div className='m-auto'>
+          Lorem ipsum ta illo, cumque necessitatibus inventore at blanditiis commodi eligendi incidunt.
+          </div>
+        </div>
+
+            </div>
         </Link>
 
           <p className='mb-[125px] mt-[24px]'>{item.title}</p>

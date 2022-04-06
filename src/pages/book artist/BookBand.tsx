@@ -77,13 +77,13 @@ url:"about"
     
     
   return (
-    <section className='mt-[150px]'>
+    <section className='mt-[0px]'>
     <div className='container sm:pl-[61px] sm:pr-[57px]'>
       <header className='text-center uppercase  lg:text-[4rem] text-[1.5rem] md:text-[2rem] font-[700]'>
         book a live band
       </header>
 
-      <div className={`${styles.bands} flex flex-wrap justify-between  mt-[105px]`}>
+      <div className={`${styles.bands} flex flex-wrap justify-between  sm:mt-[105px] mt-[40px]`}>
     {Bands.map((item,index)=>(
       <BookGallery key={index} url={item.url} category_img={item.category_img} handle1={item.handle1} handle2={item.handle2} handle3={item.handle3} stars={item.stars} title={item.title} />
 

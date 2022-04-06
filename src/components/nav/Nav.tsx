@@ -38,10 +38,10 @@ dropMenu:<><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-
 
 },
   {
-    url: "company/aboutus",
+    url: "company/about",
     title: "company",
 display:false,
-dropMenu:<><li onClick={()=>navigate("company/aboutus")} className="hover:ml-[10px] transition-all" style={{lineHeight:"15px"}}>About us </li> <li onClick={()=>navigate("contact")}  className="hover:ml-[10px] transition-all">Contact</li></>
+dropMenu:<><li onClick={()=>navigate("company/about")} className="hover:ml-[10px] transition-all" style={{lineHeight:"15px"}}>About us </li> <li onClick={()=>navigate("contact")}  className="hover:ml-[10px] transition-all">Contact</li></>
 
 },
   {
@@ -79,22 +79,30 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
   }
 
   return (
-    <div className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"} z-10 w-screen h-[80px] d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
+    <div className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"}  z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
       <div
-        className={`${styles.content}  flex flex-row justify-between  w-screen`}
+        className={`${styles.content}  flex flex-row justify-between items-start w-screen`}
       >
-        <div className={`${styles.co} flex flex-row  justify-between w-screen`}>
-          <img
+        <div className={`${styles.co} flex flex-row flex-wrap justify-between w-screen sm:mt-[0]  mt-[20px] `}>
+          <div>
+<div className=""> <img className="sm:h-[100px] h-[50px]"
             src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
             alt="website logo"
             onClick={() => navigate("/")}
-          />
+          /></div>
+          <div className="capitalize text-[.6rem]  sm:mt-[10px] sm:pl-[61px]" style={{color:window.location.pathname==="/"?"#F9A61B":"black"}}>refined celebrity</div>
+
+          </div>
+     
+
+          
           <button onClick={() => timeline.play()}>
             <i
               className="ri-menu-5-fill lg:hidden"
               style={{ color: window.location.href===`${window.location.protocol}//${window.location.host}/` ? 'white':"black", fontSize: 25 }}
             ></i>
           </button>
+
         </div>
         <div
           className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-0 left-[0] bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
@@ -179,7 +187,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
       </div>
   <div  className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
   { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"><button className="inline capitalize" onClick={()=>navigate("/")}>Home</button>  <span style={{color:"#F9A61B"}}> 
-   {">"} <button onClick={()=>navigate(`${window.location.pathname.split("/")[1]}`)} className="inline capitalize">{window.location.pathname.split("/")[1]}</button>  <button className="inline">{window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""}</button> 
+   {">"} <button  onClick={()=>navigate(`${window.location.pathname.split("/")[1]}`)} className="inline capitalize">{window.location.pathname.split("/")[1]}</button>  <button className="inline capitalize">{window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""}</button> 
       </span>
       </div>}
   </div>

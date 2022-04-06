@@ -3,6 +3,7 @@ import { Explore } from '../../components'
 import {Talent2,BrandPartner2,Booking2,PR2,Management2,LabelService2} from "../../assets/images"
 import {ServicesCard} from "../../utilities"
 import styles from "./Bookings.module.scss"
+import { useNavigate } from 'react-router-dom'
 
 const ServiceDetails=[{
   title:"talent management",
@@ -36,6 +37,7 @@ const ServiceDetails=[{
 }
 ]
 function Bookings() {
+  const navigate= useNavigate()
   return (
       <section className={`${styles.hero}`}>
       
@@ -84,6 +86,11 @@ img={serviceDetail.img}/>
  
            </div> 
       
+           <div className='flex my-[123px] justify-end w-[100%] pl-[61px] pr-[57px]'>
+
+    <button onClick={()=>navigate("/services2")} className={`${styles.load_more} w-[171px] h-[60px] rounded-[15px] uppercase text-[1.125rem] font-[700]`}>load more +</button>
+
+</div>
           </div>
        
       </div>

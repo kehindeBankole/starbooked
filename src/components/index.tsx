@@ -7,3 +7,5 @@ export { default as OurServices2 } from "./our-service2/OurServices2";
 export { default as NewsGallery} from "./news card gallery/NewsGallery";
 export { default as Book} from "./Book/Book";
 export { default as Explore} from "./explore/Explore";
+export { default as OurVision} from "./OurVision/OurVision";
+export { default as OurMission} from "./OurMission/OurMission";

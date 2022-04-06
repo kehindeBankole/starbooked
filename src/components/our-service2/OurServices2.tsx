@@ -15,32 +15,32 @@ function OurServices2() {
   const data:{title:string , text:string , img:any}[] = [
     {
       title: "talent management",
-      text: "Amet minim mollit non deserunt ullamco est  sit aliqua dolor do amet sint. Velit officia  duis enim velit mollit. Exercitation veniam  sunt nostrud amet............",
+      text: "Ability to book a celebrity from anywhere in the world",
       img: Talent2,
     },
     {
       title: "Bookings",
-      text: "Amet minim mollit non deserunt ullamco est  sit aliqua dolor do amet sint. Velit officia  duis enim velit mollit. Exercitation veniam  sunt nostrud amet............",
+      text: "Ability to book a celebrity from anywhere in the world",
       img: Booking2,
     },
     {
       title: "brand patnership",
-      text: "Amet minim mollit non deserunt ullamco est  sit aliqua dolor do amet sint. Velit officia  duis enim velit mollit. Exercitation veniam  sunt nostrud amet............",
+      text: "Ability to book a celebrity from anywhere in the world",
       img: BrandPartner2,
     },
     {
       title: "PR",
-      text: "Amet minim mollit non deserunt ullamco est  sit aliqua dolor do amet sint. Velit officia  duis enim velit mollit. Exercitation veniam  sunt nostrud amet............",
+      text: "Ability to book a celebrity from anywhere in the world",
       img: PR2,
     },
     {
       title: "social media management",
-      text: "Amet minim mollit non deserunt ullamco est  sit aliqua dolor do amet sint. Velit officia  duis enim velit mollit. Exercitation veniam  sunt nostrud amet............",
+      text: "Ability to book a celebrity from anywhere in the world",
       img: Social,
     },
     {
       title: "label services",
-      text: "Amet minim mollit non deserunt ullamco est  sit aliqua dolor do amet sint. Velit officia  duis enim velit mollit. Exercitation veniam  sunt nostrud amet............",
+      text: "Ability to book a celebrity from anywhere in the world",
       img: LabelService2,
     },
   ];

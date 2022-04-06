@@ -51,7 +51,7 @@ const handleClose = () => setOpen(false);
   return (
   
       <>
-    <div className={`${styles.card_container} mb-[35px] m-auto lg:w-[32%] md:w-[100%] p-[20px] lg:p-[0]`}>
+    <div className={`${styles.card_container} sm:mb-[35px] m-auto lg:w-[32%] md:w-[100%] p-[20px] lg:p-[0]`}>
     <div className={` ${styles.card}  flex md:h-[350px] justify-center`}>
          
          <div className='relative'> <img className='sm:w-[316px] w-[316px] h-[100%] rounded-[20px]' src={props.category_img} alt="" />
@@ -100,8 +100,8 @@ const handleClose = () => setOpen(false);
   aria-describedby="modal-modal-description"
 >
   <Box sx={style}>
-  <div className="relative">
-    <div className=''>
+  <div className="relative capitalize">
+    <div className=' '>
 
             <Input label="name*" height="50px" width="100%" />
           </div>
