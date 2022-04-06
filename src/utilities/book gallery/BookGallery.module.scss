@@ -11,6 +11,12 @@
    
 }
 
+@media screen and (max-width:1158px) and (min-width:1000px) {
+.card_container{
+    flex-basis:48%;
+}
+}
+
 .book_btn{
     background-color: $six;
     font-weight:700 ;

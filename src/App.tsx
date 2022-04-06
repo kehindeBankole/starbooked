@@ -40,14 +40,15 @@ function App() {
      
       <main className="main">
    
-        <Suspense fallback={<p>loading</p>}>
+        <Suspense fallback={<p style={{textAlign:"center"}}>loading</p>}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/services2" element={<Bookings />} />
+
             <Route path="/services" element={<Services />} />
             {/* <Route path="/company" element={<Company />} /> */}
             <Route path="/bookings" element={<Bookings_Page />} />
-            <Route path="/services2" element={<Bookings />} />
-            <Route path="/company/aboutus" element={<AboutUs />} />
+            <Route path="/company/about" element={<AboutUs />} />
             <Route path="news" element={<News/>} />
             <Route path="bookings/liveband" element={<BookBand/>} />
             <Route path="bookings/dj" element={<BookDj/>} />
@@ -61,7 +62,7 @@ function App() {
             <Route path="bookings/dj/about" element={<DjInfo/>} />
             <Route path="bookings/influencer/about" element={<InfluencerInfo/>} />
             <Route path="bookings/liveband/about" element={<BandInfo/>} />
-            <Route path="contact" element={<div className="text-center font-[700] uppercase  text-[2.25rem]">Contact us</div>} />
+            <Route path="contact" element={<div className="text-center font-[700] uppercase mt-[105px] text-[2.25rem]">Contact us</div>} />
           </Routes>
         </Suspense>
       </main>

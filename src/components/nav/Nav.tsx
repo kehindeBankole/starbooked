@@ -27,21 +27,21 @@ const Items:Drop[]=[
     url: "bookings",
     title: "bookings",
 display:false,
-dropMenu:<><li> <Link to="bookings/liveband">live band</Link> </li> <li> <Link to="bookings/dj">djs</Link> </li><li> <Link to="bookings/musician">musician</Link> </li><li><Link to="bookings/comedian">comedian</Link></li><li><Link to="bookings/mc">mc</Link></li><li><Link to="bookings/influencer">influencers</Link></li> </>
+dropMenu:<><li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[10px] transition-all"> live band </li> <li onClick={()=>navigate("bookings/dj")} className="hover:ml-[10px] transition-all"> djs</li><li onClick={()=>navigate("bookings/musician")} className="hover:ml-[10px] transition-all">musician </li><li onClick={()=>navigate("bookings/comedian")} className="hover:ml-[10px] transition-all">comedian</li><li onClick={()=>navigate("bookings/mc")} className="hover:ml-[10px] transition-all">mc</li><li onClick={()=>navigate("bookings/influencer")} className="hover:ml-[10px] transition-all">influencers</li> </>
 
 },
   {
     url: "services",
     title: "our services",
 display:false,
-dropMenu:<><li><Link to="">Talent Management</Link> </li> <li> <Link to="bookings">Bookings</Link> </li><li><Link to="">brand partnership</Link> </li><li><Link to="">PR</Link> </li><li> <Link to="">social media management</Link> </li><li> <Link to="">label services</Link> </li> </>
+dropMenu:<><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Talent Management</li> <li onClick={()=>navigate("bookings")} className="hover:ml-[10px] transition-all">Bookings</li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">brand partnership</li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">PR </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all"> social media management </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">label services </li> </>
 
 },
   {
-    url: "company/aboutus",
+    url: "company/about",
     title: "company",
 display:false,
-dropMenu:<><li><Link to="company/aboutus">About us</Link> </li> <li><Link to="contact"> Contact</Link></li></>
+dropMenu:<><li onClick={()=>navigate("company/about")} className="hover:ml-[10px] transition-all" style={{lineHeight:"15px"}}>About us </li> <li onClick={()=>navigate("contact")}  className="hover:ml-[10px] transition-all">Contact</li></>
 
 },
   {
@@ -79,22 +79,30 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
   }
 
   return (
-    <div className={`${styles.nav}  d-flex `} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
+    <div className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"}  z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
       <div
-        className={`${styles.content} flex flex-row justify-between w-screen`}
+        className={`${styles.content}  flex flex-row justify-between items-start w-screen`}
       >
-        <div className={`${styles.co} flex flex-row justify-between w-screen`}>
-          <img
+        <div className={`${styles.co} flex flex-row flex-wrap justify-between w-screen sm:mt-[0]  mt-[20px] `}>
+          <div>
+<div className=""> <img className="sm:h-[100px] h-[50px]"
             src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
             alt="website logo"
             onClick={() => navigate("/")}
-          />
+          /></div>
+          <div className="capitalize text-[.6rem]  sm:mt-[10px] sm:pl-[61px]" style={{color:window.location.pathname==="/"?"#F9A61B":"black"}}>refined celebrity</div>
+
+          </div>
+     
+
+          
           <button onClick={() => timeline.play()}>
             <i
               className="ri-menu-5-fill lg:hidden"
               style={{ color: window.location.href===`${window.location.protocol}//${window.location.host}/` ? 'white':"black", fontSize: 25 }}
             ></i>
           </button>
+
         </div>
         <div
           className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-0 left-[0] bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
@@ -160,15 +168,15 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             >
              {item.title}
             </button>
-             {(item.title!=="home")&&(<div key={index+1} className={`absolute top-[10%]  z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"354px":item.title==="our services"?"377px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"350px":item.display&&item.title==="company"?"168px":"0px",overflow:"hidden", transition:"all .5s",
-            left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:item.title==="our services"?"20px":"0px"
+             {(item.title!=="home")&&(<div key={index+1} className={`absolute   z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"280px":item.title==="our services"?"320px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"300px":item.display&&item.title==="company"?"140px":"0px",overflow:"hidden", transition:"all .5s",
+            left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:"20px"
             }}>
-              <button className="absolute right-[27px]" style={{top:item.title==="company"?"40px":"0"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
-             <ul className="my-[67px]" style={{display:"block",
-              paddingLeft:item.title==="bookings"||item.title==="our services"?"57px":"23px",
-
+              <button className="absolute" style={{top:item.title==="company"?"30px":"-10px",right:item.title==="company"?"27px":"10px"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
+             <ul className="my-[67px]" style={{
+              paddingLeft:item.title==="bookings"||item.title==="our services"?"40px":"23px",
+              margin:item.title==="company"?"46px 0":"37px 0"
             }}>
-              <span className="" onClick={()=>setNavItem(navItems.map(navItem=>({...navItem,display:false})))}> {item.dropMenu}</span>
+              <span className="hover:ml-[10px] transition-all" onClick={()=>setNavItem(navItems.map(navItem=>({...navItem,display:false})))}> {item.dropMenu}</span>
             
              </ul>
              </div>)}
@@ -178,9 +186,9 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
         
       </div>
   <div  className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
-  { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"> Home <span style={{color:"#F9A61B"}}> {
-      `> ${window.location.pathname.split("/")[1]}  ${window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""} `
-      } </span>
+  { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"><button className="inline capitalize" onClick={()=>navigate("/")}>Home</button>  <span style={{color:"#F9A61B"}}> 
+   {">"} <button  onClick={()=>navigate(`${window.location.pathname.split("/")[1]}`)} className="inline capitalize">{window.location.pathname.split("/")[1]}</button>  <button className="inline capitalize">{window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""}</button> 
+      </span>
       </div>}
   </div>
     </div>

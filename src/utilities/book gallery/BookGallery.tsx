@@ -3,6 +3,12 @@ import styles from "./BookGallery.module.scss"
 import {Link,useNavigate} from "react-router-dom"
 import {useContext} from "react"
 import {GlobalContext} from "../../GlobalContext/GlobalContext"
+import Box from '@mui/material/Box';
+// import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import { Input, Button,TextArea } from "../../utilities";
+import * as BI from "react-bootstrap-icons"
+
 interface Props{
     category_img:any;
 handle1:any;
@@ -24,18 +30,38 @@ const context=useContext(GlobalContext)
 // console.log(context);
 const {show}:Show=context
 
+
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'black',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+  color:"white",
+};
 // const navigate= useNavigate() 
+
+const [open, setOpen] = React.useState(false);
+const handleOpen = () => setOpen(true);
+const handleClose = () => setOpen(false);
   return (
   
       <>
-    <div className=' mb-[35px]     p-[20px] lg:p-[0]  m-auto'>
-    <div className={`relative ${styles.card}  flex md:h-[400px] w-auto`}>
+    <div className={`${styles.card_container} sm:mb-[35px] m-auto lg:w-[32%] md:w-[100%] p-[20px] lg:p-[0]`}>
+    <div className={` ${styles.card}  flex md:h-[350px] justify-center`}>
          
-         <div className=''> <img className='sm:w-[316px] h-[100%] rounded-[20px]' src={props.category_img} alt="" /></div>
+         <div className='relative'> <img className='sm:w-[316px] w-[316px] h-[100%] rounded-[20px]' src={props.category_img} alt="" />
+   <button  className={`${styles.book_btn} uppercase w-[100%] bottom-[0px] absolute text-[1.125rem] md:h-[70px] h-[60px] rounded-[20px]`} onClick={handleOpen}>book</button>
+         
+         </div>
      
-     <div className={`px-[15px] sm:pt-[50px] pt-[20px] sm:text-[1.125rem] text-[0.8rem] capitalize ${styles.infos}`}>
+     <div className={`px-[8px] pt-[50px]  sm:text-[.9rem] text-[0.8rem] capitalize ${styles.infos}`}>
 <div className='flex justify-between mb-[7px]'>Award <span id='award_number' className='text-right'>20</span></div>
-<div className='flex justify-between mb-[7px] items-center'>Ratings<span className='flex' id='stars'>{props.stars.map((item:any,index:number)=><img key={index} src={item} className="sm:w-[13px] sm:h-[13px] w-[8px] h-[8px]" alt="stars" />)}
+<div className='flex justify-between mb-[7px] items-center'>Ratings<span className='flex' id='stars'>{props.stars.map((item:any,index:number)=><img key={index} src={item} className="sm:w-[10px] sm:h-[10px] w-[8px] h-[8px]" alt="stars" />)}
     </span></div>
 <div className='flex justify-between mb-[22px]'>Active years<span id='act_yrs'>20</span></div>
 <div className={`text-[0.75rem] mb-[37px] flex justify-between ${styles.handles}`}>
@@ -59,7 +85,6 @@ const {show}:Show=context
 
      </div>
      <div className='absolute bottom-[0]  shadow-lg rounded-[20px] w-[100%]'>
-   <button  className={`${styles.book_btn} uppercase w-[100%] text-[1.125rem] md:h-[99px] h-[60px] rounded-[20px]`} onClick={()=>{ show()}}>book</button>
    </div>
    </div>     
   
@@ -68,7 +93,40 @@ const {show}:Show=context
      {props.title}
  </div>
           </div>
-    
+<Modal
+  open={open}
+  onClose={handleClose}
+  aria-labelledby="modal-modal-title"
+  aria-describedby="modal-modal-description"
+>
+  <Box sx={style}>
+  <div className="relative capitalize">
+    <div className=' '>
+
+            <Input label="name*" height="50px" width="100%" />
+          </div>
+          <div className="mt-[10px]">
+            <Input label="email*" height="50px" width="100%" />
+          </div>
+          <div className="mt-[10px]">
+            <Input label="phone" height="50px" width="100%" />
+          </div>
+          <div className="mt-[10px]">
+            <Input label="location*" height="50px" width="100%" />
+          </div>
+
+          <div className="mt-[10px]">
+            <TextArea label="message*" />
+          </div>
+
+          <div className="mt-[10px]">
+            <Button text="Send a message" height="68px" width="100%" />
+          </div>
+          <button onClick={()=>handleClose()} className='absolute top-[-5%] right-[-10%] text-light  text-[2.5rem] font-[700]'><BI.X/></button>
+          </div>
+
+  </Box>
+</Modal>
  </>
       
      

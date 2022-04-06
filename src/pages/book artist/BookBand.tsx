@@ -3,6 +3,11 @@ import {Band1,Band2,Star,FB,Insta,Twitter2} from "../../assets/images"
 import styles from "./BookPages.module.scss"
 import {BookGallery} from "../../utilities"
 import {Book} from "../../components"
+
+
+
+  
+
 function BookBand() {
 
 // console.log(show);
@@ -72,13 +77,13 @@ url:"about"
     
     
   return (
-    <section>
-    <div className='container '>
+    <section className='mt-[0px]'>
+    <div className='container sm:pl-[61px] sm:pr-[57px]'>
       <header className='text-center uppercase  lg:text-[4rem] text-[1.5rem] md:text-[2rem] font-[700]'>
         book a live band
       </header>
 
-      <div className={`${styles.bands} flex flex-wrap justify-between md:mr-[57px] md:ml-[61px] mt-[105px]`}>
+      <div className={`${styles.bands} flex flex-wrap justify-between  sm:mt-[105px] mt-[40px]`}>
     {Bands.map((item,index)=>(
       <BookGallery key={index} url={item.url} category_img={item.category_img} handle1={item.handle1} handle2={item.handle2} handle3={item.handle3} stars={item.stars} title={item.title} />
 
@@ -87,6 +92,7 @@ url:"about"
 <div>
 <Book/>
 </div>
+
     </div>
   </section>
   )
