@@ -1,0 +1,53 @@
+@import "../../scss/index.scss";
+
+.btn{
+    border-radius: 20px;
+background-color: $six;
+font-weight:700; 
+}
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .exploreSlider {
+    // -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: normal;  /* Firefox */
+    
+  }
+
+.exploreSlider::-webkit-scrollbar {
+ height: 5px;
+
+  }
+  
+  .exploreSlider::-webkit-scrollbar-thumb {
+    background-color: $six;
+  width: 10%;
+border-radius: 20px;
+
+  }
+
+  .exploreSlider::-webkit-scrollbar-track {
+    background-color: $zero;
+border-radius: 20px;
+
+  }
+
+  .exploreSlider::-webkit-scrollbar-button {
+width:20%;
+
+  }
+
+  @media screen and (min-width:1281px) {
+    .exploreSlider::-webkit-scrollbar-button {
+      width:21%;
+      
+        }
+  }
+  
+
+  @media screen and (min-width:1300px) {
+    .linkSlide{
+      display: block;
+    }
+  }
+  
+

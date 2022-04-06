@@ -1,0 +1,67 @@
+@import "../../scss/index.scss";
+
+.nav {
+ 
+  .content {
+    max-width: 1440px;
+    margin: 0 auto;
+    .co {
+      padding: 0 2rem;
+      @include mq("fluid-out") {
+        padding: 0;
+      }
+    }
+  }
+  img {
+    width: 100px;
+ 
+    object-fit: contain;
+    cursor: pointer;
+    @include mq("tablet") {
+      width: 267px;
+      height: 40px;
+      margin-top: 25px;
+      margin-left: 61px;
+    }
+    
+  }
+
+ 
+  .navItems {
+    @include mq("fluid-out") {
+      margin-top: 30px;
+      width: 100% !important;
+      padding-right: 57px;
+      justify-content: flex-end;
+    }
+    button {
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+    .dropdown{
+      background-color: $six;
+     color: black;
+     ul li{margin-bottom: 20px;
+    font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  }
+     
+    }
+  }
+  .bottomBar{
+    font-size: 1.5rem;
+    color:$five;
+    cursor: pointer;
+  }
+  .bottomBar{
+    font-size: 1.5rem;
+    color:$five;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width:960px) {
+  .home{
+    margin-left: 32px;
+  }
+} 

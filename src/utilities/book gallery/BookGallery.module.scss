@@ -1,0 +1,46 @@
+@import "../../scss/index.scss";
+
+.infos{
+    background-color:$zero;
+    border-radius: 20px;
+    width: 187px;
+
+    .read{
+        color:$six;
+    }
+   
+}
+
+@media screen and (max-width:1158px) and (min-width:1000px) {
+.card_container{
+    flex-basis:48%;
+}
+}
+
+.book_btn{
+    background-color: $six;
+    font-weight:700 ;
+}
+
+@media screen and (max-width:387px) {
+    .book_btn{
+    height: 40px !important;
+    font-size: .9rem;
+}
+.card{
+    height: 220px;
+}
+.infos{
+    font-size: .5rem !important;
+    .handles{
+        margin-top: 0;
+        div{ button{
+             width: 10px;
+         }
+     p{
+         font-size: .5rem;
+     }
+     }
+     }
+}
+}

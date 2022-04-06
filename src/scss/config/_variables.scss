@@ -1,0 +1,25 @@
+//COLORS
+
+$six: #f9a61b;
+$five: #191c1f;
+$four: #1f2327;
+$three: #3c3c3c;
+$two: #f9f9f9;
+$one: #fffefe;
+$zero: #d8d7d7; 
+$borderColor:rgba(245, 243, 244, 0.4);
+
+$breakpoints: (
+  "phone-small": 320px,
+  "phone": 400px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "fluid-out": 960px,
+  "tablet-wide": 1024px,
+  "desktop": 1248px,
+  "desktop-med": 1350px,
+  "desktop-wide": 1440px,
+  "excess": 2000px,
+);

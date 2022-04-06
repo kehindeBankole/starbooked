@@ -1,0 +1,11 @@
+@import "../../scss/index.scss";
+
+.btn {
+  background-color: $six;
+  font: {
+    weight: 700;
+    size: 1.125rem;
+  }
+  height: 68px;
+  width: 100%;
+}
