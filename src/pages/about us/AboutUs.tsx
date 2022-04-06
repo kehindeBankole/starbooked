@@ -3,6 +3,15 @@ import styles from "./AboutUs.module.scss"
 import { Button } from '../../utilities'
 import { OurService,OurMission,OurVision} from '../../components'
 import {About} from "../../assets/images"
+import Marquee from "react-fast-marquee";
+import {
+  Talent,
+  Booking as BookingImg,
+  BrandPartner,
+  LabelService,
+  Management,
+  PR
+} from "../../assets/images";
 function AboutUs() {
   return (
     <section className={`${styles.hero}  mt-[150px]`}>
@@ -32,8 +41,25 @@ function AboutUs() {
 
 
   <OurService/>
-    <OurMission/>
-    <OurVision/>
+  <div className="ml-[61px] mr-[57px]">
+<Marquee speed={80} gradient={false} className="overflow-hidden mb-[4rem] ">
+<div className="text-center uppercase mx-[3rem] md:text-[1.5rem]">
+            <img src={Talent} alt="talent management" />
+          </div>
+
+          <div className="text-center uppercase mx-[3rem] md:text-[1.5rem]">
+            <img src={Talent} alt="talent management" />
+          </div>
+
+          <div className="text-center uppercase mx-[3rem] md:text-[1.5rem]">
+            <img src={Talent} alt="talent management" />
+          </div>
+
+          <div className="text-center uppercase mx-[3rem] md:text-[1.5rem]">
+            <img src={Talent} alt="talent management" />
+          </div>
+</Marquee>
+</div>
     </section>
   )
 }
