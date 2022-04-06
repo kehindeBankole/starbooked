@@ -52,10 +52,10 @@ function Bookings_page() {
           <Link to={`${item.url}`}>
             <div className={`${styles.img} relative`}>
             <img className='w-[100%]' src={item.img} alt="" />
-        <div className={`${styles.overText} absolute rounded-[15px] font-[normal] overflow-hidden text-xl flex text-[white] top-[0] w-[100%] opacity-[.7]  bg-[black]`}>
-          <div className='m-auto'>
+        <div className={`${styles.overText} absolute rounded-[15px] capitalize  overflow-hidden text-xl flex text-[white] top-[0] w-[100%] opacity-[.7]  bg-[black]`}>
+          <p className='m-auto'>
           Lorem ipsum ta illo, cumque necessitatibus inventore at blanditiis commodi eligendi incidunt.
-          </div>
+          </p>
         </div>
 
             </div>
