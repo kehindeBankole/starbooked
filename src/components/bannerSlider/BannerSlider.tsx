@@ -7,11 +7,15 @@ import { ReactComponent as ChevronRight } from "../../assets/images/chevronright
 import { ReactComponent as ChevronSmall } from "../../assets/images/small.svg";
 import Button from "../button/Button";
 import { useNavigate } from "react-router-dom";
+import {two} from "../../assets/images"
 
 interface Props{
   img1:any;
   bookBtn:boolean
+  sliderInfo?:any;
 }
+
+
 
 function BannerSlider(props:Props) {
 const navigate=useNavigate()
@@ -99,7 +103,29 @@ const navigate=useNavigate()
         );
       }}
     >
-      {[1, 2].map(() => (
+      {props.sliderInfo?props.sliderInfo.map((item:any)=>(
+          <>
+          <div
+            className={styles.content}
+            style={{
+              background: `url(${item.image})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+
+              <p className="text-[white] z-[1] text-[.8rem] md:text-[1rem] w-[80%] font-[700]">{item.text}</p>
+          <div className={styles.overlay}></div>
+
+            <div className="w-[100%] z-[1]">
+            <button onClick={()=>navigate("bookings")} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
+              booking <ChevronSmall />
+            </button>
+            </div>
+           
+          </div>
+        </>
+      )):[1,2].map(() => (
         <>
           <div
             className={styles.content}
@@ -109,9 +135,16 @@ const navigate=useNavigate()
               backgroundRepeat: "no-repeat",
             }}
           >
-            <button onClick={()=>navigate("bookings")} className={`${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
+
+              <p className="text-[white] z-[1] text-[.8rem] md:text-[1rem] w-[80%] font-[700]">Let one of our veteran booking agents help you find the perfect band, entertainer or celebrity for your demographic and budget.</p>
+          <div className={styles.overlay}></div>
+
+            <div className="w-[100%] z-[1]">
+            <button onClick={()=>navigate("bookings")} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
               booking <ChevronSmall />
             </button>
+            </div>
+           
           </div>
         </>
       ))}

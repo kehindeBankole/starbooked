@@ -6,6 +6,7 @@ import logoDark from "../../assets/images/logodark.svg";
 import { useNavigate } from "react-router-dom";
 import { CloseList } from "../../assets/images";
 import {Link} from "react-router-dom"
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 type Drop={
 dropMenu?:any
 url:string;
@@ -141,10 +142,11 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               
             </button>
           ))}
+
         </div>
         <div className={`${styles.navItems} hidden lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
-            <span key={index}>
+            <React.Fragment key={index}>
             <button 
             id="dropdown-btn"
               onClick={(e) => {
@@ -180,10 +182,11 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             
              </ul>
              </div>)}
-             </span>
+             </React.Fragment>
           ))}
+     <button> <ManageSearchIcon  sx={{ fontSize: 40}} className="text-[white]"/></button>            
+
         </div>
-        
       </div>
   <div  className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
   { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"><button className="inline capitalize" onClick={()=>navigate("/")}>Home</button>  <span style={{color:"#F9A61B"}}> 
