@@ -136,8 +136,7 @@ const navigate=useNavigate()
             }}
           >
 
-              <p className="text-[white] z-[1] text-[.8rem] md:text-[1rem] w-[80%] font-[700]">Let one of our veteran booking agents help you find the perfect band, entertainer or celebrity for your demographic and budget.</p>
-          <div className={styles.overlay}></div>
+        
 
             <div className="w-[100%] z-[1]">
             <button onClick={()=>navigate("bookings")} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>

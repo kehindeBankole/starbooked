@@ -7,6 +7,11 @@ import { useNavigate } from "react-router-dom";
 import { CloseList } from "../../assets/images";
 import {Link} from "react-router-dom"
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
+import { ReactComponent as ChevronDown } from "../../assets/images/chevrondown.svg";
+import { ReactComponent as ChevronDownDark } from "../../assets/images/chevrondowndark.svg";
+import { ReactComponent as SearchDark } from "../../assets/images/searchdark.svg";
+import { ReactComponent as SearchLight } from "../../assets/images/searchlight.svg";
+
 type Drop={
 dropMenu?:any
 url:string;
@@ -82,31 +87,32 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
   return (
     <div className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"}  z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
       <div
-        className={`${styles.content}  flex flex-row justify-between items-start w-screen`}
+        className={`${styles.content}  flex flex-row justify-between items-center  w-screen`}
       >
-        <div className={`${styles.co} flex flex-row flex-wrap justify-between w-screen sm:mt-[0]  mt-[20px] `}>
-          <div>
-<div className=""> <img className="sm:h-[100px] h-[50px]"
+        <div className={`${styles.co} flex flex-row  justify-between items-center w-screen `}>
+        
+<img 
             src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
             alt="website logo"
             onClick={() => navigate("/")}
-          /></div>
-          <div className="capitalize text-[.6rem]  sm:mt-[10px] sm:pl-[61px]" style={{color:window.location.pathname==="/"?"#F9A61B":"black"}}>refined celebrity</div>
-
-          </div>
-     
+          />
+          
+     <div className="flex">
+     {/* <button className=" lg:hidden"> <ManageSearchIcon  sx={{ fontSize: 40}} className="text-[white] "/></button>             */}
 
           
-          <button onClick={() => timeline.play()}>
-            <i
-              className="ri-menu-5-fill lg:hidden"
-              style={{ color: window.location.href===`${window.location.protocol}//${window.location.host}/` ? 'white':"black", fontSize: 25 }}
-            ></i>
-          </button>
+<button onClick={() => timeline.play()}>
+  <i
+    className="ri-menu-5-fill lg:hidden mr-[30px]"
+    style={{ color: window.location.href===`${window.location.protocol}//${window.location.host}/` ? 'white':"black", fontSize: 25 }}
+  ></i>
+</button>
+     </div>
+       
 
         </div>
         <div
-          className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-0 left-[0] bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
+          className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-[0] left-[0] bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
         >
           <button
             className="absolute closeIcon"
@@ -144,7 +150,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           ))}
 
         </div>
-        <div className={`${styles.navItems} hidden lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
+        <div className={`${styles.navItems} hidden  lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
             <button 
@@ -153,7 +159,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               ( item.title==="home"||item.title==="news")&&navigate(item.url);
              getTitle(e.target,item.title)
               }}
-              className="text-lg text-one mr-30"
+              className={`text-lg ${item.title==="our services"&&"w-[129px]"} flex items-center text-one mr-30`}
               style={{
                 color:
                   item.title !== "home"
@@ -168,9 +174,10 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               }}
               
             >
-             {item.title}
+             {item.title}{(item.title!=="home"&&item.title!=="news"&&window.location.pathname=="/")&&<ChevronDown className="ml-[5px]"/>}
+             {(item.title!=="home"&&item.title!=="news"&&window.location.pathname!=="/")&&<ChevronDownDark className="ml-[5px]"/>}
             </button>
-             {(item.title!=="home")&&(<div key={index+1} className={`absolute   z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"280px":item.title==="our services"?"320px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"300px":item.display&&item.title==="company"?"140px":"0px",overflow:"hidden", transition:"all .5s",
+             {(item.title!=="home")&&(<div key={index+1} className={`absolute top-[60px] z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"280px":item.title==="our services"?"320px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"300px":item.display&&item.title==="company"?"140px":"0px",overflow:"hidden", transition:"all .5s",
             left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:"20px"
             }}>
               <button className="absolute" style={{top:item.title==="company"?"30px":"-10px",right:item.title==="company"?"27px":"10px"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
@@ -184,7 +191,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
              </div>)}
              </React.Fragment>
           ))}
-     <button> <ManageSearchIcon  sx={{ fontSize: 40}} className="text-[white]"/></button>            
+     <button> {window.location.pathname==="/"?<SearchLight/>:<SearchDark/>}</button>            
 
         </div>
       </div>
@@ -194,6 +201,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
       </span>
       </div>}
   </div>
+
     </div>
   )
 }

@@ -5,7 +5,7 @@ import {
   BrandPartner,
   LabelService,
   Management,
-  PR
+  PR,
 } from "../../assets/images";
 function OurServices() {
   return (
@@ -17,53 +17,35 @@ function OurServices() {
         <div className={`flex flex-wrap justify-center ${styles.service}`}>
           <div className="text-center uppercase md:text-[1.5rem]">
             <img src={Talent} alt="talent management" />
-            <p className="lg:mb-[72px] mb-[20px]">CORPORATE <br /> ENTERTAINMENT
-
-</p>
+            <p className="lg:mb-[72px] mb-[20px]">Talent management</p>
           </div>
 
           <div className="text-center uppercase md:text-[1.5rem]">
             <img src={Booking} alt="booking" />
-            <p className="lg:mb-[72px] mb-[20px]">PRIVATE PARTIES
-
-</p>
+            <p className="lg:mb-[72px] mb-[20px]">bookings</p>
           </div>
 
           <div className="text-center uppercase md:text-[1.5rem]">
             <img src={BrandPartner} alt="brand-partner" />
-            <p className="lg:mb-[72px] mb-[20px]">WEDDING ENTERTAINMENT</p>
+            <p className="lg:mb-[72px] mb-[20px]">brand partnership</p>
           </div>
 
           <div className="text-center uppercase md:text-[1.5rem]">
             <img src={PR} alt="PR" />
-            <p className="lg:mb-[72px] mb-[20px]">BIRTHDAY PARTY <br /> ENTERTAINMENT</p>
+            <p className="lg:mb-[72px] mb-[20px]">PR</p>
           </div>
 
           <div className="text-center uppercase md:text-[1.5rem]">
             <img src={Management} alt="social media management" />
             <p className="lg:mb-[72px] mb-[20px]">
-            CELEBRITY APPEARANCES
-
-
+              Social media <br /> management
             </p>
           </div>
 
           <div className="text-center uppercase md:text-[1.5rem]">
             <img src={LabelService} alt="label service" />
-            <p className="lg:mb-[72px] mb-[20px]">PUBLIC CONCERTS
-
-</p>
+            <p className="lg:mb-[72px] mb-[20px]">label services</p>
           </div>
-
-          <div className="text-center uppercase md:text-[1.5rem]">
-            <img src={BrandPartner} alt="label service" />
-            <p className="lg:mb-[72px] mb-[20px]">FAIRS, CARNIVALS, <br /> AND FESTIVALS
-
-
-
-</p>
-          </div>
-
         </div>
       </div>
     </section>

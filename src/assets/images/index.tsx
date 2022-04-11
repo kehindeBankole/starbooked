@@ -43,9 +43,9 @@ export {default as McInfo} from "./artist info/mc.png";
 export {default as MusicianInfo} from "./artist info/musician.png";
 export {default as CloseList} from "./closedrop_btn.svg"
 export {default as ExploreBand} from "./explore images/live band.png"
-export {default as ExploreMusician} from "./explore images/comedian.png"
-export {default as ExploreComedian} from "./explore images/djs.png"
-export {default as ExploreDjs} from "./explore images/musician.png"
+export {default as ExploreMusician} from "./explore images/musician.png"
+export {default as ExploreComedian} from "./explore images/comedian.png"
+export {default as ExploreDjs} from "./explore images/djs.png"
 export {default as Cheers} from "./cheercrowd.png"
 export {default as two} from "./2.png"
 export {default as three} from "./3.png"

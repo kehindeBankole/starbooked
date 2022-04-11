@@ -8,11 +8,14 @@ function News() {
     <section className={`${styles.News} mt-[px]`}>
 
 <div className={`${styles.banner} container`}>
+<header className='text-center  lg:text-[4rem] sm:mb-[3.75rem] mb-[1rem] text-[1.5rem] md:text-[2rem]'>
+               Gallery
+            </header>
         <BannerSlider bookBtn={false} img1={Cheers}/>
       </div>
 
 
-        <div className='mb-[166px] '>
+        <div className='mb-[166px] sm:mt-[8.438rem]'>
         <div className='container lg:p-[0] p-[20px] '>
             <header className='text-center  lg:text-[4rem] text-[1.5rem] md:text-[2rem]'>
                 Lastest news
