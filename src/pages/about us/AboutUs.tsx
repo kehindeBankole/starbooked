@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./AboutUs.module.scss"
 import { Button } from '../../utilities'
-import { OurService,OurMission,OurVision} from '../../components'
+import { OurService,OurMission,OurVision,Booking} from '../../components'
 import {About} from "../../assets/images"
 import Marquee from "react-fast-marquee";
 import {
@@ -20,7 +20,7 @@ function AboutUs() {
  
  <div className={`${styles.hero_text_container} md:w-[60%] lg:w-[47%] m-auto lg:p-[0] p-[20px] lg:ml-[61px]`}>
   <header className=' text-center lg:text-left lg:text-[4rem] text-[1.5rem] md:text-[2rem]'>
-  about starbooked
+  about starbook
   </header>
   <div className={`${styles.hero_text} `}>
 <p className='lg:text-[1.5rem] text-[1.1rem]'> At Starbooked we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p>
@@ -60,6 +60,10 @@ function AboutUs() {
           </div>
 </Marquee>
 </div>
+
+<Booking title="get in touch" subtitle="Please feel free to fill out the entertainment request form and your assigned agent will contact you to see how Star Book can assist you.
+"/>
+
     </section>
   )
 }

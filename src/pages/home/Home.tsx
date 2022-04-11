@@ -10,6 +10,7 @@ import {
   Management,
   PR
 } from "../../assets/images";
+import img1 from "../../assets/images/1.png";
 
 import styles from "./Home.module.scss";
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
     <section className={`${styles.homeContainer} `}>
      <div className="bg-five pt-[5rem]">
      <div className={`${styles.banner} container`}>
-        <BannerSlider />
+        <BannerSlider img1={img1} bookBtn={true}/> 
       </div>
      </div>
 

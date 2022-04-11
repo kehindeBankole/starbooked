@@ -42,20 +42,33 @@ function Footer() {
           <h2 className="uppercase">our services</h2>
           <ul>
             <li>
-              <button className="capitalize">Talent Management</button>
+              <button className="capitalize">corperate entertainment</button>
             </li>
             <li>
-              <button className="capitalize">Social Media Management</button>
+              <button className="capitalize">private parties
+
+</button>
             </li>
             <li>
-              <button className="capitalize">PR</button>
+              <button className="capitalize">wedding entertainment
+
+</button>
             </li>
             <li>
-              <button className="capitalize">Label Services</button>
+              <button className="capitalize">Birthday party
+entertainment</button>
             </li>
 
             <li>
-              <button className="capitalize">Brand partnership</button>
+              <button className="capitalize">celebrity appearance
+
+</button>
+            </li>
+
+            <li>
+              <button className="capitalize">fairs, carnivals and festivals
+
+</button>
             </li>
           </ul>
         </div>

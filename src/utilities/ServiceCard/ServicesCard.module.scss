@@ -16,13 +16,17 @@
     }
     p{
         margin-top: 32px;
-hr{
+
+    }
+}
+
+.hr{
     width: 80px;
     border-width: 1px;
     display: inline-block;
-    transform: translateY(-3px);
-}
-    }
+    transform: translateY(15px);
+    align-self: flex-start;
+    border-color: $six;
 }
 
 @media screen and (max-width:280px) {

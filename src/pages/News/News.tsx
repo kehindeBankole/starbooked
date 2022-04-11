@@ -1,11 +1,17 @@
 import React from 'react'
-import {News as NewsPic} from "../../assets/images"
+import {News as NewsPic,Cheers} from "../../assets/images"
 import styles from "./News.module.scss";
-import {NewsGallery} from "../../components"
+import {NewsGallery,BannerSlider,Booking} from "../../components"
 import { Button } from '../../utilities';
 function News() {
   return (
     <section className={`${styles.News} mt-[px]`}>
+
+<div className={`${styles.banner} container`}>
+        <BannerSlider bookBtn={false} img1={Cheers}/>
+      </div>
+
+
         <div className='mb-[166px] '>
         <div className='container lg:p-[0] p-[20px] '>
             <header className='text-center  lg:text-[4rem] text-[1.5rem] md:text-[2rem]'>
@@ -51,7 +57,9 @@ full story
 </div>
 </div>
         </div>
+
         </div>
+        <Booking title="be the first to know" subtitle="Sign up to get exclusive information about our new signings, rosters and labels. We only send you information that you tell us is relevant, and won’t share your email with anyone else."/>
 
     </section>
   )

@@ -9,3 +9,4 @@ export { default as Book} from "./Book/Book";
 export { default as Explore} from "./explore/Explore";
 export { default as OurVision} from "./OurVision/OurVision";
 export { default as OurMission} from "./OurMission/OurMission";
+export { default as BannerSlider} from "./bannerSlider/BannerSlider";

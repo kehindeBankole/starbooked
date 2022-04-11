@@ -5,10 +5,15 @@ import { Carousel } from "react-responsive-carousel";
 import { ReactComponent as ChevronLeft } from "../../assets/images/chevronleft.svg";
 import { ReactComponent as ChevronRight } from "../../assets/images/chevronright.svg";
 import { ReactComponent as ChevronSmall } from "../../assets/images/small.svg";
-import img1 from "../../assets/images/1.png";
 import Button from "../button/Button";
 import { useNavigate } from "react-router-dom";
-function BannerSlider() {
+
+interface Props{
+  img1:any;
+  bookBtn:boolean
+}
+
+function BannerSlider(props:Props) {
 const navigate=useNavigate()
 
   const indicatorStyles: React.CSSProperties = {
@@ -99,12 +104,12 @@ const navigate=useNavigate()
           <div
             className={styles.content}
             style={{
-              background: `url(${img1})`,
+              background: `url(${props.img1})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <button onClick={()=>navigate("bookings")} className={styles.btn}>
+            <button onClick={()=>navigate("bookings")} className={`${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
               booking <ChevronSmall />
             </button>
           </div>

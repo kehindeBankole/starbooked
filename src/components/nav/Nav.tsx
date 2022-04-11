@@ -34,7 +34,7 @@ dropMenu:<><li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[
     url: "services",
     title: "our services",
 display:false,
-dropMenu:<><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Talent Management</li> <li onClick={()=>navigate("bookings")} className="hover:ml-[10px] transition-all">Bookings</li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">brand partnership</li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">PR </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all"> social media management </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">label services </li> </>
+dropMenu:<><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Corporate Entertainment</li> <li onClick={()=>navigate("bookings")} className="hover:ml-[10px] transition-all">Private Parties </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Wedding Entertainment </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Birthday Entertainment  </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all"> Celebrity Appearances </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Public Concerts </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Fairs, Carnivals, and Festivals </li> </>
 
 },
   {
