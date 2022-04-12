@@ -5,7 +5,7 @@ import {
   BrandPartner,
   LabelService,
   Management,
-  PR
+  PR,
 } from "../../assets/images";
 function OurServices() {
   return (

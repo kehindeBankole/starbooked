@@ -54,7 +54,7 @@ function Bookings_page() {
             <img className='w-[100%]' src={item.img} alt="" />
         <div className={`${styles.overText} absolute rounded-[15px] capitalize  overflow-hidden text-xl flex text-[white] top-[0] w-[100%] opacity-[.7]  bg-[black]`}>
           <p className='m-auto'>
-          Lorem ipsum ta illo, cumque necessitatibus inventore at blanditiis commodi eligendi incidunt.
+          Whether it's a private party or a corporate event, we can handle the entire process from booking the acts to coordinating the logistics and production.
           </p>
         </div>
 
