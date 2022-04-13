@@ -22,7 +22,6 @@ function Nav() {
  
   const timeline = gsap.timeline({ paused: true });
   const navigate = useNavigate();
-console.log(window.location.pathname.replace(/%20/g," "));
 
 const Items:Drop[]=[
   {
