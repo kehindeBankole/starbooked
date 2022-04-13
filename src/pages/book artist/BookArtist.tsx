@@ -11,7 +11,7 @@ const Bands=Array(6).fill({category_img:Band1,
     handle3:Insta,
     stars:Array(5).fill(Star),
     title:"the band hitz",
-    url:"about"
+    url:"about the band hitz"
     
     })
     
@@ -21,7 +21,7 @@ const Bands=Array(6).fill({category_img:Band1,
         handle3:Insta,
         stars:Array(5).fill(Star),
         title:"mc",
-        url:"about"
+        url:"about mc laughs"
         
         })
 
@@ -31,7 +31,7 @@ const Bands=Array(6).fill({category_img:Band1,
             handle3:Insta,
             stars:Array(5).fill(Star),
             title:"Djs name",
-            url:"about"
+            url:"about dj rock"
             
             })
 
@@ -41,7 +41,7 @@ const Bands=Array(6).fill({category_img:Band1,
                 handle3:Insta,
                 stars:Array(5).fill(Star),
                 title:"influencer",
-                url:"about"
+                url:"about good vibes"
                 
                 })
 
@@ -51,7 +51,7 @@ const Bands=Array(6).fill({category_img:Band1,
                     handle3:Insta,
                     stars:Array(5).fill(Star),
                     title:"musician",
-                    url:"about"
+                    url:"about big dom whiz"
                     
                     })
 
@@ -61,7 +61,7 @@ const Bands=Array(6).fill({category_img:Band1,
                       handle3:Insta,
                       stars:Array(5).fill(Star),
                       title:"comedian",
-                      url:"about"
+                      url:"about arole"
                       
                       })
                   

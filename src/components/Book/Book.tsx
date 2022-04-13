@@ -12,7 +12,6 @@ function Book() {
   const context=useContext(GlobalContext)
   const {show}:any=context
   const {showForm}:any=context.showForm
-  console.log(showForm);
   
   return (
    <section className={`${styles.book_container} overflow-auto z-[100] top-[0] left-[0] h-[100%] fixed`} style={{width:showForm?"100%":"0%", transition:"all .5s"}} >
