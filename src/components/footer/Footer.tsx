@@ -4,6 +4,40 @@ import { Facebook, Twitter, Linkdin, Instagram } from '../../assets/images';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as ChevronUp } from "../../assets/images/chevronup.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
+const services=[{
+	title:"Corporate Entertainment"
+},
+{
+	title:"Private Parties"
+},
+{
+	title:"Wedding Enterainment"
+},
+{
+	title:"Birthday Party Entertainment"
+},
+{
+	title:"Celebrity Appearances"
+},
+{
+	title:"Public Concerts"
+},
+{
+	title:"Fairs, Carnivals, and Festivals"
+},
+]
+
+const quickLinks=[{
+title:"about"
+},
+{
+	title:"news"
+	},{
+		title:"booking"
+		},{
+			title:"services"
+			},]
+
 function Footer() {
 	const navigate = useNavigate();
 	return (
@@ -22,59 +56,27 @@ function Footer() {
 				<div id="links" className="my-[10px] xlg:my-[0] p-[3px]">
 					<h2 className="uppercase">quick links</h2>
 					<ul>
-						<li>
-							<button className="capitalize" onClick={() => {navigate('company/about');window.scroll(0,0)}}>
-								about
+						{quickLinks.map((item,index)=>(
+							<li key={index}>
+							<button className="capitalize" onClick={() => {item.title==="about"?navigate(`company/${item.title}`):navigate(`/${item.title}`);window.scroll(0,0)}}>
+								{item.title}
 							</button>
 						</li>
-
-						<li>
-							<button className="capitalize" onClick={() =>{ navigate('/news');window.scroll(0,0)}}>
-								news
-							</button>{' '}
-						</li>
-
-						<li>
-							<button className="capitalize" onClick={() => {navigate('/bookings'); window.scroll(0,0)}}>
-								booking
-							</button>
-						</li>
-
-						<li>
-							<button className="capitalize" onClick={() => {navigate('/services');window.scroll(0,0)}}>
-								services
-							</button>
-						</li>
+						))}
+					
 					</ul>
 				</div>
 
 				<div id="services" className=" my-[10px] xlg:my-[0] p-[3px]">
 					<h2 className="uppercase">our services</h2>
 					<ul>
-						<li>
-							<button onClick={()=>{navigate("services/Corporate Entertainment");window.scroll(0,0)}} className="capitalize">corporate entertainment</button>
-						</li>
-						<li>
-							<button onClick={()=>{navigate("services/Private Parties");window.scroll(0,0)}} className="capitalize">private parties</button>
-						</li>
-						<li>
-							<button onClick={()=>{navigate("services/Wedding Entertainment");window.scroll(0,0)}} className="capitalize">wedding entertainment</button>
-						</li>
-						<li>
-							<button onClick={()=>{navigate("services/Birthday Party Entertainment");window.scroll(0,0)}} className="capitalize">Birthday party entertainment</button>
-						</li>
 
-						<li>
-							<button onClick={()=>{navigate("services/Celebrity Appearances");window.scroll(0,0)}} className="capitalize">celebrity appearance</button>
-						</li>
-
-						<li>
-							<button onClick={()=>{navigate("services/Public Concerts");window.scroll(0,0);}} className="capitalize">Public Concerts</button>
-						</li>
-
-						<li>
-							<button onClick={()=>{navigate("services/Fairs, Carnivals, and Festivals");window.scroll(0,0)}} className="capitalize">fairs, carnivals and festivals</button>
-						</li>
+						{services.map((item,index)=>(
+							 <li key={index}>
+							 <button className="capitalize" onClick={()=>{navigate(`services/${item.title}`);window.scroll(0,0)}}>{item.title}</button>
+						 </li>
+						))}
+					
 					</ul>
 				</div>
 

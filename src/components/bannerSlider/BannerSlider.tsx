@@ -103,8 +103,8 @@ const navigate=useNavigate()
         );
       }}
     >
-      {props.sliderInfo?props.sliderInfo.map((item:any)=>(
-          <>
+      {props.sliderInfo?props.sliderInfo.map((item:any,index:number)=>(
+          <React.Fragment key={index}>
           <div
             className={styles.content}
             style={{
@@ -124,9 +124,9 @@ const navigate=useNavigate()
             </div>
            
           </div>
-        </>
-      )):[1,2].map(() => (
-        <>
+        </React.Fragment>
+      )):[1,2].map((item,index) => (
+        <React.Fragment key={index}>
           <div
             className={styles.content}
             style={{
@@ -145,7 +145,7 @@ const navigate=useNavigate()
             </div>
            
           </div>
-        </>
+        </React.Fragment>
       ))}
     </Carousel>
   );

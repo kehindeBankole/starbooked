@@ -110,8 +110,8 @@ function Explore() {
       slidesPerView={3}
       autoplay={true}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => swiper}
+      onSlideChange={() => "slider change"}
     >
 
   <SwiperSlide className={`hidden ${styles.linkSlide}`}>
@@ -134,7 +134,7 @@ function Explore() {
     <div className="invisible">...</div>  
     
 {exploreArr.map((item,index)=>(
-  <SwiperSlide className="self-end">
+  <SwiperSlide key={index} className="self-end">
   <div className=" relative mr-[24px] mb-[24px] w-[100%]" key={index}>
   <img src={item.img}  alt={item.title} />
 <p className="absolute bottom-[16px] left-[50%] text-[.8rem] text-[white] translate-x-[-50%]  font-[700] uppercase">{item.title}</p>

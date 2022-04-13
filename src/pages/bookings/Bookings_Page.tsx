@@ -47,8 +47,8 @@ function Bookings_page() {
 
         <div className='uppercase font-[700] text-center lg:text-[2.25rem] sm:text-[1.8rem] text-[1.2rem] flex flex-wrap justify-between mr-[57px] ml-[61px] mt-[105px]'>
         
-        {Booking_Items.map(item=>(
-          <div className=' lg:w-[38%] md:w-[60%] sm:w-[70%] w-[100%] lg:m-[0] m-auto'>
+        {Booking_Items.map((item,index)=>(
+          <div key={index} className=' lg:w-[38%] md:w-[60%] sm:w-[70%] w-[100%] lg:m-[0] m-auto'>
           <Link to={`${item.url}`}>
             <div className={`${styles.img} relative`}>
             <img className='w-[100%]' src={item.img} alt="" />

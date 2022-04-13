@@ -84,7 +84,7 @@ const {id}=param
             <h1 className='uppercase font-[700] mb-[40px] text-[1.8rem] sm:text-[3rem] lg:text-[4rem] text-center'>{data.map(item=>item.title === id&&item.title)}</h1>
 
         <BannerSlider bookBtn={false} img1={Cheers}/>
-      {data.map(item=>(item.title === id )&&(<>
+      {data.map((item,index)=>(item.title === id )&&(<React.Fragment key={index}>
       <div>
 
         <div className='mb-[40px]'>
@@ -107,7 +107,7 @@ const {id}=param
     
       </div>
       
-      </>))}
+      </React.Fragment>))}
     </div>
   )
 }
