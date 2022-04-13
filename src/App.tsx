@@ -10,12 +10,8 @@ const Bookings= lazy(() => import("./pages/bookings/Bookings"));
 const Bookings_Page= lazy(() => import("./pages/bookings/Bookings_Page"));
 const AboutUs= lazy(() => import("./pages/about us/AboutUs"));
 const News= lazy(() => import("./pages/News/News"));
-const BookBand= lazy(() => import("./pages/book artist/BookBand"));
-const BookDj= lazy(() => import("./pages/book artist/BookDj"));
-const BookMusician= lazy(() => import("./pages/book artist/BookMusician"));
-const BookComedian= lazy(() => import("./pages/book artist/BookComedian"));
-const BookMc= lazy(() => import("./pages/book artist/BookMc"));
-const BookInfluencer= lazy(() => import("./pages/book artist/BookInfluencer"));
+const BookArtist= lazy(() => import("./pages/book artist/BookArtist"));
+
 const BandInfo= lazy(() => import("./pages/artist info/Band"));
 const ComedianInfo= lazy(() => import("./pages/artist info/Comedian"));
 const MusicianInfo= lazy(() => import("./pages/artist info/Musician"));
@@ -51,12 +47,8 @@ function App() {
             <Route path="/bookings" element={<Bookings_Page />} />
             <Route path="/company/about" element={<AboutUs />} />
             <Route path="news" element={<News/>} />
-            <Route path="bookings/liveband" element={<BookBand/>} />
-            <Route path="bookings/dj" element={<BookDj/>} />
-            <Route path="bookings/musician" element={<BookMusician/>} />
-            <Route path="bookings/comedian" element={<BookComedian/>} />
-            <Route path="bookings/mc" element={<BookMc/>} />
-            <Route path="bookings/influencer" element={<BookInfluencer/>} />
+            <Route path="bookings/:artist" element={<BookArtist/>} />
+    
             <Route path="bookings/musician/about" element={<MusicianInfo/>} />
             <Route path="bookings/comedian/about" element={<ComedianInfo/>} />
             <Route path="bookings/mc/about" element={<McInfo/>} />
