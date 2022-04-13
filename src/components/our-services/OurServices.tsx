@@ -24,7 +24,7 @@ const services=[{
 				<h2 className=" text-[1.8rem] sm:text-[3rem] lg:text-[4rem]">our services</h2>
 				<div className={`flex flex-wrap justify-center ${styles.service}`}>
 					{services.map((item,index)=>(
-						<div className="text-center uppercase md:text-[1.5rem]">
+						<div key={index} className="text-center uppercase md:text-[1.5rem]">
 						<img src={Talent} alt="service image" />
 						<p className="lg:mb-[72px] mb-[20px]">{item.title}</p>
 					</div>
