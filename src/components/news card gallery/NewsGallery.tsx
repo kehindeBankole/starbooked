@@ -22,8 +22,8 @@ const news:{text:string; img:any;title:string}[]=[
 ]
 
   return (    <>
-{news.map(item=>(
-  <NewsCard text={item.text} img={Phone} title={item.title}/>
+{news.map((item,index)=>(
+  <NewsCard key={index} text={item.text} img={Phone} title={item.title}/>
 ))}
 
 
