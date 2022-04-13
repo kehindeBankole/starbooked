@@ -90,7 +90,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
       <div
         className={`${styles.content}  flex flex-row justify-between items-center  w-screen`}
       >
-        <div className={`${styles.co} flex flex-row  justify-between items-center w-screen `}>
+        <div className={`${styles.co} flex flex-row my-[10px]  justify-between items-center w-screen `}>
         
 <img 
             src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
