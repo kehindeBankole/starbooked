@@ -131,6 +131,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               onClick={() => {
                 timeline.reverse();
                 navigate(item.url);
+                window.scroll(0,0)
               }}
               className="text-lg text-one mb-30 nav-btn"
               style={{
@@ -178,7 +179,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
              {item.title}{(item.title!=="home"&&item.title!=="news"&&window.location.pathname=="/")&&<ChevronDown className="ml-[5px]"/>}
              {(item.title!=="home"&&item.title!=="news"&&window.location.pathname!=="/")&&<ChevronDownDark className="ml-[5px]"/>}
             </button>
-             {(item.title!=="home")&&(<div key={index+1} className={`absolute top-[60px] z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"280px":item.title==="our services"?"320px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"300px":item.display&&item.title==="company"?"140px":"0px",overflow:"hidden", transition:"all .5s",
+             {(item.title!=="home")&&(<div key={index+1} className={`absolute top-[70px] z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"280px":item.title==="our services"?"320px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"300px":item.display&&item.title==="company"?"140px":"0px",overflow:"hidden", transition:"all .5s",
             left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:"20px"
             }}>
               <button className="absolute" style={{top:item.title==="company"?"30px":"-10px",right:item.title==="company"?"27px":"10px"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
