@@ -8,6 +8,7 @@ interface Props{
     handle1:any;
 handle2:any;
 handle3:any;
+handleOpen?:any;
 }
 
 
@@ -44,7 +45,7 @@ function ArtistInfoGallery(props:Props) {
  
        </div>
 
-        <button className={`${styles.btn} rounded-[20px] sm:w-[503px] w-[100%] sm:h-[99px] w-[78%] h-[50px] font-[700] sm:text-[1.125rem] text-[.8rem] mb-[110px] sm:mt-[159px] mt-[100px] shadow-lg  uppercase mx-auto`}>{props.action}</button>
+        <button onClick={()=>props.handleOpen()} className={`${styles.btn} rounded-[20px] sm:w-[503px] w-[100%] sm:h-[99px] w-[78%] h-[50px] font-[700] sm:text-[1.125rem] text-[.8rem] mb-[110px] sm:mt-[159px] mt-[100px] shadow-lg  uppercase mx-auto`}>{props.action}</button>
        </>
   )
 }

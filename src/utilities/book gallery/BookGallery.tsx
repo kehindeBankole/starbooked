@@ -43,7 +43,7 @@ const style = {
   p: 4,
   color:"white",
 };
-// const navigate= useNavigate() 
+const navigate= useNavigate() 
 
 const [open, setOpen] = React.useState(false);
 const handleOpen = () => setOpen(true);
@@ -78,10 +78,9 @@ const handleClose = () => setOpen(false);
 <p className='mt-[5px] text-[.75rem]'>380k</p>
 </div>   
  </div>
- <Link to={props.url}>
-<button className={`capitalize ${styles.read}`}>read more.....</button>
+<button onClick={()=>{navigate(`${props.url}`)}} className={`capitalize ${styles.read}`}>read more.....</button>
 
- </Link>
+
 
      </div>
      <div className='absolute bottom-[0]  shadow-lg rounded-[20px] w-[100%]'>

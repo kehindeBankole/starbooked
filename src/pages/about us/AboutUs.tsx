@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./AboutUs.module.scss"
 import { Button } from '../../utilities'
-import { OurService,OurMission,OurVision,Booking} from '../../components'
+import { OurService,Booking} from '../../components'
 import {About} from "../../assets/images"
 import Marquee from "react-fast-marquee";
 import {
