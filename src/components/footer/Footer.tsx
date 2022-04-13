@@ -36,7 +36,7 @@ const quickLinks = [
 		title: 'news'
 	},
 	{
-		title: 'booking'
+		title: 'bookings'
 	},
 	{
 		title: 'services'
