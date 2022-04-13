@@ -50,8 +50,10 @@ function Home() {
         <BannerSlider img1={img1} bookBtn={true} sliderInfo={sliderInfo}/> 
       </div>
      </div>
+<div className="md:mt-[180px] md:mb-[176px] my-[2rem]">
+<Explore/>
 
-     <Explore/>
+</div>
 <OurService/>
 <div className="ml-[61px] mr-[57px]">
 <Marquee speed={80} gradient={false} className="overflow-hidden mb-[4rem] ">

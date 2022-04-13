@@ -3,7 +3,7 @@ import styles from "./Nav.module.scss";
 import { gsap } from "gsap";
 import logoWhite from "../../assets/images/logowhite.svg";
 import logoDark from "../../assets/images/logodark.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { CloseList } from "../../assets/images";
 import {Link} from "react-router-dom"
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
@@ -19,9 +19,10 @@ title:string;
 display?:boolean;
 }
 function Nav() {
+ 
   const timeline = gsap.timeline({ paused: true });
   const navigate = useNavigate();
-  console.log(window.location.pathname);
+console.log(window.location.pathname.replace(/%20/g," "));
 
 const Items:Drop[]=[
   {
@@ -40,7 +41,7 @@ dropMenu:<><li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[
     url: "services",
     title: "our services",
 display:false,
-dropMenu:<><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Corporate Entertainment</li> <li onClick={()=>navigate("bookings")} className="hover:ml-[10px] transition-all">Private Parties </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Wedding Entertainment </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Birthday Entertainment  </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all"> Celebrity Appearances </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Public Concerts </li><li onClick={()=>navigate("")} className="hover:ml-[10px] transition-all">Fairs, Carnivals, and Festivals </li> </>
+dropMenu:<><li onClick={()=>navigate("services/Corporate Entertainment")} className="hover:ml-[10px] transition-all">Corporate Entertainment</li> <li onClick={()=>navigate("services/Private Parties")} className="hover:ml-[10px] transition-all">Private Parties </li><li onClick={()=>navigate("services/Wedding Entertainment")} className="hover:ml-[10px] transition-all">Wedding Entertainment </li><li onClick={()=>navigate("services/Birthday Party Entertainment")} className="hover:ml-[10px] transition-all">Birthday Entertainment</li><li onClick={()=>navigate("services/Celebrity Appearances")} className="hover:ml-[10px] transition-all"> Celebrity Appearances </li><li onClick={()=>navigate("services/Public Concerts")} className="hover:ml-[10px] transition-all">Public Concerts </li><li onClick={()=>navigate("services/Fairs, Carnivals, and Festivals")} className="hover:ml-[10px] transition-all">Fairs, Carnivals, and Festivals </li> </>
 
 },
   {
@@ -85,7 +86,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
   }
 
   return (
-    <div className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"}  z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
+    <div id="top" className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"}  z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
       <div
         className={`${styles.content}  flex flex-row justify-between items-center  w-screen`}
       >
@@ -103,7 +104,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           
 <button onClick={() => timeline.play()}>
   <i
-    className="ri-menu-5-fill lg:hidden mr-[30px]"
+    className="ri-menu-5-fill lg:hidden md:mr-[32px]"
     style={{ color: window.location.href===`${window.location.protocol}//${window.location.host}/` ? 'white':"black", fontSize: 25 }}
   ></i>
 </button>
@@ -112,7 +113,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 
         </div>
         <div
-          className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-[0] left-[0] bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
+          className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-[0]  bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
         >
           <button
             className="absolute closeIcon"
@@ -150,7 +151,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           ))}
 
         </div>
-        <div className={`${styles.navItems} hidden  lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
+        <div className={`${styles.navItems} hidden mt-[15px] lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
             <button 
@@ -159,7 +160,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               ( item.title==="home"||item.title==="news")&&navigate(item.url);
              getTitle(e.target,item.title)
               }}
-              className={`text-lg ${item.title==="our services"&&"w-[129px]"} flex items-center text-one mr-30`}
+              className={`text-lg ${item.title==="our services"&&"w-[129px]"}  flex items-center text-one mr-30`}
               style={{
                 color:
                   item.title !== "home"
@@ -197,7 +198,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
       </div>
   <div  className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
   { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"><button className="inline capitalize" onClick={()=>navigate("/")}>Home</button>  <span style={{color:"#F9A61B"}}> 
-   {">"} <button  onClick={()=>navigate(`${window.location.pathname.split("/")[1]}`)} className="inline capitalize">{window.location.pathname.split("/")[1]}</button>  <button className="inline capitalize">{window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2]}`:""}</button> 
+   {">"} <button  onClick={()=>navigate(`${window.location.pathname.split("/")[1]}`)} className="inline capitalize">{window.location.pathname.split("/")[1].replace("2"," ")}</button>  <button className="inline capitalize">{window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2].replace(/%20/g," ")}`:""}</button> 
       </span>
       </div>}
   </div>

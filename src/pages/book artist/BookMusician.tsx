@@ -1,5 +1,5 @@
 import React from 'react'
-import {DJS,Star,FB,Insta,Twitter2, Musicians} from "../../assets/images"
+import {BookMusician as Musicians,Star,FB,Insta,Twitter2} from "../../assets/images"
 import styles from "./BookPages.module.scss"
 import {BookGallery} from "../../utilities"
 import {Book} from "../../components"
@@ -73,7 +73,7 @@ url:"about"
     <section className='mt-[0px]'>
     <div className='container '>
       <header className='text-center uppercase  lg:text-[4rem] text-[1.5rem] md:text-[2rem] font-[700]'>
-        book your favourites
+        book a musician
       </header>
 
       <div className={`${styles.bands} flex flex-wrap justify-between md:mr-[57px] md:ml-[61px] mt-[105px]`}>

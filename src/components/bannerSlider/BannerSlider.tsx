@@ -118,7 +118,7 @@ const navigate=useNavigate()
           <div className={styles.overlay}></div>
 
             <div className="w-[100%] z-[1]">
-            <button onClick={()=>navigate("bookings")} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
+            <button onClick={()=>{navigate("bookings"); window.scroll(0,0)}} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
               booking <ChevronSmall />
             </button>
             </div>

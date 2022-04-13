@@ -22,6 +22,7 @@ const MusicianInfo= lazy(() => import("./pages/artist info/Musician"));
 const McInfo= lazy(() => import("./pages/artist info/Mc"));
 const DjInfo= lazy(() => import("./pages/artist info/Dj"));
 const InfluencerInfo= lazy(() => import("./pages/artist info/Influencer"));
+const ServiceReadMore= lazy(() => import("./pages/servicerReadMore/ServiceReadMore"));
 // const Book= lazy(() => import("./pages/Book/Book"));
 // function SmallNav(){
 //   return(
@@ -43,9 +44,9 @@ function App() {
         <Suspense fallback={<p style={{textAlign:"center"}}>loading</p>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services2" element={<Bookings />} />
+            <Route path="/services" element={<Bookings />} />
 
-            <Route path="/services" element={<Services />} />
+            <Route path="/services2" element={<Services />} />
             {/* <Route path="/company" element={<Company />} /> */}
             <Route path="/bookings" element={<Bookings_Page />} />
             <Route path="/company/about" element={<AboutUs />} />
@@ -62,6 +63,7 @@ function App() {
             <Route path="bookings/dj/about" element={<DjInfo/>} />
             <Route path="bookings/influencer/about" element={<InfluencerInfo/>} />
             <Route path="bookings/liveband/about" element={<BandInfo/>} />
+            <Route path="/services/:id" element={<ServiceReadMore/>} />
             <Route path="contact" element={<div className="text-center font-[700] uppercase mt-[105px] text-[2.25rem]">Contact us</div>} />
           </Routes>
         </Suspense>

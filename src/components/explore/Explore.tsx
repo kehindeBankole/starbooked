@@ -91,7 +91,7 @@ function Explore() {
 // },[])
 
   return (
-    <section className='mt-[180px] mb-[176px]'>
+    <section className=''>
         <div className='container sm:pr-[57px] sm:pl-[61px]'>
             <div className='flex lg:flex-row flex-col flex-wrap'>
 <div className="lg:w-[40%]  lg:text-left text-center ">
@@ -131,7 +131,7 @@ function Explore() {
 
       
      
-      ...
+    <div className="invisible">...</div>  
     
 {exploreArr.map((item,index)=>(
   <SwiperSlide className="self-end">
@@ -145,7 +145,7 @@ function Explore() {
 </div>
 <div className="w-[100%]">
 
-<button onClick={()=>navigate("/bookings")} className={`${styles.btn} lg:hidden m-auto lg:w-[156px] lg:h-[60px] w-[7rem] h-[3rem] text-[.8rem] uppercase`}> booking <ChevronSmall className="inline w-[7%] ml-[12px]"/> </button>
+<button onClick={()=>{navigate("/bookings");window.scroll(0,0)}} className={`${styles.btn} lg:hidden m-auto lg:w-[156px] lg:h-[60px] w-[7rem] h-[3rem] text-[.8rem] uppercase`}> booking <ChevronSmall className="inline w-[7%] ml-[12px]"/> </button>
 
 
 </div>

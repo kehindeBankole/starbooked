@@ -3,7 +3,7 @@ import logoWhite from '../../assets/images/logowhite.svg';
 import { Facebook, Twitter, Linkdin, Instagram } from '../../assets/images';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as ChevronUp } from "../../assets/images/chevronup.svg";
-
+import { Link, animateScroll as scroll } from "react-scroll";
 function Footer() {
 	const navigate = useNavigate();
 	return (
@@ -23,25 +23,25 @@ function Footer() {
 					<h2 className="uppercase">quick links</h2>
 					<ul>
 						<li>
-							<button className="capitalize" onClick={() => navigate('company/aboutus')}>
+							<button className="capitalize" onClick={() => {navigate('company/about');window.scroll(0,0)}}>
 								about
 							</button>
 						</li>
 
 						<li>
-							<button className="capitalize" onClick={() => navigate('/news')}>
+							<button className="capitalize" onClick={() =>{ navigate('/news');window.scroll(0,0)}}>
 								news
 							</button>{' '}
 						</li>
 
 						<li>
-							<button className="capitalize" onClick={() => navigate('/bookings')}>
+							<button className="capitalize" onClick={() => {navigate('/bookings'); window.scroll(0,0)}}>
 								booking
 							</button>
 						</li>
 
 						<li>
-							<button className="capitalize" onClick={() => navigate('/services')}>
+							<button className="capitalize" onClick={() => {navigate('/services');window.scroll(0,0)}}>
 								services
 							</button>
 						</li>
@@ -52,24 +52,28 @@ function Footer() {
 					<h2 className="uppercase">our services</h2>
 					<ul>
 						<li>
-							<button className="capitalize">corperate entertainment</button>
+							<button onClick={()=>{navigate("services/Corporate Entertainment");window.scroll(0,0)}} className="capitalize">corporate entertainment</button>
 						</li>
 						<li>
-							<button className="capitalize">private parties</button>
+							<button onClick={()=>{navigate("services/Private Parties");window.scroll(0,0)}} className="capitalize">private parties</button>
 						</li>
 						<li>
-							<button className="capitalize">wedding entertainment</button>
+							<button onClick={()=>{navigate("services/Wedding Entertainment");window.scroll(0,0)}} className="capitalize">wedding entertainment</button>
 						</li>
 						<li>
-							<button className="capitalize">Birthday party entertainment</button>
-						</li>
-
-						<li>
-							<button className="capitalize">celebrity appearance</button>
+							<button onClick={()=>{navigate("services/Birthday Party Entertainment");window.scroll(0,0)}} className="capitalize">Birthday party entertainment</button>
 						</li>
 
 						<li>
-							<button className="capitalize">fairs, carnivals and festivals</button>
+							<button onClick={()=>{navigate("services/Celebrity Appearances");window.scroll(0,0)}} className="capitalize">celebrity appearance</button>
+						</li>
+
+						<li>
+							<button onClick={()=>{navigate("services/Public Concerts");window.scroll(0,0);}} className="capitalize">Public Concerts</button>
+						</li>
+
+						<li>
+							<button onClick={()=>{navigate("services/Fairs, Carnivals, and Festivals");window.scroll(0,0)}} className="capitalize">fairs, carnivals and festivals</button>
 						</li>
 					</ul>
 				</div>
@@ -87,10 +91,20 @@ function Footer() {
 				</div>
 			</div>
       <div className='flex justify-end w-[100%] mt-[10px]'>
-      <button className="bg-[#F9A61B]  flex lg:w-[100px] lg:h-[100px] w-[50px] h-[50px] rounded-full  ">
-  <ChevronUp className="m-[auto] h-[30%]"/>
+	  <Link
+    activeClass="active"
+    to="top"
+    spy={true}
+    smooth={true}
+    offset={-6000}
+    duration={2000}
+>
+<button className="bg-[#F9A61B]  flex w-[50px] h-[50px] rounded-full  ">
+  <ChevronUp className="m-[auto] h-[20%]"/>
 
   </button>
+</Link>
+     
       </div>
     
 			<div className={`flex flex-wrap justify-between  mt-[26px] capitalize ${styles.bottom_footer}`}>

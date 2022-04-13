@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./ServicesCard.module.scss"
 
 interface Props{
+id?:number;
 img:any;
 text:string;
 title:any;
@@ -13,8 +15,9 @@ moreTextHeader?:any;
 
 function ServicesCard(props:Props) {
 const [showMore,setShowMore]=useState(true)
-console.log(props.text.substring(0,100))
-  return (
+// console.log(props.text.substring(0,100))
+const navigate = useNavigate()
+return (
     // <div className={`${styles.card} w-[397px]`}>
       <div className={`${styles.card}  lg:w-[30%] md:w-[50%] md:mr-[24px] `}>
       <img src={props.img} className=" lg:h-[420px] md:w-[100%] mx-auto h-auto" alt="" />
@@ -39,7 +42,7 @@ console.log(props.text.substring(0,100))
           </div>
 
         </div> */}
-        <div className="flex"><button className={`${styles.card_footer}  capitalize`} >read more </button><span className={`${styles.hr} ml-[10px] mt-5`}></span></div>        
+        <div className="flex"><button onClick={()=>{navigate(`/services/${props.title}`);window.scroll(0,0)}} className={`${styles.card_footer}  capitalize`} >read more </button><span className={`${styles.hr} ml-[10px] mt-5`}></span></div>        
       </div>
 
     // </div>
