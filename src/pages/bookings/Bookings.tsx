@@ -90,9 +90,9 @@ function Bookings() {
  
            </div> 
       
-           <div className='flex my-[123px] justify-end w-[100%] pl-[61px] pr-[57px]'>
+           <div className='flex my-[123px] lg:justify-end justify-center w-[100%] pl-[61px] pr-[57px]'>
 
-    <button onClick={()=>{navigate("/services2");window.scroll(0,0)}} className={`${styles.load_more} w-[171px] h-[60px] rounded-[15px] uppercase text-[1.125rem] font-[700]`}>load more +</button>
+    <button onClick={()=>{navigate("/services2");window.scroll(0,0)}} className={`${styles.load_more} sm:w-[171px] sm:h-[60px]  rounded-[15px] uppercase sm:text-[1.125rem] text-[.8rem] h-[40px] w-[120px] font-[700]`}>load more +</button>
 
 </div>
           </div>
