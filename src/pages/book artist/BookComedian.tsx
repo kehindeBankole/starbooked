@@ -1,5 +1,5 @@
 import React from 'react'
-import {DJS,Star,FB,Insta,Twitter2, Comedians} from "../../assets/images"
+import {Star,FB,Insta,Twitter2,BookComedian as Comedians} from "../../assets/images"
 import styles from "./BookPages.module.scss"
 import {BookGallery} from "../../utilities"
 import {Book} from "../../components"

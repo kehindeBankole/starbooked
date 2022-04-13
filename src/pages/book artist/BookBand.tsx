@@ -1,5 +1,5 @@
 import React from 'react'
-import {Band1,Band2,Star,FB,Insta,Twitter2} from "../../assets/images"
+import {Band1,Band2,Band3,Star,FB,Insta,Twitter2} from "../../assets/images"
 import styles from "./BookPages.module.scss"
 import {BookGallery} from "../../utilities"
 import {Book} from "../../components"
@@ -34,7 +34,7 @@ url:"about"
 }
   ,
 
-{category_img:Band2,
+{category_img:Band3,
   handle1:FB,
   handle2:Twitter2,
   handle3:Insta,
@@ -44,7 +44,7 @@ url:"about"
 }
   ,
 
-{category_img:Band2,
+{category_img:Band3,
   handle1:FB,
   handle2:Twitter2,
   handle3:Insta,
@@ -54,7 +54,7 @@ url:"about"
 }
   ,
 
-{category_img:Band2,
+{category_img:Band3,
   handle1:FB,
   handle2:Twitter2,
   handle3:Insta,
@@ -63,7 +63,7 @@ url:"about"
 url:"about"  
 }
 ,
-  {category_img:Band2,
+  {category_img:Band3,
     handle1:FB,
     handle2:Twitter2,
     handle3:Insta,

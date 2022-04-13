@@ -19,11 +19,7 @@
         }
         
     } 
-    .booking_btn{
-        background-color: $six;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
+   
   .load_more{
       background-color: $six;
   }
@@ -36,6 +32,12 @@
 
 .overText{
     height: 0%;
+}
+
+.btn{
+    border-radius: 20px;
+background-color: $six;
+font-weight:700; 
 }
 
 @media screen and (max-width:1023px){
