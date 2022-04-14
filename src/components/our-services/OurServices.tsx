@@ -2,19 +2,17 @@ import styles from './OurService.module.scss';
 import { Talent, Booking, BrandPartner, LabelService, Management, PR } from '../../assets/images';
 function OurServices() {
 const services=[{
-	title:"talent management",img:Talent},
+	title:"coporate entertainment",img:Talent},
+	{
+		title:"public concerts",img:Booking
+	},
 {
-	title:"bookings",img:Booking},
+	title:"private parties",img:BrandPartner},
 {
-	title:"pr",img:PR},
+	title:"birthday parties",img:PR},
 {
-	title:<>Social media <br /> management</>,img:Management},
-{
-	title:"label services",img:LabelService
-},
-{
-	title:"brand patnership",img:BrandPartner
-}
+	title:"wedding entertainment",img:LabelService},
+
 ]
 
 	return (

@@ -11,6 +11,7 @@ export { default as Talent} from "./our_services/Talent_management.png"
 export { default as PR} from "./our_services/PR.png"
 //our service2
 export { default as Booking2 } from "./booking2.png"
+export { default as Booking3 } from "./booking3.png"
 export { default as BrandPartner2} from "./our_services2/BrandPartner.png"
 export { default as LabelService2} from "./our_services2/label.png"
 export { default as Management2} from "./our_services2/Social.png"
