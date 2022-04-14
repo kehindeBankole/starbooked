@@ -2,19 +2,18 @@ import styles from './OurService.module.scss';
 import { Talent, Booking, BrandPartner, LabelService, Management, PR } from '../../assets/images';
 function OurServices() {
 const services=[{
-	title:"talent management"
+	title:"talent management",img:Talent},
+{
+	title:"bookings",img:Booking},
+{
+	title:"pr",img:PR},
+{
+	title:<>Social media <br /> management</>,img:Management},
+{
+	title:"label services",img:LabelService
 },
 {
-	title:"bookings"
-},
-{
-	title:"pr"
-},
-{
-	title:<>Social media <br /> management</>
-},
-{
-	title:"label services"
+	title:"brand patnership",img:BrandPartner
 }
 ]
 
@@ -25,7 +24,7 @@ const services=[{
 				<div className={`flex flex-wrap justify-center ${styles.service}`}>
 					{services.map((item,index)=>(
 						<div key={index} className="text-center uppercase md:text-[1.5rem]">
-						<img src={Talent} alt="service image" />
+						<img src={item.img} alt="service image" />
 						<p className="lg:mb-[72px] mb-[20px]">{item.title}</p>
 					</div>
 					))}
