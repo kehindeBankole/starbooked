@@ -2,7 +2,7 @@ import styles from './OurServices2.module.scss';
 import { ServicesCard } from '../../utilities';
 import React from 'react';
 
-import { Talent2, BrandPartner2, Booking2, PR2, Management2, LabelService2, Social, Label } from '../../assets/images';
+import { Talent2, BrandPartner2, Booking2, PR2, Management2, LabelService2, Social, Label, Booking3 } from '../../assets/images';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -52,7 +52,7 @@ function OurServices2() {
 			title: 'Wedding Entertainment ',
 			text:
 				'Your wedding is perhaps the single most important event in your life. This milestone experience deserves only the most carefully planned celebration, and perhaps no other aspect of your wedding or rehearsal dinner deserves more attention and consideration than your chosen entertainment for the evening. Most brides and grooms assume that securing the biggest names in film, television, and music for their wedding or rehearsal dinner is nearly impossible. But nothing could be further from the truth.',
-			img: Booking2,
+			img: LabelService2,
 			moreText:
 				'Star Book has been helping couples just like you narrow down their choices for unique wedding entertainment options and then negotiate those deals on their behalf for decades. Regardless of your entertainment genre, whether you’d like a traditional musician or band, or a more unusual choice such as a comedian, we are ready to put our time-tested years of experience to work for you. With thousands of acts at our fingertips, and already well-established relationships with hundreds of agents, we can negotiate with the high-profile names that might otherwise be beyond your reach.',
 			moreTextHeader: 'Wedding Entertainers',
@@ -94,7 +94,7 @@ function OurServices2() {
 			title: 'Public Concerts',
 			text:
 				'Headliners and Celebrity Entertainment for Fairs & Music Festivals Perhaps you’re early into the planning phase, and you’re trying to hire not only a world class headlining band for your music festival but also multiple acts to perform throughout the day. Maybe your festival is just one day, the line-up is nearly finished, and you just need to secure that headlining band. Or, perhaps your festival is multiple days with multiple stages, and you’re looking for some fairly big names to round out the line-up and appeal to a variety of tastes.Regardless of where you are in your decision-making process, Star Book has a massive catalogue of performers to choose from, as well as the already established entertainment industry relationship with their agents.',
-			img: LabelService2,
+			img:Booking2,
 			moreText: '',
 			moreTextHeader: 'Public concerts',
 			help:

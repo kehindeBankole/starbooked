@@ -2,7 +2,7 @@ import React from 'react';
 import { Explore } from '../../components';
 import { ReactComponent as ChevronSmall } from '../../assets/images/small.svg';
 
-import { Talent2, BrandPartner2, Booking2, PR2, Management2, LabelService2 } from '../../assets/images';
+import { Talent2, BrandPartner2, Booking3, LabelService2 } from '../../assets/images';
 import { ServicesCard } from '../../utilities';
 import styles from './Bookings.module.scss';
 import { useNavigate } from 'react-router-dom';
@@ -71,7 +71,6 @@ function Bookings() {
 					</header>
 					<div className={`${styles.hero_text} `}>
 						<p className="">
-							{' '}
 							Book world-renowned and rising music artists, DJs and celebrity talent for commercial or
 							private events around the world. Our booking agents can help you bring top talent to
 							audiences almost anywhere.
@@ -85,13 +84,12 @@ function Bookings() {
 						onClick={() => navigate('/bookings')}
 						className={`${styles.btn} lg:w-[156px] lg:h-[60px] lg:block hidden w-[7rem] h-[3rem] lg:text-[1rem] text-[.8rem] uppercase`}
 					>
-						{' '}
-						booking <ChevronSmall className="inline w-[7%] ml-[12px]" />{' '}
+						booking <ChevronSmall className="inline w-[7%] ml-[12px]" />
 					</button>
 				</div>
 
 				<div className="lg:mr-[57px] lg:w-auto md:w-[50%] mx-auto lg:px-[0px] px-[20px] ">
-					<img src={Booking2} className=" lg:h-[344px] w-[100%]" alt="" />
+					<img src={Booking3} className=" lg:h-[344px] w-[100%]" alt="" />
 				</div>
 			</div>
 
