@@ -5,8 +5,6 @@ import logoWhite from "../../assets/images/logowhite.svg";
 import logoDark from "../../assets/images/logodark.svg";
 import { useNavigate, useParams } from "react-router-dom";
 import { CloseList } from "../../assets/images";
-import {Link} from "react-router-dom"
-import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import { ReactComponent as ChevronDown } from "../../assets/images/chevrondown.svg";
 import { ReactComponent as ChevronDownDark } from "../../assets/images/chevrondowndark.svg";
 import { ReactComponent as SearchDark } from "../../assets/images/searchdark.svg";
@@ -18,8 +16,10 @@ url:string;
 title:string;
 display?:boolean;
 }
+
+
+
 function Nav() {
- 
   const timeline = gsap.timeline({ paused: true });
   const navigate = useNavigate();
 
@@ -73,7 +73,7 @@ dropMenu:<><li onClick={()=>navigate("company/about")} className="hover:ml-[10px
     // `${window.location.protocol}//${window.location.host}/
   });
 
-  const getTitle=(e:any,title:string)=>{
+  const getTitle=(title:string)=>{
 setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty("dropMenu")?{...navItem,display: !navItem.display}:{...navItem,display:false}))
 
 }
@@ -81,9 +81,9 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 
 
   const CloseDropDown=()=>{
-  setNavItem(  navItems.map(item=>({...item,display:false})))
+  setNavItem(navItems.map(item=>({...item,display:false})))
   }
-
+  
   return (
     <div id="top" className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"}  z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
       <div
@@ -158,7 +158,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             id="dropdown-btn"
               onClick={(e) => {
               ( item.title==="home"||item.title==="news")&&navigate(item.url);
-             getTitle(e.target,item.title)
+             getTitle(item.title)
               }}
               className={`text-lg ${item.title==="our services"&&"w-[129px]"}  flex items-center text-one mr-30`}
               style={{

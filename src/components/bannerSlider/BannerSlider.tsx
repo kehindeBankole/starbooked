@@ -34,6 +34,10 @@ const navigate=useNavigate()
   return (
     <Carousel
       showStatus={false}
+      autoPlay={true}
+      infiniteLoop={true}
+      interval={4000}
+      
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
         hasPrev && (
           <button
@@ -51,6 +55,7 @@ const navigate=useNavigate()
               left: "18%",
               position: "absolute",
             }}
+            
           >
             <ChevronLeft />
           </button>
@@ -101,7 +106,9 @@ const navigate=useNavigate()
             aria-label={`${label} ${index + 1}`}
           />
         );
-      }}
+      }
+    }
+      
     >
       {props.sliderInfo?props.sliderInfo.map((item:any,index:number)=>(
           <React.Fragment key={index}>
