@@ -44,9 +44,9 @@ function App() {
 					</Suspense>
 				</main>
 
-				<footer>
+		
 					<Footer />
-				</footer>
+
 			</div>
 		</GlobalProvider>
 	);
