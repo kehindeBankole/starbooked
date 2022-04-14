@@ -2,17 +2,13 @@ import styles from './OurService.module.scss';
 import { Talent, Booking, BrandPartner, LabelService, Management, PR } from '../../assets/images';
 function OurServices() {
 const services=[{
-	title:"talent management"
-,img:Talent},
+	title:"talent management",img:Talent},
 {
-	title:"bookings"
-,img:Booking},
+	title:"bookings",img:Booking},
 {
-	title:"pr"
-,img:PR},
+	title:"pr",img:PR},
 {
-	title:<>Social media <br /> management</>
-,img:Management},
+	title:<>Social media <br /> management</>,img:Management},
 {
 	title:"label services",img:LabelService
 },
