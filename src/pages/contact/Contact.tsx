@@ -3,6 +3,24 @@ import Facebook from '@mui/icons-material/Facebook';
 import Instagram from '@mui/icons-material/Instagram';
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import Twitter from '@mui/icons-material/Twitter';
+const Handles=[{
+	icons:<Instagram/>,
+	url:"https://www.instagram.com",
+title:"instagram"},
+{
+	icons:<LinkedIn/>,
+	url:"https://www.linkedin.com",
+title:"linkedin"},
+{
+	icons:<Facebook/>,
+	url:"https://www.facebook.com",
+title:"facebook"}
+,
+{
+	icons:<Twitter/>,
+	url:"https://www.twitter.com",
+title:"twitter"}
+]
 function Contact() {
 	return (
 		<section className="container md:pl-[61px] md:pr-[57px]">
@@ -36,28 +54,17 @@ or <br />
 		<div className='m-auto md:m-[0]'>
 		<header className='text-2xl font-bold capitalize text-3xl'>our handles</header>
 		<div className='flex justify-between mt-[1rem]'>
-			<div className='mx-[.5rem]'>
-				<a href='#'>
-				<Instagram className="text-2xl"/>
+{Handles.map((item,index)=>(
+		<div key={index} className='mx-[.5rem]'>
+		<a className={`text-2xl ${item.title==="instagram"?"text-[#e95950]":"text-[blue]"}`} href={item.url} target="_blank">
+		{item.icons}
 
-				</a>
-			<p className='text-[.8rem] font-bold'>Instagram</p>	
-			</div>
+		</a>
+	<p className='text-[.8rem] font-bold'>{}</p>	
+	</div>
+))}
 
-			<div className='mx-[.5rem]'>
-				<a href="#"><LinkedIn className="text-2xl"/></a>
-			<p className='text-[.8rem] font-bold'>LinkedIn</p>	
-			</div>
-
-			<div className='mx-[.5rem]'>
-				<a href="#"><Facebook className="text-2xl"/></a>
-			<p className='text-[.8rem] font-bold'>Facebook</p>	
-			</div>
-
-			<div className='mx-[.5rem]'>
-				<a href="#"><Twitter className="text-2xl"/></a>
-			<p className='text-[.8rem] font-bold'>Twitter</p>	
-			</div>
+		
 		</div>
 <div>
 
