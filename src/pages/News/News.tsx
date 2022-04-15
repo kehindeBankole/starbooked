@@ -1,9 +1,11 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom"
 import { News as NewsPic, Cheers } from '../../assets/images';
 import styles from './News.module.scss';
 import { NewsGallery, BannerSlider, Booking } from '../../components';
 import { Button } from '../../utilities';
 function News() {
+	const navigate=useNavigate()
 	return (
 		<section className={`${styles.News} mt-[px]`}>
 			<div className={`${styles.banner} container`}>
@@ -42,17 +44,23 @@ function News() {
 						<NewsGallery />
 					</div>
 
-					<div className="flex mt-[123px]">
-						<div className={`${styles.load_more} m-auto`}>
-							<button
-								className={`w-[171px] h-[60px] rounded-[15px] uppercase text-[1.125rem] font-[700]`}
-							>
-								load more +
-							</button>
-						</div>
+					
+
+					<div className={`${styles.load_more} flex my-[123px] justify-center w-[100%] pl-[61px] pr-[57px]`}>
+						<button
+							onClick={() => {
+								navigate('');
+								window.scroll(0, 0);
+							}}
+							className={`${styles.load_more} sm:w-[171px] sm:h-[60px]  rounded-[15px] uppercase sm:text-[1.125rem] text-[.8rem] h-[40px] w-[120px] font-[700]`}
+						>
+							load more +
+						</button>
 					</div>
 				</div>
 			</div>
+
+			
 			<Booking
 				title="be the first to know"
 				subtitle="Sign up to get exclusive information about our new signings, rosters and labels. We only send you information that you tell us is relevant, and won’t share your email with anyone else."
