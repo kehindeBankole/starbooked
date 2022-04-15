@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useLayoutEffect } from "react";
 import styles from "./Nav.module.scss";
 import { gsap } from "gsap";
 import logoWhite from "../../assets/images/logowhite.svg";
@@ -47,7 +47,7 @@ dropMenu:<><li onClick={()=>navigate("services/Corporate Entertainment")} classN
     url: "company/about",
     title: "company",
 display:false,
-dropMenu:<><li onClick={()=>navigate("company/about")} className="hover:ml-[10px] transition-all" style={{lineHeight:"15px"}}>About us </li> <li onClick={()=>navigate("contact")}  className="hover:ml-[10px] transition-all">Contact</li></>
+dropMenu:<><li onClick={()=>navigate("company/about")} className="hover:ml-[10px] transition-all" style={{lineHeight:"15px"}}>About us </li> <li onClick={()=>navigate("company/contact")}  className="hover:ml-[10px] transition-all">Contact</li></>
 
 },
   {
@@ -57,7 +57,7 @@ dropMenu:<><li onClick={()=>navigate("company/about")} className="hover:ml-[10px
 ]
 
   const [navItems,setNavItem]= useState(Items)
-  useEffect(() => {
+  useLayoutEffect(() => {
     timeline
       .to(".mobileNav", { x: 0, duration: 0.2 })
       .from(".closeIcon", { rotate: "180deg", opacity: 0 }, ">");
@@ -186,7 +186,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
               paddingLeft:item.title==="bookings"||item.title==="our services"?"40px":"23px",
               margin:item.title==="company"?"46px 0":"37px 0"
             }}>
-              <span className="hover:ml-[10px] transition-all" onClick={()=>setNavItem(navItems.map(navItem=>({...navItem,display:false})))}> {item.dropMenu}</span>
+              <span className="hover:ml-[10px] transition-all" onClick={()=>{setNavItem(navItems.map(navItem=>({...navItem,display:false})));window.scroll(0,0)}}> {item.dropMenu}</span>
             
              </ul>
              </div>)}

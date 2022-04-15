@@ -12,6 +12,9 @@ const services=[{
 	title:"birthday parties",img:PR},
 {
 	title:"wedding entertainment",img:LabelService},
+	{
+		title:<>FAIRS, CARNIVALS, <br /> AND FESTIVALS</>,
+		img:Management},
 
 ]
 
