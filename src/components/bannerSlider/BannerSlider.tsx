@@ -36,7 +36,7 @@ const navigate=useNavigate()
       showStatus={false}
       autoPlay={true}
       infiniteLoop={true}
-      interval={4000}
+      interval={5000}
       
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
         hasPrev && (

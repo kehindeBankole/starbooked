@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { GlobalProvider } from './GlobalContext/GlobalContext';
 const Home = lazy(() => import('./pages/home/Home'));
 const Services = lazy(() => import('./pages/services/Services'));
-// const Company = lazy(() => import('./pages/company/Company'));
+const Contact = lazy(() => import('./pages/contact/Contact'));
 const Bookings = lazy(() => import('./pages/bookings/Bookings'));
 const Bookings_Page = lazy(() => import('./pages/bookings/Bookings_Page'));
 const AboutUs = lazy(() => import('./pages/about us/AboutUs'));
@@ -14,12 +14,10 @@ const ArtistInfo = lazy(() => import('./pages/artist info/ArtistInfo'));
 const ServiceReadMore = lazy(() => import('./pages/servicerReadMore/ServiceReadMore'));
 
 function App() {
-
 	return (
 		<GlobalProvider>
 			<div className="flex flex-col min-h-screen w-[100%] overflow-x-hidden">
-
-				<Nav/>
+				<Nav />
 				<main className="main">
 					<Suspense fallback={<p style={{ textAlign: 'center' }}>loading</p>}>
 						<Routes>
@@ -33,21 +31,12 @@ function App() {
 							<Route path="bookings/:artist" element={<BookArtist />} />
 							<Route path="bookings/:artist/:aboutArtist" element={<ArtistInfo />} />
 							<Route path="/services/:id" element={<ServiceReadMore />} />
-							<Route
-								path="contact"
-								element={
-									<div className="text-center font-[700] uppercase mt-[105px] text-[2.25rem]">
-										Contact us
-									</div>
-								}
-							/>
+							<Route path="/company/contact" element={<Contact />} />
 						</Routes>
 					</Suspense>
 				</main>
 
-		
-					<Footer />
-
+				<Footer />
 			</div>
 		</GlobalProvider>
 	);
