@@ -15,7 +15,7 @@ function News() {
 				<BannerSlider bookBtn={false} img1={Cheers} />
 			</div>
 
-			<div className="mb-[166px] sm:mt-[8.438rem]">
+			<div className="sm:mb-[166px] sm:mt-[8.438rem]">
 				<div className="container lg:p-[0] p-[20px] ">
 					<header className="text-center  lg:text-[4rem] text-[1.5rem] md:text-[2rem]">Lastest news</header>
 					<div className="flex flex-wrap mb-[166px] mt-[61px] justify-between">
@@ -46,7 +46,7 @@ function News() {
 
 					
 
-					<div className={`${styles.load_more} flex my-[123px] justify-center w-[100%] pl-[61px] pr-[57px]`}>
+					<div className={`${styles.load_more} flex sm:my-[123px] my-[2rem] justify-center w-[100%] pl-[61px] pr-[57px]`}>
 						<button
 							onClick={() => {
 								navigate('');

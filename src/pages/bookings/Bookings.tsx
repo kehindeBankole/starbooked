@@ -121,7 +121,7 @@ function Bookings() {
 						))}
 					</div>
 
-					<div className="flex my-[123px] lg:justify-end justify-center w-[100%] pl-[61px] pr-[57px]">
+					<div className="flex sm:my-[123px] my-[2rem] lg:justify-end justify-center w-[100%] pl-[61px] pr-[57px]">
 						<button
 							onClick={() => {
 								navigate('/services2');
