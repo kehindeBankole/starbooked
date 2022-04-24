@@ -113,7 +113,7 @@ const navigate=useNavigate()
       {props.sliderInfo?props.sliderInfo.map((item:any,index:number)=>(
           <React.Fragment key={index}>
           <div
-            className={styles.content}
+            className={`flex ${styles.content}`}
             style={{
               background: `url(${item.image})`,
               backgroundSize: "cover",
@@ -121,14 +121,14 @@ const navigate=useNavigate()
             }}
           >
 
-              <p className="text-[white] z-[1] text-[.8rem] md:text-[1rem] w-[80%] font-[700]">{item.text}</p>
+              <p className="text-[white] m-auto z-[1] text-[.8rem] md:text-[1rem] w-[80%] font-[700]">{item.text}</p>
           <div className={styles.overlay}></div>
 
-            <div className="w-[100%] z-[1]">
+            {/* <div className="w-[100%] z-[1]">
             <button onClick={()=>{navigate("bookings"); window.scroll(0,0)}} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
               booking <ChevronSmall />
             </button>
-            </div>
+            </div> */}
            
           </div>
         </React.Fragment>
@@ -154,6 +154,7 @@ const navigate=useNavigate()
           </div>
         </React.Fragment>
       ))}
+
     </Carousel>
   );
 }

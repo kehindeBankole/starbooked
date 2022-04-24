@@ -54,8 +54,8 @@ function Footer() {
 					</div>
 
 					<div className="mt-[34px]" style={{ fontSize: '18px' }}>
-						A platform to promote celebrities and also book them for their services
-					</div>
+					From the biggest bands to top solo artists, from comedians to social media influencers, <br /> <br/>
+Star Book is YOUR booking agency.					</div>
 				</div>
 
 				<div id="links" className="my-[10px] xlg:my-[0] p-[3px]">
@@ -102,28 +102,29 @@ function Footer() {
 					<h2 className="uppercase">contact us</h2>
 					<ul>
 						<li id="phone-number" className="capitalize">
-							07459649070, 08143291757.
+							07459649070, +234 814 3291 757.
 						</li>
 						<li id="address" className="capitalize">
-							59, ram avenue, plam nut, central, usk.
+							lagos, nigeria.
 						</li>
 						<li id="address" className="capitalize">
-							for general enquiry: <a className='lowercase' href="mailto:info@starbook.ng"> info@starbook.ng</a>.
+							E-mail: <a  href="mailto:info@starbook.ng"> Info@Starbook.Ng</a> (For General Inquiry)
 						</li>
 						<li id="address" className="capitalize">
-							for bookings: <a className='lowercase' href="mailto:booking@starbook.ng">booking@starbook.ng</a>.
+							 <a href="mailto:booking@starbook.ng">Booking@Starbook.Ng</a>.
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div className="flex justify-end w-[100%] mt-[10px]">
+			<div className="flex justify-end w-[100%] fixed right-[2%] z-50 bottom-[5%]">
 				<Link activeClass="active" to="top" spy={true} smooth={true} offset={-6000} duration={2000}>
 					<button className="bg-[#F9A61B]  flex w-[50px] h-[50px] rounded-full  ">
 						<ChevronUp className="m-[auto] h-[20%]" />
 					</button>
 				</Link>
 			</div>
-
+{/* e-mail: info@starbook.ng (for general inquiry)
+booking@starbook.ng (for bookings) */}
 			<div className={`flex flex-wrap justify-between  mt-[26px] capitalize ${styles.bottom_footer}`}>
 				<p id="copyrights" className="w-[100%] md:w-[50%]">
 					<span>&copy;</span>starbook 2022. all rights reserved.
