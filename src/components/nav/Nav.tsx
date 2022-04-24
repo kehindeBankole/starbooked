@@ -22,7 +22,7 @@ display?:boolean;
 function Nav() {
   const timeline = gsap.timeline({ paused: true });
   const navigate = useNavigate();
-
+// window.scroll(0,0)
 const Items:Drop[]=[
   {
     url: "/",
@@ -94,7 +94,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 <img 
             src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
             alt="website logo"
-            onClick={() => navigate("/")}
+            onClick={() => {navigate("/"); window.scroll(0,0) }}
           />
           
      <div className="flex">
@@ -157,7 +157,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             <button 
             id="dropdown-btn"
               onClick={(e) => {
-              ( item.title==="home"||item.title==="news")&&navigate(item.url);
+              ( item.title==="home"||item.title==="news")&&navigate(item.url);window.scroll(0,0);
              getTitle(item.title)
               }}
               className={`text-lg ${item.title==="our services"&&"w-[129px]"}  flex items-center text-one mr-30`}
