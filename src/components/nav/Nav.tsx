@@ -22,7 +22,7 @@ display?:boolean;
 function Nav() {
   const timeline = gsap.timeline({ paused: true });
   const navigate = useNavigate();
-
+// window.scroll(0,0)
 const Items:Drop[]=[
   {
     url: "/",
@@ -33,7 +33,7 @@ const Items:Drop[]=[
     url: "bookings",
     title: "bookings",
 display:false,
-dropMenu:<><li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[10px] transition-all"> live band </li> <li onClick={()=>navigate("bookings/dj")} className="hover:ml-[10px] transition-all"> djs</li><li onClick={()=>navigate("bookings/musician")} className="hover:ml-[10px] transition-all">musician </li><li onClick={()=>navigate("bookings/comedian")} className="hover:ml-[10px] transition-all">comedian</li><li onClick={()=>navigate("bookings/mc")} className="hover:ml-[10px] transition-all">mc</li><li onClick={()=>navigate("bookings/influencer")} className="hover:ml-[10px] transition-all">influencers</li> </>
+dropMenu:<><li onClick={()=>navigate("bookings")} className="hover:ml-[10px] transition-all"> All </li><li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[10px] transition-all"> live band </li> <li onClick={()=>navigate("bookings/dj")} className="hover:ml-[10px] transition-all"> djs</li><li onClick={()=>navigate("bookings/musician")} className="hover:ml-[10px] transition-all">musician </li><li onClick={()=>navigate("bookings/comedian")} className="hover:ml-[10px] transition-all">comedian</li><li onClick={()=>navigate("bookings/mc")} className="hover:ml-[10px] transition-all">mc</li><li onClick={()=>navigate("bookings/influencer")} className="hover:ml-[10px] transition-all">influencers</li> </>
 
 },
   {
@@ -85,7 +85,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
   }
   
   return (
-    <div id="top" className={`${styles.nav} ${window.location.pathname==="/"&&"fixed top-[0]"}  z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
+    <>    <div id="top" className={`${styles.nav} fixed top-[0] z-10 w-screen  d-flex`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
       <div
         className={`${styles.content}  flex flex-row justify-between items-center  w-screen`}
       >
@@ -94,7 +94,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 <img 
             src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
             alt="website logo"
-            onClick={() => navigate("/")}
+            onClick={() => {navigate("/"); window.scroll(0,0) }}
           />
           
      <div className="flex">
@@ -157,7 +157,10 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             <button 
             id="dropdown-btn"
               onClick={(e) => {
-              ( item.title==="home"||item.title==="news")&&navigate(item.url);
+                if(item.title==="home"||item.title==="news"){
+                  navigate(item.url);window.scroll(0,0)
+                }
+              // ( item.title==="home"||item.title==="news")&&navigate(item.url);window.scroll(0,0);
              getTitle(item.title)
               }}
               className={`text-lg ${item.title==="our services"&&"w-[129px]"}  flex items-center text-one mr-30`}
@@ -196,14 +199,16 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 
         </div>
       </div>
-  <div  className={`${styles.bottomBar}  container capitalize ${styles.home}`} >
+ 
+
+    </div>
+    <div  className={`${styles.bottomBar} pt-[50px] container capitalize ${styles.home}`} >
   { window.location.href===`${window.location.protocol}//${window.location.host}/` ? null : <div className="md:ml-[61px] my-[50px] sm:my-[100px] lg text-[0.8rem] sm:text-[1rem] md:text-[1.5rem]"><button className="inline capitalize" onClick={()=>navigate("/")}>Home</button>  <span style={{color:"#F9A61B"}}> 
    {">"} <button  onClick={()=>navigate(`${window.location.pathname.split("/")[1]}`)} className="inline capitalize">{window.location.pathname.split("/")[1].replace("2"," ")}</button>  <button className="inline capitalize">{window.location.pathname.split("/")[2]?`> ${window.location.pathname.split("/")[2].replace(/%20/g," ")}`:""}</button> 
       </span>
       </div>}
   </div>
-
-    </div>
+    </>
   )
 }
 

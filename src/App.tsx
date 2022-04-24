@@ -11,7 +11,7 @@ const AboutUs = lazy(() => import('./pages/about us/AboutUs'));
 const News = lazy(() => import('./pages/News/News'));
 const BookArtist = lazy(() => import('./pages/book artist/BookArtist'));
 const ArtistInfo = lazy(() => import('./pages/artist info/ArtistInfo'));
-const ServiceReadMore = lazy(() => import('./pages/servicerReadMore/ServiceReadMore'));
+const ServiceLearnMore = lazy(() => import('./pages/servicerReadMore/ServiceLearnMore'));
 
 function App() {
 	return (
@@ -30,7 +30,7 @@ function App() {
 							<Route path="news" element={<News />} />
 							<Route path="bookings/:artist" element={<BookArtist />} />
 							<Route path="bookings/:artist/:aboutArtist" element={<ArtistInfo />} />
-							<Route path="/services/:id" element={<ServiceReadMore />} />
+							<Route path="/services/:id" element={<ServiceLearnMore />} />
 							<Route path="/company/contact" element={<Contact />} />
 						</Routes>
 					</Suspense>

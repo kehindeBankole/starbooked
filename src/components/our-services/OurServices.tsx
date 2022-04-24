@@ -1,20 +1,28 @@
 import styles from './OurService.module.scss';
-import { Talent, Booking, BrandPartner, LabelService, Management, PR } from '../../assets/images';
+import { Talent, Booking, BrandPartner, LabelService, Management, PR,Coporate,Concerts,PrivateParties,Birthday,Wedding,Fairs, Celeb } from '../../assets/images';
 function OurServices() {
 const services=[{
-	title:"coporate entertainment",img:Talent},
+	title:<>coporate <br /> entertainment</>,img:Coporate},
 	{
-		title:"public concerts",img:Booking
+		title:"private parties",img:PrivateParties},
+		{
+			title:<>wedding <br /> entertainment</>,img:Wedding
+		},
+		{
+			title:"birthday parties",img:Birthday
+		},
+		{
+			title:"celebrity appearances",img:Celeb
+		},
+	{
+		title:"public concerts",img:Concerts
 	},
-{
-	title:"private parties",img:BrandPartner},
-{
-	title:"birthday parties",img:PR},
-{
-	title:"wedding entertainment",img:LabelService},
+
+
+
 	{
 		title:<>FAIRS, CARNIVALS, <br /> AND FESTIVALS</>,
-		img:Management},
+		img:Fairs}
 
 ]
 
@@ -22,7 +30,9 @@ const services=[{
 		<section id="services" className={`${styles.services} `}>
 			<div className="container pt-[42px]">
 				<h2 className=" text-[1.8rem] sm:text-[3rem] lg:text-[4rem]">our services</h2>
-				<div className={`flex flex-wrap justify-center ${styles.service}`}>
+				<p className='font-bold text-center max-w-[887px] m-auto uppercase md:text-[1rem] text-[.8rem] p-[1rem]'>Whether it's a private party or a corporate event, we can handle the entire process from booking 
+the acts to coordinating the logistics and production.</p>
+				<div className={`flex flex-wrap justify-center sm:pt-[65px] pt-[20px] ${styles.service}`}>
 					{services.map((item,index)=>(
 						<div key={index} className="text-center uppercase md:text-[1.5rem]">
 						<img src={item.img} alt="service image" />

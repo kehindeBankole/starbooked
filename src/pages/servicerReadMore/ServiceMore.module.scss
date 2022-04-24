@@ -1,0 +1,56 @@
+@import "../../scss/index.scss";
+
+.hero{
+    
+    header{
+        font: {
+            weight: 700;
+            
+        }
+        text-transform:uppercase ;
+    }
+    .hero_text{
+       
+        margin: {
+            left: 13px;
+           right: 20px;
+           bottom: 37px;
+           top:24px
+        }
+        
+    } 
+   
+  
+}
+.load_more{
+    background-color: $six;
+}
+.img:hover .overText{
+    height: 100%;
+    transition: 0.5s all;
+}
+
+.overText{
+    height: 0%;
+}
+
+.btn{
+    border-radius: 20px;
+background-color: $six;
+font-weight:700; 
+}
+
+@media screen and (max-width:1023px){
+    .hero{
+        .hero_content{
+            flex-direction: column-reverse;
+
+            div{
+               .bookImg{
+                   margin-bottom: 20px;
+               }
+            }
+        }
+        
+    }
+}

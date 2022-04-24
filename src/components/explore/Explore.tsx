@@ -114,15 +114,15 @@ function Explore() {
       onSlideChange={() => "slider change"}
     >
 
-  <SwiperSlide className={`hidden ${styles.linkSlide}`}>
-  <div className="pt-[46px] pb-[41px] ml-[24px] mb-[24px]  mr-[50px] w-[218px] rounded-[40px] bg-[#D8D7D7]">
+  <SwiperSlide className={`hidden lg:block ${styles.linkSlide}`}>
+  <div className="pt-[46px] pb-[41px] mb-[24px]  w-[218px] rounded-[40px] bg-[#D8D7D7]">
   <ul className="font-[700] ml-[49px]">
-    <li className="uppercase mb-[20px]">live band</li>
-    <li className="mb-[20px]">DJs</li>
-    <li className="uppercase mb-[20px]">Musician</li>
-    <li className="uppercase mb-[20px]">comedian</li>
-    <li className="mb-[20px]">Mcs</li>
-    <li className="uppercase ">influencer</li>
+    <li><button  className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/liveband")}>live band</button> </li>
+    <li ><button className="font-bold mb-[20px]" onClick={()=>navigate("bookings/dj")}> DJs</button></li>
+    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/musician")}>Musician</button> </li>
+    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/comedian")}>comedian</button> </li>
+    <li ><button className="font-bold mb-[20px]" onClick={()=>navigate("bookings/mc")}>Mcs</button> </li>
+    <li ><button className="font-bold uppercase " onClick={()=>navigate("bookings/influencer")}>influencer</button> </li>
 </ul>
   </div>
   </SwiperSlide>

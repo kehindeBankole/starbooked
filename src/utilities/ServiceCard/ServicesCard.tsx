@@ -19,7 +19,7 @@ const [showMore,setShowMore]=useState(true)
 const navigate = useNavigate()
 return (
     // <div className={`${styles.card} w-[397px]`}>
-      <div className={`${styles.card}  lg:w-[30%] md:w-[50%] md:mr-[24px] `}>
+      <div className={`${styles.card}   lg:w-[350px] md:w-[50%]   md:mr-[24px]`}>
       <img src={props.img} className=" lg:h-[420px] md:w-[100%] mx-auto h-auto" alt="" />
       <p className={`text-center ${styles.card_title} uppercase`}>{props.title}</p>
         <p className={` ${styles.card_text} `}>{props.text.substring(0,200)}...</p>

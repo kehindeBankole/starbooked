@@ -2,7 +2,7 @@ import React from 'react';
 import { Explore } from '../../components';
 import { ReactComponent as ChevronSmall } from '../../assets/images/small.svg';
 
-import { Talent2, BrandPartner2, Booking3, LabelService2 } from '../../assets/images';
+import { Booking3, Wedding2,Coporate2,PrivateParties2,Birthday2,Celeb2,Concerts2,Fairs2} from '../../assets/images';
 import { ServicesCard } from '../../utilities';
 import styles from './Bookings.module.scss';
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +22,7 @@ const data: {
 		title: 'Corporate Entertainment',
 		text:
 			'Maybe you would like a high profile musician such as Burna Boy to get your attendees out on the dance floor and create a sense of fun camaraderie. Or, maybe you’d like a comedian such as Basket Mouth to set a light and humorous tone for your evening, helping to break the ice for your attendees. Ultimately, your choice of entertainment will reflect the level of professionalism you put into planning your corporate event and—if done right—impress those in attendance beyond measure.',
-		img: Talent2,
+		img: Coporate2,
 		moreText:
 			'Coming up with unique entertainment ideas for corporate events may indeed seem among the biggest challenges you’ll face in this endeavor. And that would be no surprise since it’s clear that while the right entertainment choice could make the event one of the most memorable for those in attendance, the wrong choice of entertainment could also make the event one that the attendees would rather forget. And when your company’s reputation is riding on the line, it’s crucial that you select your entertainment carefully to avoid the latter. So during our first conversation, we’ll get to know more about you, your company, your style, and the message you want to convey through your event, and together we’ll come up with the perfect options for your event.',
 		moreTextHeader: 'Corporate Entertainment Ideas',
@@ -36,7 +36,7 @@ const data: {
 		title: 'Private Parties',
 		text:
 			'Are you under the impression that it would be impossible for someone like you to secure a deal with a well-known celebrity or performer for your private event? One that you might be able to afford? If so, you’d be wrong. Regardless of your resources, Star Book has hundreds of musicians, actors, comedians, and other celebrities to choose from, and we can negotiate your deal on your behalf so that you maximize your budget and secure the most appropriate entertainment for your private event.',
-		img: BrandPartner2,
+		img: PrivateParties2,
 		moreText:
 			'Maybe you want a star appearance by a live band such as Shuga or an influencer such as Lasisielenu to impress your guests and leave a lasting impression. Or, perhaps a DJ such as DJ Cuppy to lighten the evening and set the tone? Maybe you’d like to advertise in advance so that guests know that your private event will feature some high-profile entertainment, or perhaps you’d rather keep the identity of your performer a secret for the big reveal. Either way, we can help.',
 		moreTextHeader: 'Private Party Entertainment Ideas',
@@ -47,10 +47,10 @@ const data: {
 	},
 	{
 		id: 3,
-		title: 'Wedding Entertainment ',
+		title: 'Wedding Entertainment',
 		text:
 			'Your wedding is perhaps the single most important event in your life. This milestone experience deserves only the most carefully planned celebration, and perhaps no other aspect of your wedding or rehearsal dinner deserves more attention and consideration than your chosen entertainment for the evening. Most brides and grooms assume that securing the biggest names in film, television, and music for their wedding or rehearsal dinner is nearly impossible. But nothing could be further from the truth.',
-		img: LabelService2,
+		img: Wedding2,
 		moreText:
 			'Star Book has been helping couples just like you narrow down their choices for unique wedding entertainment options and then negotiate those deals on their behalf for decades. Regardless of your entertainment genre, whether you’d like a traditional musician or band, or a more unusual choice such as a comedian, we are ready to put our time-tested years of experience to work for you. With thousands of acts at our fingertips, and already well-established relationships with hundreds of agents, we can negotiate with the high-profile names that might otherwise be beyond your reach.',
 		moreTextHeader: 'Wedding Entertainers',
@@ -97,14 +97,14 @@ function Bookings() {
 				<Explore />
 			</div>
 			<div>
-				<div className="container">
+				<div className="container md:pl-[61px]">
 					<header
 						className={`uppercase ${styles.header} text-[2rem] mb-[4rem] sm:text-[3rem] lg:text-[4rem] text-center`}
 					>
 						Our services
 					</header>
 
-					<div className="md:flex px-[20px] flex-wrap justify-center">
+					<div className="md:flex px-[20px] flex-wrap lg:justify-between justify-center">
 						{data.map((item) => (
 							<React.Fragment key={item.id}>
 								<ServicesCard

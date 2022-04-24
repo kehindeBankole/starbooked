@@ -5,7 +5,7 @@ import {BookGallery} from "../../utilities"
 import {Book} from "../../components"
 import { useParams } from 'react-router-dom'
 
-const Bands=Array(6).fill({category_img:Band1,
+const Bands=Array(6).fill({category_img:Band3,
     handle1:FB,
     handle2:Twitter2,
     handle3:Insta,
