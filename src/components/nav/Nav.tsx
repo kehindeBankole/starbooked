@@ -157,7 +157,10 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             <button 
             id="dropdown-btn"
               onClick={(e) => {
-              ( item.title==="home"||item.title==="news")&&navigate(item.url);window.scroll(0,0);
+                if(item.title==="home"||item.title==="news"){
+                  navigate(item.url);window.scroll(0,0)
+                }
+              // ( item.title==="home"||item.title==="news")&&navigate(item.url);window.scroll(0,0);
              getTitle(item.title)
               }}
               className={`text-lg ${item.title==="our services"&&"w-[129px]"}  flex items-center text-one mr-30`}
