@@ -11,6 +11,8 @@ import Modal from '@mui/material/Modal';
 import { useParams } from 'react-router-dom';
 import {useContext,useState,useRef} from "react"
 
+
+
 const AboutArtist=[
 {
 header:"the band hitz",

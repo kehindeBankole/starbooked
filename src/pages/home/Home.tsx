@@ -9,6 +9,8 @@ import styles from './Home.module.scss';
 import { ReactComponent as ChevronSmall } from "../../assets/images/small.svg";
 import { useNavigate } from "react-router-dom";
 
+
+
 const MarqueeImg=[Marquee1,Marquee2,Marquee3,Marquee4,Marquee5,Marquee6]
 const sliderInfo = [
 	{
