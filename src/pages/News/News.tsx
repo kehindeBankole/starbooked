@@ -7,6 +7,9 @@ import styles from './News.module.scss';
 import { NewsGallery, BannerSlider, Booking } from '../../components';
 import { Button } from '../../utilities';
 function News() {
+
+
+
 	const [ news, setNews ]: any = useState([]);
 
 	useEffect(() => {
@@ -17,13 +20,15 @@ function News() {
 		gettingData();
 	}, []);
 
-	const fetchingData = async () => {
-		const res = await fetch(
-			'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=5ae16ee46c5e4774b307a1eb0fec3791'
-		);
-		const data = await res.json();
-		return data;
-	};
+	const fetchingData=async()=>{
+		const res=await fetch("https://gnews.io/api/v4/search?q=entertainment&token=3a75e2fa44f570f67b433bb63be66a16&lang=en&country=ng")
+	const data=await res.json()
+	
+	
+return data
+	}
+	
+	fetchingData()
 
 	const sliderInfo = [
 		{
@@ -75,7 +80,7 @@ function News() {
 					<div className="flex items flex-wrap mb-[166px] mt-[61px] justify-between">
 						<div className="lg:ml-[61px] lg:w-[38%] mx-auto md:w-[50%] w-auto ">
 							<img
-								src={news.articles ? news.articles[0].urlToImage : 'no news'}
+								src={news.articles ? news.articles[0].image : 'no news'}
 								className="mx-auto md:w-[100%] sm:w-[75%] w-[100%]"
 								alt=""
 							/>
@@ -105,7 +110,7 @@ function News() {
 									key={index}
 									date={item.publishedAt}
 									articleLink={item.url}
-									image={item.urlToImage}
+									image={item.image}
 									description={item.description}
 									title={item.title}
 								/>
