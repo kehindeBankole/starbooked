@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 
 
 const sendingEmail=(form:any,id:string)=>{
-    emailjs.sendForm('service_yta96hj', id, form, 'wKcVoY0oBaK0dDUj5')
+    emailjs.sendForm('service_yta96hj', id, form, process.env.REACT_APP_EMAIL_KEY)
     .then((result) => {
         console.log(result.text);
         Swal.fire({

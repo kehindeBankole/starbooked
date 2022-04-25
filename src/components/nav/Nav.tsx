@@ -99,7 +99,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 
         </div>
         <div
-          className={`${styles.navItems} mobileNav right-[0] ${sideNav?"w-full":"w-[0]"} transition-[6s] overflow-hidden flex flex-col  lg:hidden fixed top-[0] bg-five h-[100%]  z-50 justify-center  items-center`}
+          className={` mobileNav right-[0] ${sideNav?"w-full":"w-[0]"} transition-all duration-700 overflow-hidden flex flex-col  lg:hidden fixed top-[0] bg-five h-[100%]  z-50 justify-center  items-center`}
         >
           <button
             className="absolute closeIcon"
@@ -119,7 +119,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
                 navigate(item.url);
                 window.scroll(0,0)
               }}
-              className="text-lg text-one mb-30 nav-btn"
+              className="text-lg text-one mb-30 nav-btn capitalize"
               style={{
                 color:
                   item.title !== "home"

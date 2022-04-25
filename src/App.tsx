@@ -12,6 +12,7 @@ const News = lazy(() => import('./pages/News/News'));
 const BookArtist = lazy(() => import('./pages/book artist/BookArtist'));
 const ArtistInfo = lazy(() => import('./pages/artist info/ArtistInfo'));
 const ServiceLearnMore = lazy(() => import('./pages/servicerReadMore/ServiceLearnMore'));
+const SearchArtist = lazy(() => import('./pages/search artist/SearchArtist'));
 
 function App() {
 	return (
@@ -24,7 +25,7 @@ function App() {
 							<Route path="/" element={<Home />} />
 							<Route path="/services" element={<Bookings />} />
 							<Route path="/services2" element={<Services />} />
-							{/* <Route path="/company" element={<Company />} /> */}
+							<Route path="/search" element={<SearchArtist />} />
 							<Route path="/bookings" element={<Bookings_Page />} />
 							<Route path="/company/about" element={<AboutUs />} />
 							<Route path="news" element={<News />} />

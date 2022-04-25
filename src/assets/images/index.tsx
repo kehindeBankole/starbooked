@@ -91,3 +91,18 @@ export {default as Marquee3} from "./marquee/3.png"
 export {default as Marquee4} from "./marquee/4.png"
 export {default as Marquee5} from "./marquee/5.png"
 export {default as Marquee6} from "./marquee/6.png"
+
+export {default as wizkid} from "./search artist/wizkid.jpg"
+export {default as burnaboy} from "./search artist/burnaboy.jpg"
+export {default as davido} from "./search artist/davido.jpg"
+export {default as donjazzy} from "./search artist/donjazzy.jpg"
+export {default as flavour} from "./search artist/flavour.jpg"
+export {default as nasty_c} from "./search artist/nasty_c.jpg"
+export {default as olamide} from "./search artist/olamide.jpg"
+export {default as phyno} from "./search artist/phyno.jpg"
+export {default as psquare} from "./search artist/psquare.jpg"
+export {default as tems} from "./search artist/tems.jpg"
+export {default as yemi_alade} from "./search artist/yemi_alade.jpg"
+export {default as buju} from "./search artist/buju.jpg"
+
+
