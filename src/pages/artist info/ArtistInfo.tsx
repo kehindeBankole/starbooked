@@ -4,9 +4,12 @@ import {FB,Insta,Twitter2,BandInfo,ComedianInfo,DjInfo,InfluencerInfo,McInfo,Mus
 import { Input, Button,TextArea } from "../../utilities";
 import Box from '@mui/material/Box';
 import * as BI from "react-bootstrap-icons"
+import sendingEmail from "../../utilities/Email";
+import Swal from 'sweetalert2'
 
 import Modal from '@mui/material/Modal';
 import { useParams } from 'react-router-dom';
+import {useContext,useState,useRef} from "react"
 
 const AboutArtist=[
 {
@@ -73,6 +76,44 @@ function ArtistInfo() {
       const [open, setOpen] = React.useState(false);
       const handleOpen = () => setOpen(true);
       const handleClose = () => setOpen(false);
+
+      const [name,setName]=useState("")
+const [location,setLocation]=useState("")
+const [phone,setPhone]=useState("")
+const [email,setEmail]=useState("")
+const [message,setMessage]=useState("")
+const form:any = useRef();
+
+const sendEmail = (e:any) => {
+  e.preventDefault();
+handleClose()
+  if(name&&location&&phone&&email){
+sendingEmail(form.current,"contact_form")
+
+
+    clearForm()
+  }
+
+  else{
+    Swal.fire({
+      title: 'Error',
+      text: 'Mail not sent, fill all fields',
+      icon: 'error',
+      confirmButtonText: 'ok'
+    })
+  }
+
+
+};
+const clearForm=()=>{
+  setName("")
+  setLocation("")
+  setPhone("")
+  setEmail("")
+  // setMessage("")
+  }
+
+
     return (
         <section className=''>
         <div className='container'>
@@ -98,30 +139,30 @@ function ArtistInfo() {
       aria-describedby="modal-modal-description"
     >
       <Box sx={style}>
-      <div className="relative capitalize">
-        <div className=' '>
-    
-                <Input label="name*" height="50px" width="100%" />
-              </div>
-              <div className="mt-[10px]">
-                <Input label="email*" height="50px" width="100%" />
-              </div>
-              <div className="mt-[10px]">
-                <Input label="phone" height="50px" width="100%" />
-              </div>
-              <div className="mt-[10px]">
-                <Input label="location*" height="50px" width="100%" />
-              </div>
-    
-              <div className="mt-[10px]">
-                <TextArea label="message*" />
-              </div>
-    
-              <div className="mt-[10px]">
-                <Button text="Send a message" height="68px" width="100%" />
-              </div>
-              <button  onClick={handleClose}  className='absolute top-[-5%] right-[-10%] text-light  text-[2.5rem] font-[700]'><BI.X/></button>
-              </div>
+      <form ref={form} onSubmit={sendEmail} className="relative capitalize">
+      <div className=' '>
+
+<Input type="text" onChange={setName} value={name} label="name" important={true} height="50px" width="100%" />
+</div>
+<div className="mt-[10px]">
+<Input type="text" onChange={setEmail} value={email} label="email" important={true} height="50px" width="100%" />
+</div>
+<div className="mt-[10px]">
+<Input type="text" onChange={setPhone} value={phone} label="phone" height="50px"  width="100%" />
+</div>
+<div className="mt-[10px]">
+<Input type="text" onChange={setLocation} value={location} label="location" important={true} height="50px" width="100%" />
+</div>
+
+<div className="mt-[10px]">
+<TextArea label="message" important={true}/>
+</div>
+
+<div className="mt-[10px]">
+<Button submit={true}  text="Send a message" height="68px" width="100%" />
+</div>
+<button onClick={()=>handleClose()} className='absolute top-[-5%] right-[-10%] text-light  text-[2.5rem] font-[700]'><BI.X/></button>
+              </form>
     
       </Box>
     </Modal>

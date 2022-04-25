@@ -16,15 +16,10 @@ function Booking({title , subtitle}:{title:string , subtitle:string}) {
 
   const sendEmail = (e:any) => {
     e.preventDefault();
+console.log("working");
 
     if(name&&location&&phone&&email){
 sendingEmail(form.current,"contact_form")
-      Swal.fire({
-        title: 'Success',
-        text: 'Mail sent successfully',
-        icon: 'success',
-        confirmButtonText: 'ok'
-      })
 
       clearForm()
     }
@@ -34,7 +29,9 @@ sendingEmail(form.current,"contact_form")
         title: 'Error',
         text: 'Mail not sent, fill all fields',
         icon: 'error',
-        confirmButtonText: 'ok'
+        confirmButtonText: 'ok',
+        backdrop:true
+
       })
     }
 

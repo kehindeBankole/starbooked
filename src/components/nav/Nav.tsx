@@ -57,21 +57,8 @@ dropMenu:<><li onClick={()=>navigate("company/about")} className="hover:ml-[10px
 ]
 
   const [navItems,setNavItem]= useState(Items)
-  useLayoutEffect(() => {
-    timeline
-      .to(".mobileNav", { x: 0, duration: 0.2 })
-      .from(".closeIcon", { rotate: "180deg", opacity: 0 }, ">");
 
-    timeline.from(".mobileNav .nav-btn", {
-      opacity: 0,
-      y: 50,
-      stagger: {
-        each: 0.1,
-      },
-    });
-    // window.location.href ===
-    // `${window.location.protocol}//${window.location.host}/
-  });
+  const [sideNav,setSideNav]=useState(false)
 
   const getTitle=(title:string)=>{
 setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty("dropMenu")?{...navItem,display: !navItem.display}:{...navItem,display:false}))
@@ -101,7 +88,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
      {/* <button className=" lg:hidden"> <ManageSearchIcon  sx={{ fontSize: 40}} className="text-[white] "/></button>             */}
 
           
-<button onClick={() => timeline.play()}>
+<button onClick={() => setSideNav(true)}>
   <i
     className="ri-menu-5-fill lg:hidden md:mr-[32px]"
     style={{ color: window.location.href===`${window.location.protocol}//${window.location.host}/` ? 'white':"black", fontSize: 25 }}
@@ -112,12 +99,12 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 
         </div>
         <div
-          className={`${styles.navItems} mobileNav translate-x-full flex flex-col lg:hidden fixed top-[0]  bg-five h-[100%] w-[100%] z-50 justify-center  items-center`}
+          className={`${styles.navItems} mobileNav right-[0] ${sideNav?"w-full":"w-[0]"} transition-[6s] overflow-hidden flex flex-col  lg:hidden fixed top-[0] bg-five h-[100%]  z-50 justify-center  items-center`}
         >
           <button
             className="absolute closeIcon"
             style={{ top: 20, right: 20 }}
-            onClick={() => timeline.reverse()}
+            onClick={() => setSideNav(false)}
           >
             <i
               className="ri-close-circle-line"
@@ -128,7 +115,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
             <button
             key={index}
               onClick={() => {
-                timeline.reverse();
+               setSideNav(false)
                 navigate(item.url);
                 window.scroll(0,0)
               }}

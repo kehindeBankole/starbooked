@@ -116,7 +116,7 @@ Star Book is YOUR booking agency.					</div>
 					</ul>
 				</div>
 			</div>
-			<div className="flex justify-end w-[100%] fixed right-[2%] z-50 bottom-[5%]">
+			<div className="flex justify-end w-[100%] fixed right-[2%] bottom-[5%]">
 				<Link activeClass="active" to="top" spy={true} smooth={true} offset={-6000} duration={2000}>
 					<button className="bg-[#F9A61B]  flex w-[50px] h-[50px] rounded-full  ">
 						<ChevronUp className="m-[auto] h-[20%]" />
