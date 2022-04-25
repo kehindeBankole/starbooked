@@ -21,7 +21,7 @@ function News() {
 	}, []);
 
 	const fetchingData=async()=>{
-		const res=await fetch("https://gnews.io/api/v4/search?q=entertainment&token=3a75e2fa44f570f67b433bb63be66a16&lang=en&country=ng")
+		const res=await fetch(`https://gnews.io/api/v4/search?q=entertainment&token=${process.env.REACT_APP_API_KEY_NEWS}&lang=en&country=ng`)
 	const data=await res.json()
 	
 	
