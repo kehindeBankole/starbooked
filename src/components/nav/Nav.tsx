@@ -99,7 +99,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 
         </div>
         <div
-          className={` mobileNav right-[0] ${sideNav?"w-full":"w-[0]"} transition-all duration-700 overflow-hidden flex flex-col  lg:hidden fixed top-[0] bg-five h-[100%]  z-50 justify-center  items-center`}
+          className={` mobileNav right-[0] ${sideNav?"w-full":"w-[0]"} transition-all duration-700 overflow-hidden flex flex-col  lg:hidden fixed top-[0] bg-five h-[100%]  z-[100] justify-center  items-center`}
         >
           <button
             className="absolute closeIcon"
@@ -182,8 +182,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
              </div>)}
              </React.Fragment>
           ))}
-     <button> {window.location.pathname==="/"?<SearchLight/>:<SearchDark/>}</button>            
-
+     <button onClick={()=>navigate("/search")}> {window.location.pathname==="/"?<SearchLight/>:<SearchDark/>}</button>            
         </div>
       </div>
  
