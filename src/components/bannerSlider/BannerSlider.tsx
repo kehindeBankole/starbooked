@@ -5,10 +5,19 @@ import { Carousel } from "react-responsive-carousel";
 import { ReactComponent as ChevronLeft } from "../../assets/images/chevronleft.svg";
 import { ReactComponent as ChevronRight } from "../../assets/images/chevronright.svg";
 import { ReactComponent as ChevronSmall } from "../../assets/images/small.svg";
-import img1 from "../../assets/images/1.png";
 import Button from "../button/Button";
 import { useNavigate } from "react-router-dom";
-function BannerSlider() {
+import {two} from "../../assets/images"
+
+interface Props{
+  img1:any;
+  bookBtn:boolean
+  sliderInfo?:any;
+}
+
+
+
+function BannerSlider(props:Props) {
 const navigate=useNavigate()
 
   const indicatorStyles: React.CSSProperties = {
@@ -25,6 +34,10 @@ const navigate=useNavigate()
   return (
     <Carousel
       showStatus={false}
+      autoPlay={true}
+      infiniteLoop={true}
+      interval={5000}
+      
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
         hasPrev && (
           <button
@@ -42,6 +55,7 @@ const navigate=useNavigate()
               left: "18%",
               position: "absolute",
             }}
+            
           >
             <ChevronLeft />
           </button>
@@ -92,24 +106,55 @@ const navigate=useNavigate()
             aria-label={`${label} ${index + 1}`}
           />
         );
-      }}
+      }
+    }
+      
     >
-      {[1, 2].map(() => (
-        <>
+      {props.sliderInfo?props.sliderInfo.map((item:any,index:number)=>(
+          <React.Fragment key={index}>
           <div
-            className={styles.content}
+            className={`flex ${styles.content}`}
             style={{
-              background: `url(${img1})`,
+              background: `url(${item.image})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
             }}
           >
-            <button onClick={()=>navigate("bookings")} className={styles.btn}>
+
+              <p className="text-[white] m-auto z-[1] text-[.8rem] md:text-[1rem] w-[80%] font-[700]">{item.text}</p>
+          <div className={styles.overlay}></div>
+
+            {/* <div className="w-[100%] z-[1]">
+            <button onClick={()=>{navigate("bookings"); window.scroll(0,0)}} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
               booking <ChevronSmall />
             </button>
+            </div> */}
+           
           </div>
-        </>
+        </React.Fragment>
+      )):[1,2].map((item,index) => (
+        <React.Fragment key={index}>
+          <div
+            className={styles.content}
+            style={{
+              background: `url(${props.img1})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+
+        
+
+            <div className="w-[100%] z-[1]">
+            <button onClick={()=>navigate("bookings")} className={`m-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
+              booking <ChevronSmall />
+            </button>
+            </div>
+           
+          </div>
+        </React.Fragment>
       ))}
+
     </Carousel>
   );
 }

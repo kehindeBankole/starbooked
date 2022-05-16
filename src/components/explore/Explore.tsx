@@ -91,7 +91,7 @@ function Explore() {
 // },[])
 
   return (
-    <section className='mt-[180px] mb-[176px]'>
+    <section className=''>
         <div className='container sm:pr-[57px] sm:pl-[61px]'>
             <div className='flex lg:flex-row flex-col flex-wrap'>
 <div className="lg:w-[40%]  lg:text-left text-center ">
@@ -110,19 +110,19 @@ function Explore() {
       slidesPerView={3}
       autoplay={true}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => swiper}
+      onSlideChange={() => "slider change"}
     >
 
-  <SwiperSlide className={`hidden ${styles.linkSlide}`}>
-  <div className="pt-[46px] pb-[41px] ml-[24px] mb-[24px]  mr-[50px] w-[218px] rounded-[40px] bg-[#D8D7D7]">
+  <SwiperSlide className={`hidden lg:block ${styles.linkSlide}`}>
+  <div className="pt-[46px] pb-[41px] mb-[24px]  w-[218px] rounded-[40px] bg-[#D8D7D7]">
   <ul className="font-[700] ml-[49px]">
-    <li className="uppercase mb-[20px]">live band</li>
-    <li className="mb-[20px]">DJs</li>
-    <li className="uppercase mb-[20px]">Musician</li>
-    <li className="uppercase mb-[20px]">comedian</li>
-    <li className="mb-[20px]">Mcs</li>
-    <li className="uppercase ">influencer</li>
+    <li><button  className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/liveband")}>live band</button> </li>
+    <li ><button className="font-bold mb-[20px]" onClick={()=>navigate("bookings/dj")}> DJs</button></li>
+    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/musician")}>Musician</button> </li>
+    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/comedian")}>comedian</button> </li>
+    <li ><button className="font-bold mb-[20px]" onClick={()=>navigate("bookings/mc")}>Mcs</button> </li>
+    <li ><button className="font-bold uppercase " onClick={()=>navigate("bookings/influencer")}>influencer</button> </li>
 </ul>
   </div>
   </SwiperSlide>
@@ -131,10 +131,10 @@ function Explore() {
 
       
      
-      ...
+    <div className="invisible">...</div>  
     
 {exploreArr.map((item,index)=>(
-  <SwiperSlide className="self-end">
+  <SwiperSlide key={index} className="self-end">
   <div className=" relative mr-[24px] mb-[24px] w-[100%]" key={index}>
   <img src={item.img}  alt={item.title} />
 <p className="absolute bottom-[16px] left-[50%] text-[.8rem] text-[white] translate-x-[-50%]  font-[700] uppercase">{item.title}</p>
@@ -145,7 +145,7 @@ function Explore() {
 </div>
 <div className="w-[100%]">
 
-<button onClick={()=>navigate("/bookings")} className={`${styles.btn} lg:hidden m-auto lg:w-[156px] lg:h-[60px] w-[7rem] h-[3rem] text-[.8rem] uppercase`}> booking <ChevronSmall className="inline w-[7%] ml-[12px]"/> </button>
+<button onClick={()=>{navigate("/bookings");window.scroll(0,0)}} className={`${styles.btn} lg:hidden m-auto lg:w-[156px] lg:h-[60px] w-[7rem] h-[3rem] text-[.8rem] uppercase`}> booking <ChevronSmall className="inline w-[7%] ml-[12px]"/> </button>
 
 
 </div>

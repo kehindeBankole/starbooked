@@ -24,3 +24,6 @@ code {
   margin: 0 auto;
 
 }
+.swiper-pagination-bullet{
+  background-color:#f9a61b !important;
+}

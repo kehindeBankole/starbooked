@@ -1,0 +1,30 @@
+@import "../../scss/index.scss";
+
+.card{
+    .card_title{
+        font-weight: 700;
+    }
+   
+    .card_text{
+        font-size: 1.125rem;
+    }
+    p{
+        margin-top: 32px;
+hr{
+    width: 80px;
+    border: 1px solid $zero;
+    display: inline-block;
+    transform: translateY(-3px);
+    // margin: 0 22px 0 53px;
+    
+}
+    }
+}
+.news{
+    color: $six;
+}
+@media screen and (max-width:280px) {
+    .img{
+        height: auto;
+    }
+}
