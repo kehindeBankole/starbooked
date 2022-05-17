@@ -102,7 +102,7 @@ Star Book is YOUR booking agency.					</div>
 					<h2 className="uppercase">contact us</h2>
 					<ul>
 						<li id="phone-number" className="capitalize">
-							07459649070, +234 814 3291 757.
+							+2347459649070, +234 814 3291 757.
 						</li>
 						<li id="address" className="capitalize">
 							lagos, nigeria.
