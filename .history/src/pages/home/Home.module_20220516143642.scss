@@ -1,0 +1,30 @@
+@import "../../scss/index.scss";
+
+.homeContainer {
+  border-bottom-left-radius: 200px;
+  .banner {
+    height: 27.625rem;
+    border: 0;
+    padding-top: 31px;
+    @include mq("fluid-out") {
+      height: 47.625rem;
+    }
+    .btn {
+      background-color: $six;
+      height: 40px;
+      width: 130px;
+      border-radius: 15px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #191c1f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        margin-left: 12px;
+      }
+    }
+  }
+}

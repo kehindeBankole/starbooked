@@ -1,0 +1,71 @@
+@import "../../scss/index.scss";
+.content {
+
+  height: 300px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 20px 20px 100px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  padding-bottom: 22px;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+
+  
+  @include mq("tablet") {
+    border-radius: 20px 20px 100px 20px;
+  }
+  @include mq("fluid-out") {
+    height: 577px;
+    border-radius: 20px 20px 200px 20px;
+  }
+  .overlay{
+    background: black;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    opacity: 0.5;
+    height:100%;
+    border-radius: 20px 20px 100px 20px;
+
+    // border-radius: 20px 20px 100px 20px;
+    @include mq("tablet") {
+      border-radius: 20px 20px 100px 20px;
+
+    }
+    @include mq("fluid-out") {
+   
+      border-radius: 20px 20px 200px 20px;
+    }
+
+  }
+  .btn {
+    background-color: $six;
+    height: 40px;
+    width: 130px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #191c1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin-left: 12px;
+    }
+ 
+    @include mq("fluid-out") {
+      height: 60px;
+      width: 156px;
+      font-size: 1.125rem;
+    }
+  }
+}
