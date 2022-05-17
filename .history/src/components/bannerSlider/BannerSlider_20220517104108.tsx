@@ -13,7 +13,6 @@ interface Props{
   img1:any;
   bookBtn:boolean
   sliderInfo?:any;
-  color?:string;
 }
 
 
@@ -132,7 +131,7 @@ const navigate=useNavigate()
             </div> */}
            
           </div>
-          <p className={`text-[${props.color}] z-[1] text-[.8rem] md:text-[1rem]  mx-auto mt-[2rem] w-[70%] font-[700] uppercase`}>{item.text}</p>
+          <p className="text-[white] z-[1] text-[.8rem] md:text-[1rem] bg-[green] mx-auto mt-[2rem] w-[70%] font-[700] uppercase">{item.text}</p>
         </React.Fragment>
       )):[1,2].map((item,index) => (
         <React.Fragment key={index}>

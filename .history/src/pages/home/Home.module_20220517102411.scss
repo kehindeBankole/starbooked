@@ -2,11 +2,11 @@
 .homeContainer {
     border-bottom-left-radius: 200px;
     .banner {
-        // height: 27.625rem;
+        height: 27.625rem;
         border: 0;
         padding-top: 31px;
         @include mq("fluid-out") {
-            // height: 47.625rem;
+            height: 47.625rem;
         }
         .btn {
             background-color: $six;
@@ -15,7 +15,7 @@
             border-radius: 15px;
             font-weight: 700;
             font-size: 0.8rem;
-            // line-height: 20px;
+            line-height: 20px;
             text-transform: uppercase;
             color: #191c1f;
             display: flex;

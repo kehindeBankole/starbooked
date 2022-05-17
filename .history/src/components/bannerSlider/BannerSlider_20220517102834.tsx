@@ -13,7 +13,6 @@ interface Props{
   img1:any;
   bookBtn:boolean
   sliderInfo?:any;
-  color?:string;
 }
 
 
@@ -132,7 +131,7 @@ const navigate=useNavigate()
             </div> */}
            
           </div>
-          <p className={`text-[${props.color}] z-[1] text-[.8rem] md:text-[1rem]  mx-auto mt-[2rem] w-[70%] font-[700] uppercase`}>{item.text}</p>
+          <p className="text-[white] z-[1] text-[.8rem] md:text-[1rem] mx-auto mt-[3rem] w-[70%] font-[700] uppercase">{item.text}</p>
         </React.Fragment>
       )):[1,2].map((item,index) => (
         <React.Fragment key={index}>
@@ -148,7 +147,7 @@ const navigate=useNavigate()
         
 
             <div className="w-[100%]  z-[1]">
-            <button onClick={()=>navigate("bookings")} className={`mx-auto ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
+            <button onClick={()=>navigate("bookings")} className={`mx-auto  ${props.bookBtn?"block":"invisible"} ${styles.btn}`}>
               booking <ChevronSmall />
             </button>
             </div>

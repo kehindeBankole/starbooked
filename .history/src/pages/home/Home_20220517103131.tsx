@@ -52,9 +52,9 @@ function Home() {
 		<section className={`${styles.homeContainer} `}>
 			<div className="bg-five pt-[5rem]">
 				<div className={`${styles.banner} container`}>
-					<BannerSlider color="white" img1={img1} bookBtn={true} sliderInfo={sliderInfo} />
-					<div className="w-[100%] pb-[2rem]">
-            <button onClick={()=>{navigate("bookings"); window.scroll(0,0)}} className={`mx-auto  ${styles.btn}`}>
+					<BannerSlider img1={img1} bookBtn={true} sliderInfo={sliderInfo} />
+					<div className="w-[100%]">
+            <button onClick={()=>{navigate("bookings"); window.scroll(0,0)}} className={`m-auto pb-5 ${styles.btn}`}>
               booking <ChevronSmall />
             </button>
             </div>

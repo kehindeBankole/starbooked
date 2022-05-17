@@ -132,7 +132,7 @@ const navigate=useNavigate()
             </div> */}
            
           </div>
-          <p className={`text-[${props.color}] z-[1] text-[.8rem] md:text-[1rem]  mx-auto mt-[2rem] w-[70%] font-[700] uppercase`}>{item.text}</p>
+          <p className={` z-[1] text-[.8rem] md:text-[1rem]  mx-auto mt-[2rem] w-[70%] font-[700] uppercase`}>{item.text}</p>
         </React.Fragment>
       )):[1,2].map((item,index) => (
         <React.Fragment key={index}>
