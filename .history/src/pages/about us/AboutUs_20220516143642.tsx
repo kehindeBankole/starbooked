@@ -20,15 +20,15 @@ function AboutUs() {
   return (
     <section className={`${styles.hero}  mt-[0px]`}>
   
-  <div className={`md:pb-[159px] flex ${styles.hero_content} container justify-between items-center`}>
+  <div className={`pb-[159px] flex ${styles.hero_content} container justify-between items-center`}>
  
  <div className={`${styles.hero_text_container} md:w-[60%] lg:w-[47%] m-auto lg:p-[0] p-[20px] lg:ml-[61px]`}>
   <header className=' text-center lg:text-left lg:text-[4rem] text-[1.5rem] md:text-[2rem]'>
   about starbook
   </header>
   <div className={`${styles.hero_text} `}>
-<p className='lg:text-[1.5rem] text-[1.1rem]'> At starbook we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p>
-<p className=''>At starbook we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p> 
+<p className='lg:text-[1.5rem] text-[1.1rem]'> At Starbooked we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p>
+<p className=''>At Starbooked we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p> 
 
   </div>
 

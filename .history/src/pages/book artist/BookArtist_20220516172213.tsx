@@ -77,7 +77,7 @@ function BookArtist() {
       <div className={`${styles.bands} flex flex-wrap justify-between  sm:mt-[105px] mt-[40px]`}>
     {artist==="liveband"&&(
    <>
-   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem] md:text-[2rem] font-[700]'>
+   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem]  md:text-[2rem] font-[700]'>
      book a Live band
    </header>
       {Bands.map((item,index)=>(
@@ -91,7 +91,7 @@ function BookArtist() {
     }
     {artist==="dj"&&(
    <>
-   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem] md:text-[2rem] font-[700]'>
+   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem]  md:text-[2rem] font-[700]'>
      book a dj
    </header>
       {Dj.map((item,index)=>(
@@ -106,7 +106,7 @@ function BookArtist() {
 
  {artist==="musician"&&(
    <>
-   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem] md:text-[2rem] font-[700]'>
+   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem]  md:text-[2rem] font-[700]'>
      book a musician
    </header>
       {Musician.map((item,index)=>(
@@ -120,7 +120,7 @@ function BookArtist() {
     }
  {artist==="comedian"&&(
    <>
-   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem] md:text-[2rem] font-[700]'>
+   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem]  md:text-[2rem] font-[700]'>
      book a comedian
    </header>
       {Comedian.map((item,index)=>(
@@ -135,7 +135,7 @@ function BookArtist() {
 
 {artist==="mc"&&(
    <>
-   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem] md:text-[2rem] font-[700]'>
+   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem]  md:text-[2rem] font-[700]'>
      book a mc
    </header>
       {Mc.map((item,index)=>(
@@ -149,7 +149,7 @@ function BookArtist() {
     }
  {artist==="influencer"&&(
    <>
-   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem] md:text-[2rem] font-[700]'>
+   <header className='text-center uppercase w-full lg:text-[4rem] text-[1.5rem] sm:mb-[3rem]  md:text-[2rem] font-[700]'>
      book a influencer
    </header>
       {Influencer.map((item,index)=>(

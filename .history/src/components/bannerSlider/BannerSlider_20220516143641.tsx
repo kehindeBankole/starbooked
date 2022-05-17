@@ -121,7 +121,7 @@ const navigate=useNavigate()
             }}
           >
 
-              <p className="text-[white] z-[1] text-[.8rem] md:text-[1rem] w-[85%] font-[700] uppercase">{item.text}</p>
+              <p className="text-[white] m-auto z-[1] text-[.8rem] md:text-[1rem] w-[80%] font-[700]">{item.text}</p>
           <div className={styles.overlay}></div>
 
             {/* <div className="w-[100%] z-[1]">

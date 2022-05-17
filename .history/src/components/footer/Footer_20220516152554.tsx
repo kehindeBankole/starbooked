@@ -102,16 +102,16 @@ Star Book is YOUR booking agency.					</div>
 					<h2 className="uppercase">contact us</h2>
 					<ul>
 						<li id="phone-number" className="capitalize">
-					<a href="tel:07459649070">07459649070</a>, <a href="tel:08143291757">08143291757</a> .
+					<a href="tel:07459649070">07459649070</a>,<a href="tel:+234 814 3291 757">+234 814 3291 757</a> .
 						</li>
 						<li id="address" className="capitalize">
 							lagos, nigeria.
 						</li>
-						<li id="address">
-							E-mail: <a  href="mailto:info@starbook.ng"> info@Starbook.Ng</a> (For General Inquiry)
+						<li id="address" className="capitalize">
+							E-mail: <a  href="mailto:info@starbook.ng"> Info@Starbook.Ng</a> (For General Inquiry)
 						</li>
-						<li id="address" >
-							 <a href="mailto:booking@starbook.Ng">booking@starbook.ng</a>.
+						<li id="address" className="capitalize">
+							 <a href="mailto:booking@starbook.ng">Booking@Starbook.Ng</a>.
 						</li>
 					</ul>
 				</div>

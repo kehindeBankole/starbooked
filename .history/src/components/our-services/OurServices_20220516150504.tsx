@@ -1,8 +1,8 @@
-import styles from './OurServices.module.scss';
+import styles from './ourService.module.scss';
 import { Talent, Booking, BrandPartner, LabelService, Management, PR,Coporate,Concerts,PrivateParties,Birthday,Wedding,Fairs, Celeb } from '../../assets/images';
 function OurServices() {
 const services=[{
-	title:<>corporate <br /> entertainment</>,img:Coporate},
+	title:<>coporate <br /> entertainment</>,img:Coporate},
 	{
 		title:"private parties",img:PrivateParties},
 		{

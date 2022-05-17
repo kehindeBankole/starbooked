@@ -107,10 +107,10 @@ Star Book is YOUR booking agency.					</div>
 						<li id="address" className="capitalize">
 							lagos, nigeria.
 						</li>
-						<li id="address">
+						<li id="address" className="capitalize">
 							E-mail: <a  href="mailto:info@starbook.ng"> info@Starbook.Ng</a> (For General Inquiry)
 						</li>
-						<li id="address" >
+						<li id="address" className="capitalize">
 							 <a href="mailto:booking@starbook.Ng">booking@starbook.ng</a>.
 						</li>
 					</ul>

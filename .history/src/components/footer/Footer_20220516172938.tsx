@@ -111,7 +111,7 @@ Star Book is YOUR booking agency.					</div>
 							E-mail: <a  href="mailto:info@starbook.ng"> info@Starbook.Ng</a> (For General Inquiry)
 						</li>
 						<li id="address" >
-							 <a href="mailto:booking@starbook.Ng">booking@starbook.ng</a>.
+							 <a href="mailto:ooking@starbook.Ng">booking@starbook.ng</a>.
 						</li>
 					</ul>
 				</div>

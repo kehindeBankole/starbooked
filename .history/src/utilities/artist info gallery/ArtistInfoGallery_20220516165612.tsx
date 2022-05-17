@@ -15,7 +15,7 @@ handleOpen?:any;
 
 function ArtistInfoGallery(props:Props) {
   return (<>
-    <div className={`p-[20px] md:p-[0] flex flex-wrap justify-between md:mr-[57px] md:ml-[61px] sm:mt-[50px]`}>
+    <div className={`p-[20px] md:p-[0] flex flex-wrap justify-between md:mr-[57px] md:ml-[61px] sm:mt-[100px] mt-[20px]`}>
     <div className='lg:w-[42%] sm:w-[80%] mx-auto lg:m-[0]'>
  <h2 className='mb-[41px] font-[700] md:text-[2.25rem] sm:text-[1.5rem] md:text-left  uppercase'>about</h2>
  <div className='text-[.85rem] sm:text-[1rem]'>

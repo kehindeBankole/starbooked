@@ -281,7 +281,7 @@ moreText:<>
 			<div className="flex mt-[2rem]  lg:justify-end justify-center w-[100%] ">
 				<button
 					onClick={() => {
-						navigate('/bookings');
+						navigate('/services2');
 						window.scroll(0, 0);
 					}}
 					className={`${styles.load_more} sm:w-[171px] sm:h-[60px]  rounded-[15px] uppercase sm:text-[1.125rem] text-[.8rem] h-[40px] w-[120px] font-[700]`}
