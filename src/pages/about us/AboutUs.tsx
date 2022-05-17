@@ -27,8 +27,13 @@ function AboutUs() {
   about starbook
   </header>
   <div className={`${styles.hero_text} `}>
+<<<<<<< HEAD
 <p className='lg:text-[1.5rem] text-[1.1rem]'> At starbook we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p>
 <p className=''>At starbook we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p> 
+=======
+<p className='lg:text-[1.5rem] text-[1.1rem]'> At Starbook we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p>
+<p className=''>At Starbook we connect talent, brands and businesses, enabling them to stage memorable events, share remarkable music, tell significant stories, and, through it all, reach new audiences.</p> 
+>>>>>>> 2dbcb058eea6d0b507c8ce37a777ba15cc6c0ccb
 
   </div>
 

@@ -71,7 +71,7 @@ return data
 				<header className="text-center  lg:text-[4rem] sm:mb-[3.75rem] mb-[1rem] text-[1.5rem] md:text-[2rem]">
 					Gallery
 				</header>
-				<BannerSlider bookBtn={false} color="black" img1={Cheers} sliderInfo={sliderInfo} />
+				<BannerSlider bookBtn={false} img1={Cheers} sliderInfo={sliderInfo} />
 			</div>
 
 			<div className="sm:mb-[166px] sm:mt-[8.438rem]">
