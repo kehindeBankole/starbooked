@@ -68,10 +68,10 @@ function Explore() {
   <ul className="font-[700] ml-[49px]">
     <li><button  className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/liveband")}>live band</button> </li>
     <li ><button className="font-bold mb-[20px]" onClick={()=>navigate("bookings/dj")}> DJs</button></li>
-    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/musician")}>Musician</button> </li>
-    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/comedian")}>comedian</button> </li>
-    <li ><button className="font-bold mb-[20px]" onClick={()=>navigate("bookings/mc")}>Mcs</button> </li>
-    <li ><button className="font-bold uppercase " onClick={()=>navigate("bookings/influencer")}>influencer</button> </li>
+    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/musicians")}>Musician</button> </li>
+    <li ><button className="font-bold uppercase mb-[20px]" onClick={()=>navigate("bookings/comedians")}>comedian</button> </li>
+    <li ><button className="font-bold mb-[20px]" onClick={()=>navigate("bookings/mcs")}>Mcs</button> </li>
+    <li ><button className="font-bold uppercase " onClick={()=>navigate("bookings/influencers")}>influencer</button> </li>
 </ul>
   </div>
   </SwiperSlide>
