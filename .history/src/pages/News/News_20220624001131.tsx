@@ -104,8 +104,8 @@ return data
 					</div>
 
 					<div className="flex flex-wrap justify-center">
-						{news.results ? (
-							news.results.map((item: any, index: any) => (
+						{news.articles ? (
+							news.articles.map((item: any, index: any) => (
 								<NewsGallery
 									key={index}
 									date={item.pubDate}

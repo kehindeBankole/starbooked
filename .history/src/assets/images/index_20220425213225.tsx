@@ -104,6 +104,5 @@ export {default as psquare} from "./search artist/psquare.jpg"
 export {default as tems} from "./search artist/tems.jpg"
 export {default as yemi_alade} from "./search artist/yemi_alade.jpg"
 export {default as buju} from "./search artist/buju.jpg"
-export {default as entertainmentNews} from "./entertainment-news.png"
 
 

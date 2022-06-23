@@ -98,26 +98,27 @@ return data
 								{news.results? news.results[0].description:'no news'}
 							</div>
 							<button className={`${styles.full_story} capitalize mt-[35px]`}>
+								{' '}
 								<a href={news.results? news.results[0].link:'no news'}>full story</a>{' '}
 							</button>
 						</div>
 					</div>
 
 					<div className="flex flex-wrap justify-center">
-						{news.results ? (
-							news.results.map((item: any, index: any) => (
+						{/* {news.articles ? (
+							news.articles.map((item: any, index: any) => (
 								<NewsGallery
 									key={index}
-									date={item.pubDate}
-									articleLink={item.link}
-									image={item.image_url?item.image_url:entertainmentNews}
+									date={item.publishedAt}
+									articleLink={item.url}
+									image={item.image}
 									description={item.description}
 									title={item.title}
 								/>
 							))
 						) : (
 							'no news'
-						)}
+						)} */}
 					</div>
 
 					<div
