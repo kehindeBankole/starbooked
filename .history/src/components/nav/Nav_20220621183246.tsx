@@ -199,4 +199,3 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
 }
 
 export default Nav;
-

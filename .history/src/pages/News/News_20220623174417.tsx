@@ -144,4 +144,3 @@ return data
 }
 
 export default News;
-// pub_68231f11925c68934efd8287ff5a0ab4c4a5

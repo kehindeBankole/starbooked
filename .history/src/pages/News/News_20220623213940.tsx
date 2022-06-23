@@ -103,7 +103,7 @@ return data
 					</div>
 
 					<div className="flex flex-wrap justify-center">
-						{news.articles ? (
+						{/* {news.articles ? (
 							news.articles.map((item: any, index: any) => (
 								<NewsGallery
 									key={index}
@@ -116,7 +116,7 @@ return data
 							))
 						) : (
 							'no news'
-						)}
+						)} */}
 					</div>
 
 					<div
