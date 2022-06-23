@@ -20,9 +20,9 @@ function News() {
 	}, []);
 
 	const fetchingData=async()=>{
-		const res=await fetch(`https://newsdata.io/api/1/news?apikey=pub_68231f11925c68934efd8287ff5a0ab4c4a5&country=ng&category=entertainment`)
+		const res=await fetch(`https://gnews.io/api/v4/search?q=entertainment&token=${process.env.REACT_APP_API_KEY_NEWS}&lang=en&country=ng`)
 	const data=await res.json()
-console.log(data)
+
 	
 return data
 	}
@@ -76,7 +76,7 @@ return data
 			<div className="sm:mb-[166px] sm:mt-[8.438rem]">
 				<div className="container lg:p-[0] p-[20px] ">
 					<header className="text-center  lg:text-[4rem] text-[1.5rem] md:text-[2rem]">Latest news</header>
-					{/* <div className="flex items flex-wrap mb-[166px] mt-[61px] justify-between">
+					<div className="flex items flex-wrap mb-[166px] mt-[61px] justify-between">
 						<div className="lg:ml-[61px] lg:w-[38%] mx-auto md:w-[50%] w-auto ">
 							<img
 								src={news.articles ? news.articles[0].image : 'no news'}
@@ -100,10 +100,10 @@ return data
 								<a href={news.articles ? news.articles[0].url : '#'}>full story</a>{' '}
 							</button>
 						</div>
-					</div> */}
+					</div>
 
 					<div className="flex flex-wrap justify-center">
-						{/* {news.articles ? (
+						{news.articles ? (
 							news.articles.map((item: any, index: any) => (
 								<NewsGallery
 									key={index}
@@ -116,7 +116,7 @@ return data
 							))
 						) : (
 							'no news'
-						)} */}
+						)}
 					</div>
 
 					<div
@@ -144,4 +144,3 @@ return data
 }
 
 export default News;
-// pub_68231f11925c68934efd8287ff5a0ab4c4a5

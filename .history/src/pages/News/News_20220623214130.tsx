@@ -20,9 +20,9 @@ function News() {
 	}, []);
 
 	const fetchingData=async()=>{
-		const res=await fetch(`https://newsdata.io/api/1/news?apikey=pub_68231f11925c68934efd8287ff5a0ab4c4a5&country=ng&category=entertainment`)
+		const res=await fetch(`https://gnews.io/api/v4/search?q=entertainment&token=${process.env.REACT_APP_API_KEY_NEWS}&lang=en&country=ng`)
 	const data=await res.json()
-console.log(data)
+
 	
 return data
 	}
