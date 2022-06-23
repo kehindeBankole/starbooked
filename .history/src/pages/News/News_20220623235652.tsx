@@ -91,33 +91,34 @@ return data
 							<p className={`${styles.lat_news} capitalize`}>latest news</p>
 
 							<header className={`${styles.headline} text-[1rem] lg:text-[2.25rem]`}>
-								{news.results? news.results[0].title:'no news'}
+								{news.results? news.results[0].image_url?news.results[0].image_url:entertainmentNews:'no news'}
 							</header>
 
 							<div className="lg:pr-[140px]">
-								{news.results? news.results[0].description:'no news'}
+								{news.results? news.results[0].title:'no news'}
 							</div>
 							<button className={`${styles.full_story} capitalize mt-[35px]`}>
-								<a href={news.results? news.results[0].link:'no news'}>full story</a>{' '}
+								{' '}
+								<a href={news.articles ? news.articles[0].url : '#'}>full story</a>{' '}
 							</button>
 						</div>
 					</div>
 
 					<div className="flex flex-wrap justify-center">
-						{news.results ? (
-							news.results.map((item: any, index: any) => (
+						{/* {news.articles ? (
+							news.articles.map((item: any, index: any) => (
 								<NewsGallery
 									key={index}
-									date={item.pubDate}
-									articleLink={item.link}
-									image={item.image_url?item.image_url:entertainmentNews}
+									date={item.publishedAt}
+									articleLink={item.url}
+									image={item.image}
 									description={item.description}
 									title={item.title}
 								/>
 							))
 						) : (
 							'no news'
-						)}
+						)} */}
 					</div>
 
 					<div

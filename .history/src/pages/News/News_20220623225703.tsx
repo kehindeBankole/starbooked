@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {  Cheers, entertainmentNews } from '../../assets/images';
+import {  Cheers } from '../../assets/images';
 import { two, four, five, viewingLappy, Piano, Chairs } from '../../assets/images';
 
 import styles from './News.module.scss';
@@ -20,11 +20,9 @@ function News() {
 	}, []);
 
 	const fetchingData=async()=>{
-		const res=await fetch(`https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY_NEWS}&country=ng&category=entertainment`)
-		
-		
+		const res=await fetch(`https://gnews.io/api/v4/search?q=entertainment&token=${process.env.REACT_APP_API_KEY_NEWS}&lang=en&country=ng`)
 	const data=await res.json()
-console.log(data)
+
 	
 return data
 	}
@@ -81,7 +79,7 @@ return data
 					<div className="flex items flex-wrap mb-[166px] mt-[61px] justify-between">
 						<div className="lg:ml-[61px] lg:w-[38%] mx-auto md:w-[50%] w-auto ">
 							<img
-								src={news.results? news.results[0].image_url?news.results[0].image_url:entertainmentNews:'no news'}
+								src={news.articles ? news.articles[0].image : 'no news'}
 								className="mx-auto md:w-[100%] sm:w-[75%] w-[100%]"
 								alt=""
 							/>
@@ -91,26 +89,27 @@ return data
 							<p className={`${styles.lat_news} capitalize`}>latest news</p>
 
 							<header className={`${styles.headline} text-[1rem] lg:text-[2.25rem]`}>
-								{news.results? news.results[0].title:'no news'}
+								{news.articles ? news.articles[0].title : 'no news'}
 							</header>
 
 							<div className="lg:pr-[140px]">
-								{news.results? news.results[0].description:'no news'}
+								{news.articles ? news.articles[0].description : 'no news'}
 							</div>
 							<button className={`${styles.full_story} capitalize mt-[35px]`}>
-								<a href={news.results? news.results[0].link:'no news'}>full story</a>{' '}
+								{' '}
+								<a href={news.articles ? news.articles[0].url : '#'}>full story</a>{' '}
 							</button>
 						</div>
 					</div>
 
 					<div className="flex flex-wrap justify-center">
-						{news.results ? (
-							news.results.map((item: any, index: any) => (
+						{news.articles ? (
+							news.articles.map((item: any, index: any) => (
 								<NewsGallery
 									key={index}
-									date={item.pubDate}
-									articleLink={item.link}
-									image={item.image_url?item.image_url:entertainmentNews}
+									date={item.publishedAt}
+									articleLink={item.url}
+									image={item.image}
 									description={item.description}
 									title={item.title}
 								/>
