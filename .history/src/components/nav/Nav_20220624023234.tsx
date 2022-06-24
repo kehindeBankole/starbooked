@@ -169,9 +169,9 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
              {(item.title!=="home"&&item.title!=="news"&&window.location.pathname!=="/")&&<ChevronDownDark className="ml-[5px]"/>}
             </button>
              {(item.title!=="home")&&(<div key={index+1} className={`absolute top-[70px] z-[100]  ${styles.dropdown}`} style={{width:item.title==="bookings"?"280px":item.title==="our services"?"320px":"172px", height:item.display&&(item.title==="our services"||item.title==="bookings")?"300px":item.display&&item.title==="company"?"140px":"0px",overflow:"hidden", transition:"all .5s",
-            left:item.title==="bookings"||item.title==="our services"?"47%":"75%", borderRadius:"20px"
+            left:item.title==="bookings"||item.title==="our services"?"47%":"80%", borderRadius:"20px"
             }}>
-              <button className="absolute" style={{top:item.title==="company"?"30px":"-10px",right:item.title==="company"?"27px":"10px"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
+              <button className="absolute" style={{top:item.title==="company"?"30px":"-10px",right:item.title==="company"?"0px":"10px"}}  onClick={()=>CloseDropDown()}><img src={CloseList} style={{width:"20px",height:"20px" }} alt="close" /></button>
              <ul className="my-[67px]" style={{
               paddingLeft:item.title==="bookings"||item.title==="our services"?"40px":"23px",
               margin:item.title==="company"?"46px 0":"37px 0"
