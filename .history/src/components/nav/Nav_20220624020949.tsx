@@ -141,7 +141,7 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
             <button
-            // onBlur={CloseDropDown}
+            onBlur={CloseDropDown}
             id="dropdown-btn"
               onClick={(e) => {
                 if(item.title==="home"||item.title==="news"){

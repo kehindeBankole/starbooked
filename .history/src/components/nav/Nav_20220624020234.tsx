@@ -32,8 +32,8 @@ const Items:Drop[]=[
     title: "bookings",
 display:false,
 dropMenu:<><li onClick={()=>navigate("bookings")} className="hover:ml-[10px] transition-all"> All </li>
-<li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[10px] transition-all">live band</li>
- <li onClick={()=>navigate("bookings/djs")} className="hover:ml-[10px] transition-all">djs</li><li onClick={()=>navigate("bookings/musicians")} className="hover:ml-[10px] transition-all">musicians</li><li onClick={()=>navigate("bookings/comedians")} className="hover:ml-[10px] transition-all">comedians</li><li onClick={()=>navigate("bookings/mcs")} className="hover:ml-[10px] transition-all">mcs</li><li onClick={()=>navigate("bookings/influencers")} className="hover:ml-[10px] transition-all">influencers</li></>
+{/* <li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[10px] transition-all"> live band </li> */}
+ <li onClick={()=>navigate("bookings/liveband")} className="hover:ml-[10px] transition-all">djs</li><li onClick={()=>navigate("bookings/musicians")} className="hover:ml-[10px] transition-all">musicians</li><li onClick={()=>navigate("bookings/comedians")} className="hover:ml-[10px] transition-all">comedians</li><li onClick={()=>navigate("bookings/mcs")} className="hover:ml-[10px] transition-all">mcs</li><li onClick={()=>navigate("bookings/influencers")} className="hover:ml-[10px] transition-all">influencers</li></>
 
 },
   {
@@ -78,7 +78,8 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
       >
         <div className={`${styles.co} flex flex-row my-[10px]  justify-between items-center w-screen `}>
         
-<img src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
+<img 
+            src={window.location.href===`${window.location.protocol}//${window.location.host}/` ? logoWhite:logoDark}
             alt="website logo"
             onClick={() => {navigate("/"); window.scroll(0,0) }}
           />
@@ -140,9 +141,9 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
         <div className={`${styles.navItems} hidden mt-[15px] lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
-            <button
-            // onBlur={CloseDropDown}
+            <button 
             id="dropdown-btn"
+            onBlur={CloseDropDown}
               onClick={(e) => {
                 if(item.title==="home"||item.title==="news"){
                   navigate(item.url);window.scroll(0,0)

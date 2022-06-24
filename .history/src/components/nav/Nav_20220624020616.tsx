@@ -140,9 +140,9 @@ setNavItem(navItems.map((navItem)=>navItem.title===title&&navItem.hasOwnProperty
         <div className={`${styles.navItems} hidden mt-[15px] lg:flex bg-five`} style={{background:window.location.href===`${window.location.protocol}//${window.location.host}/` ? '#191c1f':"#F9F9F9"}}>
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
-            <button
-            // onBlur={CloseDropDown}
+            <button 
             id="dropdown-btn"
+            // onBlur={CloseDropDown}
               onClick={(e) => {
                 if(item.title==="home"||item.title==="news"){
                   navigate(item.url);window.scroll(0,0)
